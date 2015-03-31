@@ -15,11 +15,11 @@ Feature:Informar pontos a coletar
 
     Scenario: Ponto em estado crítico
       Given Eu estou vendo os Pontos disponíveis
-      And O ponto "Restaurante Universitário" está com quantidade de resíduos próxima do limite máximo
+      And O ponto "Restaurante Universitário" está com quantidade de resíduos acima do limite crítico de "20 litros"
       Then Devo ver uma mensagem indicando que há pontos em estado crítico
       And O item de "Restaurante Universário" da lista deve estar destacado indicando estado crítico
 
      Scenario: Imprimir Lista
       Given Eu estou vendo os Pontos disponíveis
-      And Eu Seleciono a opção Imprimir
+      And Eu seleciono a opção Imprimir
       Then A lista de pontos de coleta deve ser imprimida pelo computador
