@@ -18,7 +18,7 @@ When(~'^i try to create an account with CNPJ "([^"]*)" $'){ String cnpj ->
     assert gestor != null
 }
 
-Then(~'^The account with CNPJ "([^"]*)" is not stored twice in the system $') { cnpj ->
+Then(~'^The account with CNPJ "([^"]*)" is not stored twice in the system $') { String cnpj ->
     assert gestor.size() == 1
 
 }
