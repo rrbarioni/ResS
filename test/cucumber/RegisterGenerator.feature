@@ -11,7 +11,9 @@ Feature: register a residue generator
 
   Scenario: new valid generator web
     Given I am at the register new generator page
+    And There's no generator with the address "Bubble Street number 7"
     When I fill the generator details with valid info
+    And The address "Bubble Street number 7"
     And I register the new generator
     Then I should be on the register a new generator page
     And I should see a message indicating that the action was successful
