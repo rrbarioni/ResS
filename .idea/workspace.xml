@@ -92,8 +92,8 @@
         <option value="$PROJECT_DIR$/test/functional/pages/GetPageTitle.groovy" />
         <option value="$PROJECT_DIR$/test/functional/pages/ResidueGeneratorEditPage.groovy" />
         <option value="$PROJECT_DIR$/test/cucumber/steps/EditResidueGeneratorSucessSteps.groovy" />
-        <option value="$PROJECT_DIR$/test/cucumber/EditResidueGenerator.feature" />
         <option value="$PROJECT_DIR$/test/cucumber/steps/EditResidueGeneratorSteps.groovy" />
+        <option value="$PROJECT_DIR$/test/cucumber/EditResidueGenerator.feature" />
       </list>
     </option>
   </component>
@@ -665,15 +665,15 @@
       <workItem from="1429344180594" duration="4000" />
       <workItem from="1429344199759" duration="203000" />
       <workItem from="1429344416540" duration="10046000" />
-      <workItem from="1429386539439" duration="7031000" />
+      <workItem from="1429386539439" duration="7433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36733000" />
+    <option name="totallyTimeSpent" value="37135000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
