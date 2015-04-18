@@ -6,13 +6,16 @@ grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
+def gebVersion = "0.7.0"
+def seleniumVersion = "2.22.0"
+
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
         // specify dependency exclusions here; for example, uncomment this to disable ehcache:
         // excludes 'ehcache'
     }
-    log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
+    log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
 
     repositories {
@@ -21,7 +24,7 @@ grails.project.dependency.resolution = {
         grailsPlugins()
         grailsHome()
         grailsCentral()
-
+        mavenRepo "http://repository.codehaus.org"
         mavenRepo "http://repo.grails.org/grails/plugin"
         //mavenLocal()
         mavenCentral()
@@ -30,6 +33,9 @@ grails.project.dependency.resolution = {
     dependencies {
 
         compile ('commons-codec:commons-codec:1.6')
+        test("org.codehaus.geb:geb-junit4:0.7.0")
+        test("org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion")
+        test("org.seleniumhq.selenium:selenium-support:$seleniumVersion")
 
     }
 
@@ -41,5 +47,6 @@ grails.project.dependency.resolution = {
         build ":tomcat:2.1.0"
         runtime ":database-migration:1.1"
         compile ':cache:1.0.0'
+        test ":geb:0.7.0"
     }
 }
