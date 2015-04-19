@@ -1,43 +1,46 @@
-  Feature: Gerar historico de coleta
-      As a membro da empresa de coleta
-      I want to gerar um historico de coletas
-      So that eu posso saber o desempenho da minha empresa.
+Feature: Gerar historico de coleta
+  As a membro da empresa de coleta
+  I want to gerar um historico de coletas
+  So that eu posso saber o desempenho da minha empresa.
 
 
 
-    Scenario Adicionar coleta do dia no sistema
-      Given eu estou logado no sistema como administrador
-      When estou na pagina de historico de coletas
-      And clico no botao gerar historico do dia
-      And clico em adicionar coleta do dia
-      Then È aberto uma pagina para colocar o registro de coleta do dia
+  Scenario Adicionar coleta do dia no sistema
+    Given nao foi adicionado historico de coleta do dia "08/04/2015"
+    When preencho os campos necessarios com informa√ßoes validas e data "08/04/2015"
+    And clico em adicionar coleta do dia
+    Then √© adicionada com sucesso
+    And sou direcionado para a homepage
+
+  @ignore
+  Scenario Adicionar a pagina de historico de coletas como um cliente
+    Given eu estou logado no sistema como cliente
+    And estou na pagina Home
+    When clico no botao gerar historico de coleta
+    Then √© aberta a pagina do meu historico de coletas
+  @ignore
+  Scenario Acessar o historico de coletas do dia como administrador
+    Given eu estou logado no sistema como administrador
+    When estou na pagina de historico de coletas
+    And clico no botao gerar historico do dia
+    Then √© aberto o historico deste dia
+  @ignore
+  Scenario Acessar o historico de coletas geral como administrador
+    Given eu estou logado no sistema como administrador
+    When estou na pagina de historico de coletas
+    And clico no botao gerar historico geral
+    Then √© aberto o historico geral
+
+  Scenario: Documentar coleta
+    Given nao foi criada um relatorio de coleta do dia "08/04/2015"
+    When crio um novo relatorio o dia "08/04/2015"
+    Then o relatorio do dia "08/04/2015" √© adicionado ao historico de coletas
+  @ignore
+  Scenario: Atualizar relatorio de coleta do dia
+    Given ja foi criado o relatorio de coleta do dia
+    When seleciono o relatorio do dia
+    And atualizo ele
+    Then o relatorio ser√° salvo no historico de coletas
 
 
-    Scenario Adicionar a pagina de historico de coletas como um cliente
-      Given eu estou logado no sistema como cliente
-      When estou na pagina Home
-      And clico no botao gerar historico de coleta
-      Then È aberta a pagina do meu historico de coletas
 
-    Scenario Acessar o historico de coletas do dia como administrador
-      Given eu estou logado no sistema como administrador
-      When estou na pagina de historico de coletas
-      And clico no botao gerar historico do dia
-      Then È aberto o historico deste dia
-
-    Scenario Acessar o historico de coletas geral como administrador
-      Given eu estou logado no sistema como administrador
-      When estou na pagina de historico de coletas
-      And clico no botao gerar historico geral
-      Then È aberto o historico geral
-
-    Scenario: Documentar coleta
-      Given nao foi criada um relatorio de coleta do dia
-      When crio um novo relatorio com a data de hoje
-      Then o relatorio È adicionado ao historico de coletas
-
-    Scenario: Atualizar relatorio de coleta do dia
-      Given ja foi criado o relatorio de coleta do dia
-      When seleciono o relatorio do dia
-      And atualizo ele
-      Then o relatorio ser· salvo no historico de coletas
