@@ -18,13 +18,14 @@ Feature: Edit the residue generator registration data
     And   submit my changes
     Then  I should see a message indicating that the changes are properly stored
   #end
-
+  @ignore
   Scenario: Some of the registration data fields are not filled correctly or are blank
     Given I am at the registration data edit section
     When  I fill some of the registration data fields with invalid information or just not fill them
     And   I confirm my changes
     Then  the system warns me about the blank or the invalid fields
 
+  @ignore
   Scenario: The registration data changes results in an existing residue generator
     Given I already filled all the registration data fields correctly
     And   submitted the changes by confirming them
@@ -33,6 +34,7 @@ Feature: Edit the residue generator registration data
     Then  the system should warn me about it
     And   must take me back to the edit section so that i can re-fill the fields
 
+  @ignore
   Scenario: Residue generator registration data edit fail
     Given I am at the residue generator registration data edit screen
     When  I fill some fields not correctly, leave them blank or fill them as such them produce an existing residue generator
