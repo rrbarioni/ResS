@@ -34,7 +34,7 @@ When(~'^i fill the name field with "([^"]*)" CNPJ field with "([^"]*)", address 
 
 }
 And(~'^i click the button create account'){
-    page.select("create account")
+    page.selectCreatePage()
 }
 Then(~'^the system stores the account with CNPJ "([^"]*)"  properly $'){String cnpj ->
     gestor = GestorCadastre.findByCNPJ(cnpj)
