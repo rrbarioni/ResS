@@ -31,5 +31,8 @@ class ResidueGenerator {
             return nameGenerator
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4cbf37f862ffada963d2383cbe38a3dee9df7cff
 }
