@@ -28,9 +28,9 @@ Given(~'^ i am at the gestor cadastre page  $'){
     to gestorCadastrePage
     at gestorCadastrePage
 
-}
-When(~'^i fill the name field with "([^"]*)" CNPJ field with "([^"]*)", address field with "([^"]*)", telephone field with "([^"]*)", \'email field with "([^"]*)" and home page field with "([^"]*)"$'){String name, String cnpj, String address, String telephone, String email, String homepage ->
-    page.fillGestorDetails.create("./test/functional/steps/" + name + cnpj + address + telephone + email + homepage)
+
+When(~'^i fill the name field with "([^"]*)" CNPJ field with "([^"]*)", address field with "([^"]*)", telephone field with "([^"]*)", \'email field with "([^"]*)" and website field with "([^"]*)"$'){String name, String cnpj, String address, String telephone, String email, String website ->
+    page.fillGestorDetails.create("./test/functional/steps/" + name + cnpj + address + telephone + email + website)
 
 }
 And(~'^i click the button create account'){
