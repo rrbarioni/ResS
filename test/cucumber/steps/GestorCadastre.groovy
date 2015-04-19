@@ -29,8 +29,8 @@ Given(~'^ i am at the gestor cadastre page  $'){
     at gestorCadastrePage
 
 
-When(~'^i fill the name field with "([^"]*)" CNPJ field with "([^"]*)", address field with "([^"]*)", telephone field with "([^"]*)", \'email field with "([^"]*)" and website field with "([^"]*)"$'){String name, String cnpj, String address, String telephone, String email, String website ->
-    page.fillGestorDetails.create("./test/functional/steps/" + name + cnpj + address + telephone + email + website)
+When(~'^i fill all the fields correctly$'){
+    page.fillGeneratorDetails()
 
 }
 And(~'^i click the button create account'){
