@@ -6,6 +6,5 @@ class GetPageTitle {
     String getMessage(String code) {
 
         messageSource.getMessage(code, null, "", RCU.getLocale(request));
-
     }
 }
