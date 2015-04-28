@@ -34,8 +34,8 @@ grails.project.dependency.resolution = {
 
         compile ('commons-codec:commons-codec:1.6')
         test("org.codehaus.geb:geb-junit4:0.7.0")
-        test("org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion")
-        test("org.seleniumhq.selenium:selenium-support:$seleniumVersion")
+        test("org.seleniumhq.selenium:selenium-chrome-driver:2.22.0")
+        test("org.seleniumhq.selenium:selenium-support:2.22.0")
 
     }
 
