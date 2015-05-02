@@ -15,6 +15,12 @@
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
+		<form name = "search"> // form do search
+			<div id ="filters" style="  margin-top: 20px; margin-left: 26px;">
+				<input type="text" id ="generatorName">
+				<input type="submit" name="search" value="Search" id="searchButton">
+ 			</div>
+		</form>
 		<div id="list-residueGenerator" class="content scaffold-list" role="main">
 			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">

@@ -33,6 +33,12 @@ class GeneratorTestDataAndOperations{
         }
     }
 
+    static public void findGeneratorByName(String name){
+        generators.find {generator ->
+            generator.nameGenerator == name
+        }
+    }
+
     static public void createGenerator(String address){
         def cont = new ResidueGeneratorController()
         def novoGenerator = findGeneratorByAddress(address)
@@ -40,6 +46,21 @@ class GeneratorTestDataAndOperations{
         cont.create()
         cont.save()
         cont.response.reset()
+    }
+
+    static public void createGeneratorName(String name){
+        def cont = new ResidueGeneratorController()
+        def novoGenerator = findGeneratorByName(name)
+        cont.params << novoGenerator
+        cont.create()
+        cont.save()
+        cont.response.reset()
+    }
+
+    static public void showGenerator(String name){
+        def cont = new ResidueGeneratorController()
+        def newGenerator = findGeneratorByName(name)
+        cont.show(newGenerator)
     }
 
     static public void editGenerator(String address, def residueGenerator){
