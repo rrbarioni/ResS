@@ -50,8 +50,8 @@ class GeneratorTestDataAndOperations{
 
     static public void createGeneratorName(String name){
         def cont = new ResidueGeneratorController()
-        def novoGenerator = findGeneratorByName(name)
-        cont.params << novoGenerator
+        def newGenerator = findGeneratorByName(name)
+        cont.params << newGenerator
         cont.create()
         cont.save()
         cont.response.reset()
