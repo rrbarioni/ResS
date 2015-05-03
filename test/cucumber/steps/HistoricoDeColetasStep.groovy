@@ -1,51 +1,44 @@
+package steps
 
-
-
-/**
- * Created by Túlio on 14/04/2015.
- */
+import cucumber.api.Format
+import pages.HistoricoPage
+import static cucumber.api.groovy.EN.*
+import HistoricoDeColeta.Coleta
 
 Given (~'^estou na pagina de adicionar coleta$'){ ->
-    to LoginPage
-    at LoginPage
-    page.fillLoginData("admin", "adminadmin")
-    at HomePage
-    page.select("Adicionar Coleta")
-    at AdicionarColetaPage
+    to HistoricoPage
+    at HistoricoPage
 }
 
-And (~'^nao foi adicionado historico de coleta do dia "([^"]*)"$'){Date dia ->
-    at AdicionarColetaPage
-    def  data = HistoricoDeColetas.findByDia(dia)
-    assert data == null
+And (~'^nao foi adicionada uma coleta do dia "([^"]*)" do restaurante "([^"]*)"$'){@Format("dd/MM/yyyy")Date dia, String rest ->
+    data = dia
+    restaurante = rest
+    def  coleta = Coleta.findByDataAndNome(dia,rest)
+    assert coleta == null
 }
 
-When (~'^preencho os campos necessarios com informaçoes validas e com a data "([^"]*)"$'){
-    coleta = HistoricoDeColetas
-    HistoricoTestDataAndOperations.fillValidInfo(data)
+When (~'^preencho os campos necessarios com informa�oes validas$'){
+    page.fillColetaInfo()
 }
 And (~'^clico em adicionar coleta do dia$'){ ->
-    Relatoriopage.selectAdicionarColeta()
+    page.selectAdicionarColeta()
 }
-Then (~'^é adicionada com sucesso$'){ ->
-    coleta = HistoricoDeColetas.findByDia(dia)
+Then (~'^eh adicionada com sucesso$'){ ->
+    coleta = Coleta.findByDataAndNome(data,restaurante)
     assert coleta != null
 }
-And (~'^sou direcionado para a homepage$'){ ->
-    to HomePage
-    at HomePage
-}
-
-Given(~'^nao foi criada um relatorio de coleta do dia "([^"]*)"$'){ Date dia ->
-    data = HistoricoDeColetas.findByDia(dia)
-    assert data == null
-}
-When (~'^crio um novo relatorio do dia "([^"]*)"$'){ Date dia ->
-    HistoricoTestDataAndOperations.CreateHistorico("nome",101,dia)
-}
-Then (~'^o relatorio do dia "([^"]*)" é adicionado ao historico de coletas$'){ Date dia ->
-    assert HistoricoDeColetas.findByDia(dia) != null
-}
 
 
 
+Given(~'^nao foi criada um relatorio de coleta do dia "([^"]*)" do restaurante "([^"]*)"$'){@Format("dd/MM/yyyy") Date dia, String restaurante ->
+    coleta = Coleta.findByDataAndNome(dia,restaurante)
+    assert coleta == null
+}
+When (~'^crio um novo relatorio o dia "([^"]*)" do restaurante "([^"]*)"$'){@Format("dd/MM/yyyy") Date dia, String rest ->
+    data = dia
+    restaurante = rest
+    HistoricoTestDataAndOperations.CreateHistorico(rest,dia)
+}
+Then (~'o relatorio � adicionado ao historico de coletas$'){ ->
+    assert Coleta.findByDataAndNome(data,restaurante) != null
+}

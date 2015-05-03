@@ -1,25 +1,31 @@
 package pages
 import geb.Page
+import steps.HistoricoTestDataAndOperations
 
-class RelatorioPage extends Page {
+
+class HistoricoPage extends Page {
+
+    def titulo = "Adicionar Coleta"
+    static url = "/ResS/HistoricoColeta/adicionar"
 
     static at = {
-        GetPageTitle gp = new GetPageTitle()
-        def gerador = gp.getMessage("default.generator.label")
-        def titulo = gp.getMessage("default.create.label") + " " + gerador
+
         title ==~ titulo
     }
 
-
     def selectAdicionarColeta() {
+
         $("input", name: "adicionar").click()
 
     }
 
-    def fillValidInfo(Date data){
-        $("form").name = "nome"
-        $("form").vol = 101
-        $("form").date = data
+    def fillColetaInfo(){
+        HistoricoTestDataAndOperations HTDO = new HistoricoTestDataAndOperations()
+        LinkedHashMap coleta = GTDO.getGenerator();
+
+        $("form").nome = coleta.nome
+        $("form").volume = coleta.volume
+        $("form").data = coleta.data
 
     }
 }
