@@ -16,3 +16,11 @@ When(~'^deleto o ponto aceitando a mensagem de confirmação'){ ->
 Then(~'^a deleção é confirmada'){ ->
     at PesquisaPages
 }
+
+Then(~'^O ponto continua no sistema'){ ->
+    at ResidueGeneratorEditPage
+}
+
+When(~'^Desisto de deletar um ponto recusando a mensagem de confirmação'){ ->
+    assert withConfirm(false) {$("input", name: "_action_delete").click() } == "Tem certeza?"
+}
