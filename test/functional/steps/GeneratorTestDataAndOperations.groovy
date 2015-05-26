@@ -21,6 +21,13 @@ class GeneratorTestDataAndOperations{
              averageMonthlyMeals: 0,
              averageDailyMeals: 0],
 
+            [nameGenerator:"China Dragon",
+             type: "Restaurante",
+             cnpj: "testecnpj3",
+             addressGenerator: "Donut Street number 5",
+             averageMonthlyMeals: 0,
+             averageDailyMeals: 0]
+
     ]
 
     static public def getGenerator(){
@@ -43,11 +50,14 @@ class GeneratorTestDataAndOperations{
     }
 
     static public void editGenerator(String address, def residueGenerator){
-        def cont = new ResidueGeneratorController()
-        cont.params << [name: "Clovis Palace"] << [type: "Restaurante"] << [cnpj:"testecnpj2" ] << [addressGenerator:address ] << [averageMonthlyMeals: 0] << [averageDailyMeals:0] << [id: residueGenerator.getId()]
-        cont.edit()
-        cont.save()
-        cont.response.reset()
+        def existingGenerator = findGeneratorByAddress(address)
+        if(address != null && existingGenerator == null) {
+            def cont = new ResidueGeneratorController()
+            cont.params << [name: "Clovis Palace"] << [type: "Restaurante"] << [cnpj: "testecnpj2"] << [addressGenerator: address] << [averageMonthlyMeals: 0] << [averageDailyMeals: 0] << [id: residueGenerator.getId()]
+            cont.edit()
+            cont.save()
+            cont.response.reset()
+        }
     }
 
 }
