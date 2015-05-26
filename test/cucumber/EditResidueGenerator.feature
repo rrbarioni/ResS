@@ -11,7 +11,7 @@ Feature: Edit the residue generator registration data
     Then the system should store the residue generator with the new address in the data base
   #end
 
-  #if ($Residue generator registration data edit success web page)
+  #if($Residue generator registration data edit success web page)
 
   Scenario: Residue generator registration data edit success web page
     Given I am at the residue generator edit page
@@ -21,26 +21,23 @@ Feature: Edit the residue generator registration data
     Then  I should see a message indicating that the changes are properly stored
   #end
 
-  @ignore
-  Scenario: Some of the registration data fields are not filled correctly or are blank
-    Given I am at the registration data edit section
-    When  I fill some of the registration data fields with invalid information or just not fill them
-    And   I confirm my changes
-    Then  the system warns me about the blank or the invalid fields
+  Scenario: Some of the required registration data fields are blank
+    Given the system has a residue generator with the address "Bubble Street number 4"
+    When  I do not fill the address field
+    And   confirm my changes
+    Then  the system should not store the changes
 
-  @ignore
+
   Scenario: The registration data changes results in an existing residue generator
-    Given I already filled all the registration data fields correctly
-    And   submitted the changes by confirming them
-    When  the system runs the duplicity check algorithm
-    And   verifies that a residue generator with this registration data already exists
-    Then  the system should warn me about it
-    And   must take me back to the edit section so that i can re-fill the fields
+    Given the system has a residue generator with the address "Donut Street number 5"
+    When I change it address to "Bubble Street number 4"
+    Then the system should not store the changes
 
-  @ignore
+
   Scenario: Residue generator registration data edit fail
-    Given I am at the residue generator registration data edit screen
-    When  I fill some fields not correctly, leave them blank or fill them as such them produce an existing residue generator
-    And   click the submit button
-    Then  the system should not change screens
-    And   must display a visual warning about the correspondent error of my edit process
+    Given I am at the residue generator edit page
+    When I fill the address field with ""
+    And fill all the required fields correctly
+    And submit my changes
+    Then I should see a message indicating that an error occurred
+
