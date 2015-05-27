@@ -1,6 +1,6 @@
 package steps
 
-import HistoricoDeColeta.*
+import HistoricoDeColeta.ColetaController
 import cucumber.api.Format
 
 class HistoricoTestDataAndOperations {
@@ -14,13 +14,13 @@ class HistoricoTestDataAndOperations {
     ]
 
     static public def getColeta(){
-        return findColetaByNomeData("RU","08/04/2015" )
+        return findColetaByNomeData("RU",("08/04/2015") )
     }
 
     static public def findColetaByNomeData(String rest,@Format("dd/MM/yyyy") Date date ) {
         coletas.find { coleta ->
             coleta.nome == rest
-            coleta.data == date
+            coleta.data = date
         }
     }
 
@@ -34,21 +34,4 @@ class HistoricoTestDataAndOperations {
         cont.save()
         cont.response.reset()
     }
-
-    static public void editColeta(int volume,Coleta coleta){
-        def colet = coleta
-        colet.setVolume(volume)
-        def cont =  new ColetaController()
-        cont.params << colet.properties
-        cont.update()
-    }
-
-    static public void deleteColeta(Coleta coleta){
-        def cont = new ColetaController()
-        cont.params << [id: coleta.id]
-        cont.request.setContent(new byte[1000])
-        cont.delete()
-        cont.response.reset()
-    }
-
 }
