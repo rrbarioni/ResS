@@ -44,4 +44,14 @@ class HistoricoTestDataAndOperations {
     }
 
 
+
+    static public void deleteColeta(Coleta coleta){
+        def cont = new ColetaController()
+        cont.params << [id: coleta.id]
+        cont.request.setContent(new byte[1000])
+        cont.delete()
+        cont.response.reset()
+    }
+
+
 }

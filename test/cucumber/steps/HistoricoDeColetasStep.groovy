@@ -57,4 +57,17 @@ Then (~'o valor do volume eh atualizado$') { ->
     assert c.getVolume() == volume
 }
 
+Given  (~'^existe uma coleta do dia "([^"]*)" do restaurante "([^"]*)"$'){@Format("dd/MM/yyyy") Date dia, String restaurante ->
+    coleta = Coleta.findByDataAndNome(dia,restaurante)
+    assert coleta != null
+}
+When  (~'^seleciono remover esta coleta$'){ ->
+    HistoricoTestDataAndOperations.deleteColeta(coleta)
+}
+Then  (~'^nao existem mais coleta dia "([^"]*)" do restaurante "([^"]*)"$'){@Format("dd/MM/yyyy") Date dia, String restaurante ->
+    coleta = Coleta.findByDataAndNome(dia,restaurante)
+    assert coleta == null
+}
+
+
 
