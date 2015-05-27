@@ -1,6 +1,7 @@
 package steps
 
 import cucumber.api.Format
+import pages.ColetaEditPage
 import pages.HistoricoPage
 import static cucumber.api.groovy.EN.*
 import HistoricoDeColeta.Coleta
@@ -10,7 +11,6 @@ Given (~'^estou na pagina de adicionar coleta$'){ ->
     to HistoricoPage
     at HistoricoPage
 }
-
 When (~'^preencho os campos necessarios com informaçoes validas$'){ ->
     page.fillColetaInfo()
 }
@@ -19,10 +19,6 @@ And (~'^clico em adicionar coleta do dia$'){ ->
 }
 Then (~'^eh adicionada com sucesso$'){ ->
 }
-
-
-
-
 
 
 Given(~'^nao foi criada um relatorio de coleta do dia "([^"]*)" do restaurante "([^"]*)"$'){@Format("dd/MM/yyyy") Date dia, String restaurante ->
@@ -39,15 +35,12 @@ Then (~'o relatorio eh adicionado ao historico de coletas$'){ ->
 }
 
 
-
-
 Given (~'^ja foi criado o relatorio de coleta do dia "([^"]*)" do restaurante "([^"]*)"$'){@Format("dd/MM/yyyy") Date dia, String restaurante ->
    dat = dia
     rest = restaurante
     c = Coleta.findByDataAndNome(dia,restaurante)
     assert c != null
 }
-
 When (~'altero o valor do volume da coleta para "([^\"]*)"$') { int vol ->
     volume = vol
     HistoricoTestDataAndOperations.editColeta(volume, c)
@@ -56,6 +49,7 @@ Then (~'o valor do volume eh atualizado$') { ->
     c = Coleta.findByDataAndNome(dat,rest)
     assert c.getVolume() == volume
 }
+
 
 Given  (~'^existe uma coleta do dia "([^"]*)" do restaurante "([^"]*)"$'){@Format("dd/MM/yyyy") Date dia, String restaurante ->
     coleta = Coleta.findByDataAndNome(dia,restaurante)
@@ -70,4 +64,21 @@ Then  (~'^nao existem mais coleta dia "([^"]*)" do restaurante "([^"]*)"$'){@For
 }
 
 
+Given(~'^estou na pagina de editar coleta$'){ ->
+    to HistoricoPage
+    page.selectAdicionarColeta()
+    to ColetaEditPage
+    at ColetaEditPage
+}
+When(~'^coloco o novo volume "([^"]*)" a ser adicionado$'){int vol ->
+    page.fillVolume(vol)
+}
+And(~'^coloco os outros dados corretamente$'){ ->
+    page.fillOtherFields()
+}
+And(~'^e envio as mudancas'){ ->
+    page.submitChanges()
+}
+Then (~'^o volume eh alterado com sucesso$'){ ->
+}
 

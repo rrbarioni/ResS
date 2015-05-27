@@ -3,7 +3,6 @@ Feature: Gerar historico de coleta
   I want to gerar um historico de coletas
   So that eu posso saber o desempenho da minha empresa.
 
-
   Scenario Adicionar coleta do dia no sistema
     Given estou na pagina de adicionar coleta
     When preencho os campos necessarios com informaçoes validas
@@ -41,7 +40,7 @@ Feature: Gerar historico de coleta
     When crio um novo relatorio o dia "08/04/2015" do restaurante "RU"
     Then o relatorio eh adicionado ao historico de coletas
 
-  Scenario: Atualizar relatorio de coleta do dia
+  Scenario: Editar de coleta do dia
     Given ja foi criado o relatorio de coleta do dia "08/04/2015" do restaurante "RU"
     When altero o valor do volume da coleta para "10"
     Then o valor do volume eh atualizado
@@ -50,3 +49,13 @@ Feature: Gerar historico de coleta
     Given existe uma coleta do dia "08/04/2015" do restaurante "RU"
     When seleciono remover esta coleta
     Then nao existem mais coleta dia "08/04/2015" do restaurante "RU"
+
+
+
+  Scenario: Editar Coleta GUI
+    Given estou na pagina de editar coleta
+    When coloco o novo volume "10" a ser adicionado
+    And coloco os outros dados corretamente
+    And e envio as mudancas
+    Then o volume eh alterado com sucesso
+
