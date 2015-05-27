@@ -6,42 +6,47 @@ Feature: Gerar historico de coleta
 
   Scenario Adicionar coleta do dia no sistema
     Given estou na pagina de adicionar coleta
-    And nao foi adicionada uma coleta do dia "08/04/2015" do restaurante "RU"
     When preencho os campos necessarios com informaçoes validas
     And clico em adicionar coleta do dia
     Then eh adicionada com sucesso
 
-
+  //falta teste
   @ignore
   Scenario Adicionar a pagina de historico de coletas como um cliente
-    Given eu estou logado no sistema como cliente
+    Given eu estou logado no sistema como cliente "RU"
     And estou na pagina Home
-    When clico no botao gerar historico de coleta
-    Then eh aberta a pagina do meu historico de coletas
+    When clico no botao "historico de coleta"
+    Then apenas coletas do "RU" estara na lista
 
+  //falta teste
   @ignore
   Scenario Acessar o historico de coletas do dia como administrador
     Given eu estou logado no sistema como administrador
-    When estou na pagina de historico de coletas
-    And clico no botao gerar historico do dia
-    Then eh aberto o historico deste dia
+    And estou na pagina de historico de coletas
+    When clico no botao "filtrar" e escolho a opcao "dia"
+    And escolho o dia "08/04/2015"
+    Then apenas coletas do dia "08/04/2015" estara na lista
 
+  //falta teste
   @ignore
   Scenario Acessar o historico de coletas geral como administrador
     Given eu estou logado no sistema como administrador
-    When estou na pagina de historico de coletas
-    And clico no botao gerar historico geral
-    Then eh aberto o historico geral
+    And estou na pagina Home
+    When clico no botao "historico de coleta"
+    Then aparecera todas as coletas ja realizadas no sistema
+
 
   Scenario: Documentar coleta
     Given nao foi criada um relatorio de coleta do dia "08/04/2015" do restaurante "RU"
     When crio um novo relatorio o dia "08/04/2015" do restaurante "RU"
     Then o relatorio eh adicionado ao historico de coletas
-  @ignore
+
   Scenario: Atualizar relatorio de coleta do dia
-    Given ja foi criado o relatorio de coleta do dia
-    When seleciono o relatorio do dia
-    And atualizo ele
-    Then o relatorio sera salvo no historico de coletas
+    Given ja foi criado o relatorio de coleta do dia "08/04/2015" do restaurante "RU"
+    When altero o valor do volume da coleta para "10"
+    Then o valor do volume eh atualizado
 
-
+  Scenario: Apagar coleta
+    Given existe uma coleta do dia "08/04/2015" do restaurante "RU"
+    When seleciono remover esta coleta
+    Then nao existem mais coleta dia "08/04/2015" do restaurante "RU"
