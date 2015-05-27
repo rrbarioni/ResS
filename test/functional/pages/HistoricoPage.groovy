@@ -1,31 +1,31 @@
 package pages
 import geb.Page
-import steps.HistoricoTestDataAndOperations
 
 
-class HistoricoPage extends Page {
+class HistoricoPage extends Page{
 
-    def titulo = "Adicionar Coleta"
-    static url = "/ResS/HistoricoColeta/adicionar"
+    def titulo = "Create Coleta"
+    static url = "/ResS/coleta/create"
 
     static at = {
 
         title ==~ titulo
     }
 
-    def selectAdicionarColeta() {
-
-        $("input", name: "adicionar").click()
-
-    }
-
     def fillColetaInfo(){
-        HistoricoTestDataAndOperations HTDO = new HistoricoTestDataAndOperations()
-        LinkedHashMap coleta = GTDO.getGenerator();
+        $("form").nome = "RU"
+        $("form").data_day = "8"
+        $("form").data_month = "4"
+        $("form").data_year = "2015"
+        $("form").volume = 101
 
-        $("form").nome = coleta.nome
-        $("form").volume = coleta.volume
-        $("form").data = coleta.data
+       // assert $("form").data_day == "8" && $("form").data_month == "4" && $("form").data_year == "2015"
 
     }
+
+    def selectAdicionarColeta(){
+        $("input", name: "create").click()
+    }
+
 }
+

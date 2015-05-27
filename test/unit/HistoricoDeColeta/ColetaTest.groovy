@@ -1,7 +1,5 @@
 package HistoricoDeColeta
 
-
-
 import grails.test.mixin.*
 import org.junit.*
 
