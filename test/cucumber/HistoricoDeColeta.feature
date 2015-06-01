@@ -1,9 +1,9 @@
 Feature: Gerar historico de coleta
   As a membro da empresa de coleta
   I want to gerar um historico de coletas
-  So that eu posso saber o desempenho da minha empresa.
+  So that eu posso saber o desempenho da minha empresa
 
-  Scenario Adicionar coleta do dia no sistema
+  Scenario: Adicionar coleta do dia no sistema
     Given estou na pagina de adicionar coleta
     When preencho os campos necessarios com informaçoes validas
     And clico em adicionar coleta do dia
@@ -11,7 +11,7 @@ Feature: Gerar historico de coleta
 
   //falta teste
   @ignore
-  Scenario Adicionar a pagina de historico de coletas como um cliente
+  Scenario: Adicionar a pagina de historico de coletas como um cliente
     Given eu estou logado no sistema como cliente "RU"
     And estou na pagina Home
     When clico no botao "historico de coleta"
@@ -19,7 +19,7 @@ Feature: Gerar historico de coleta
 
   //falta teste
   @ignore
-  Scenario Acessar o historico de coletas do dia como administrador
+  Scenario: Acessar o historico de coletas do dia como administrador
     Given eu estou logado no sistema como administrador
     And estou na pagina de historico de coletas
     When clico no botao "filtrar" e escolho a opcao "dia"
@@ -28,12 +28,11 @@ Feature: Gerar historico de coleta
 
   //falta teste
   @ignore
-  Scenario Acessar o historico de coletas geral como administrador
+  Scenario: Acessar o historico de coletas geral como administrador
     Given eu estou logado no sistema como administrador
     And estou na pagina Home
     When clico no botao "historico de coleta"
     Then aparecera todas as coletas ja realizadas no sistema
-
 
   Scenario: Documentar coleta
     Given nao foi criada um relatorio de coleta do dia "08/04/2015" do restaurante "RU"
