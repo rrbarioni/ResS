@@ -13,15 +13,14 @@ class ResidueGenerator {
 
     static constraints = {
 
-        nameGenerator blank: true // no caso de ser ecoponto pode não ter nome
-        type inList: ["Restaurante","Cantina","Ecoponto"]
+        nameGenerator nullable:true,blank:true // no caso de ser ecoponto pode não ter nome
+        type inList: ["Restaurante","Cantina","Ecoponto"], nullable:false, blank:false
 
+        addressGenerator blank: false, nullable: false, maxSize: 40, unique: true
+        averageDailyMeals  nullable: false, min: 0,blank:false
+        averageMonthlyMeals  nullable: false, min: 0,blank:false
 
-        addressGenerator blank: false, nullable: false, maxSize: 40
-        averageDailyMeals  nullable: true, min: 0
-        averageMonthlyMeals  nullable: true, min: 0
-
-        cnpj blank:true
+        cnpj blank:false, nullable:false
 
     }
     String toString(){

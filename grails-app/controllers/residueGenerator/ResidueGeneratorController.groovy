@@ -16,8 +16,7 @@ class ResidueGeneratorController {
     }
 
     def create() {
-        def residueGenerator = new ResidueGenerator(params)
-        [residueGeneratorInstance: residueGenerator]
+        [residueGeneratorInstance: new ResidueGenerator(params)]
     }
 
     def save() {

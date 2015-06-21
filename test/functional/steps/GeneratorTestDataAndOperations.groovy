@@ -27,7 +27,6 @@ class GeneratorTestDataAndOperations{
              addressGenerator: "Donut Street number 5",
              averageMonthlyMeals: 0,
              averageDailyMeals: 0]
-
     ]
 
     static public def getGenerator(){
@@ -58,6 +57,39 @@ class GeneratorTestDataAndOperations{
             cont.save()
             cont.response.reset()
         }
+    }
+
+    static public getAltGenerator(String address){
+        def novoGenerator =  [nameGenerator: "Alt",
+                              type: "Restaurante",
+                              cnpj: "testecnpj1",
+                              addressGenerator: address,
+                              averageMonthlyMeals: 0,
+                              averageDailyMeals: 0];
+        return novoGenerator;
+    }
+
+    static public void createAltGenerator(String address){
+        def cont = new ResidueGeneratorController()
+        def novoGenerator = getAltGenerator(address)
+        cont.params << novoGenerator
+        cont.create()
+        cont.save()
+        cont.response.reset()
+
+    }
+
+    static public void createIncompleteGenerator(String address){
+        def cont = new ResidueGeneratorController()
+        cont.params << [nameGenerator: "",
+                        type: "Restaurante",
+                        cnpj: null,
+                        addressGenerator: address,
+                        averageMonthlyMeals: null,
+                        averageDailyMeals: 0];
+        cont.create()
+        cont.save()
+        cont.response.reset()
     }
 
 }
