@@ -30,6 +30,17 @@ class ResidueGeneratorEditPage extends Page{
         $("input", name: "edit").click()
     }
 
+    def boolean hasInvalidMessage(){
+
+        def invalidField = $('input:invalid')
+
+        if(invalidField != null){
+            return true
+        } else {
+            return false
+        }
+    }
+
 
 
 }

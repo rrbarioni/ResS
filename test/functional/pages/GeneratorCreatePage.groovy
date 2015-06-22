@@ -3,7 +3,7 @@ import geb.Page
 
 class GeneratorCreatePage extends Page{
 
-    def titulo = "Criar ResidueGenerator"
+    def titulo = "Create ResidueGenerator"
     static url = "/ResS/residueGenerator/create"
 
     static at = {
