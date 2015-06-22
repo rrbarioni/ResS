@@ -1,9 +1,9 @@
 package residueGenerator
 
-class GeneratorHarvestSolicitacion {
+class HarvestSolicitation {
 
     String harvester;
-    int harversterId;
+    int harvesterId;
     int generatorId;
     String status;
     int estimatedAmountOfResidue;
@@ -11,7 +11,7 @@ class GeneratorHarvestSolicitacion {
 
     static constraints = {
         harvester nullable: false,blank: false
-        harversterId nullable:false,blank:false,unique:true
+        harvesterId nullable:false,blank:false,unique:true
         generatorId nullable:false,blank:false,unique:true
         status nullable:false,blank:false
         solicitationDate nullable:false,blank:false
