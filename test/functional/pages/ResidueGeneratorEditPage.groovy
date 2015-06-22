@@ -5,7 +5,7 @@ import steps.GeneratorTestDataAndOperations
 
 class ResidueGeneratorEditPage extends Page{
 
-    def titulo = "Edit ResidueGenerator"
+    def titulo = "Editar ResidueGenerator"
     static url = "/ResS/residueGenerator/edit/1"
 
     static at = {
