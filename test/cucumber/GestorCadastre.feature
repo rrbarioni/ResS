@@ -11,42 +11,36 @@ Feature: Gestor cadastre
     When i try to create an account with CNPJ "77.274.871/0001-28"
     Then the account is stored properly in the system
 
+  Scenario: gestor cadastre without website
 
-  @ignore
-  Scenario: gestor cadastre with CNPJ already in use
+    Given the system has got no cadastre with CNPJ "58391029"
+    When i try to create an account with CNPJ"58391029" without a website
+    Then the account is properly stored in the system
 
-    Given the system has a cadastre with CNPJ "77.274.871/0001-28"
-    When i create the account with CNPJ "77.274.871/0001-28"
-    Then the account is not stored in the system
-
-  @ignore
   Scenario: gestor cadastre with Phone number field not containing only numbers
 
-    Given that i want to cadastre a new gestor
-    When i create an account with Phone number field "fa22-gja2"
-    Then the account is not stored in the system
-
-
-
+    Given i want to cadastre a new gestor with CNPJ "59182195"
+    When i try to create an account with Phone number field "fa22-gja2"
+    Then the account with phone number "fa22-gja2" is not stored in the system
 
 
   Scenario: gestor cadastre web
 
     Given i am at the gestor cadastre page
     When i fill all the registration data fields correctly
-    And i click the button "create my account"
-    Then the system stores the account properly
+    And  try to create my account
+    Then i should see a message confirming the creation
 
-    @ignore
-  Scenario: gestor cadastre with CNPJ already in use web
 
-    Given that i am at the gestor cadastre page
-    And the system has a cadastre with CNPJ "77.274.871/0001-28"
-    When i fill the CNPJ field with "77.274.871/0001-28"
-    And i click the button "Create my account"
-    Then the system doesn't store the account
+  Scenario: gestor cadastre without website web
 
-      @ignore
+    Given i am at the gestor cadastre page
+    And the system has no cadastre with CNPJ "77.274.871/0001-28"
+    When i fill all the registration data fields except for the website
+    And  try to create my account
+    Then i should see a message confirming the creation
+
+
   Scenario: gestor cadastre with phone number field not containing only numbers
 
     Given i am at the gestor cadastre page
