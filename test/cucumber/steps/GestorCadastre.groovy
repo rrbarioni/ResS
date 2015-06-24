@@ -20,6 +20,20 @@ Then(~'^the account is stored properly in the system$') { ->
     assert GestorTestDataAndOperations.findGestorByCnpj(cnpj) != null
 }
 
+//Gestor cadastre without website
+Given(~'^the system has got no cadastre with CNPJ "([^"]*)"$') { String cnpj ->
+    gestor = GestorGenerator.findByCNPJ(cnpj)
+    assert gestor == null
+}
+
+When(~'^i try to create an account with CNPJ"([^"]*)" without a website$'){ String cnpj ->
+    GestorTestDataAndOperations.createGestor(cnpj)
+    CNPJ = cnpj
+}
+
+Then(~'^the account is properly stored in the system$') { ->
+    assert GestorTestDataAndOperations.findGestorByCnpj(cnpj) != null
+}
 
 //Gestor cadastre with Phone number field not containing only numbers
 Given(~'^i want to cadastre a new gestor with CNPJ "([^"]*)"$') {String CNPj  ->
