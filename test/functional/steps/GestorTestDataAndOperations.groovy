@@ -11,16 +11,16 @@ class GestorTestDataAndOperations{
             [nomeDaEmpresa:"RU",
              cNPJ:"77.274.871/0001-28",
              endereco: "Bubble Street number 7",
-             telefone:"3452-4412",
+             telefone:"34524412",
              email:"jose@hotmail.com",
-            homePage:"supimpa.com.br"],
+             homePage:"supimpa.com.br"],
 
             [nomeDaEmpresa:"ADUFEPE",
-             cNPJ:"29195195",
+             cNPJ:"58391029",
              endereco:"Bubble Street number 4",
-             telefone:"2224-1415",
+             telefone:"22241415",
              email:"maria@hotmail.com",
-             homePage:"naosalvo.com.br"],
+             homePage:""],
 
 
     ]
@@ -35,6 +35,12 @@ class GestorTestDataAndOperations{
         }
     }
 
+    static public def findGestorByPhone(String phone){
+        gestors.find{ gestor ->
+            gestor.telefone == phone
+        }
+    }
+
     static public void createGestor(String cnpj){
         def cont = new GestorGeneratorController()
         def novoGestor = findGestorByCnpj(cnpj)
@@ -43,5 +49,6 @@ class GestorTestDataAndOperations{
         cont.save()
         cont.response.reset()
     }
+
 
 }
