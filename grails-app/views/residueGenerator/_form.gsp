@@ -10,12 +10,12 @@
 	<g:textField name="nameGenerator" value="${residueGeneratorInstance?.nameGenerator}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: residueGeneratorInstance, field: 'type', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: residueGeneratorInstance, field: 'type', 'error')} required">
 	<label for="type">
 		<g:message code="residueGenerator.type.label" default="Type" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:select name="type" from="${residueGeneratorInstance.constraints.type.inList}" value="${residueGeneratorInstance?.type}" valueMessagePrefix="residueGenerator.type" noSelection="['': '']"/>
+	<g:select name="type" from="${residueGeneratorInstance.constraints.type.inList}" required="" value="${residueGeneratorInstance?.type}" valueMessagePrefix="residueGenerator.type"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: residueGeneratorInstance, field: 'addressGenerator', 'error')} required">
@@ -42,11 +42,11 @@
 	<g:field name="averageMonthlyMeals" type="number" min="0" value="${residueGeneratorInstance.averageMonthlyMeals}" required=""/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: residueGeneratorInstance, field: 'cnpj', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: residueGeneratorInstance, field: 'cnpj', 'error')} required">
 	<label for="cnpj">
 		<g:message code="residueGenerator.cnpj.label" default="Cnpj" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="cnpj" value="${residueGeneratorInstance?.cnpj}"/>
+	<g:textField name="cnpj" required="" value="${residueGeneratorInstance?.cnpj}"/>
 </div>
 
