@@ -5,11 +5,80 @@
 	<title>ResS</title>
 	<style type="text/css" media="screen">
 
+	#forkongithub a{
+		background:#ff6680;
+		color:#fff;
+		text-decoration:none;
+		font-family:arial,sans-serif;
+		text-align:center;
+		font-weight:bold;
+		padding:5px 40px;
+		font-size:1rem;
+		line-height:2rem;
+		position:relative;
+		transition:0.5s;
+	}
+
+	#forkongithub a:hover{
+		background:#ffe666;
+		color:#fff;
+	}
+
+	#forkongithub a::before,#forkongithub a::after{
+		content:"";
+		width:100%;
+		display:block;
+		position:absolute;
+		top:1px;
+		left:0;
+		height:1px;
+		background:#fff;
+	}
+
+	#forkongithub a::after{
+		bottom:1px;
+		top:auto;
+	}
+
+	@media screen and (min-width:800px){
+
+		#forkongithub{
+			position:absolute;
+			display:block;
+			top:0;
+			right:0;
+			width:200px;
+			overflow:hidden;
+			height:200px;
+			z-index:9999;
+		}
+
+		#forkongithub a{
+			width:200px;
+			position:absolute;
+			top:60px;
+			right:-60px;
+			transform:rotate(45deg);
+			-webkit-transform:rotate(45deg);
+			-ms-transform:rotate(45deg);
+			-moz-transform:rotate(45deg);
+			-o-transform:rotate(45deg);
+			box-shadow:4px 4px 10px rgba(0,0,0,0.8);
+		}
+	}
 	.container{
 		width: 100%;
 		text-align: center;
 		height: 100%;
-		margin-top: 1em;
+	}
+
+	.areaContainer{
+		min-height: 11em;
+		border-style: groove;
+		border-width: thin;
+		overflow: auto;
+		border-left-style: none;
+		border-right-style: none;
 	}
 
 	.area span {
@@ -72,7 +141,7 @@
 		}
 	}
 	</style>
-	<style>#forkongithub a{background:#ff6680;color:#fff;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#ffe666;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:absolute;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#forkongithub a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}</style><span id="forkongithub"><a href="https://github.com/pauloborba/ResS">Fork me on GitHub</a></span>
+
 </head>
 <body>
 
@@ -102,14 +171,18 @@
 	});
 </script>
 
+<span id="forkongithub">
+	<a href="https://github.com/pauloborba/ResS" id="forkongithublink">Fork me on GitHub</a>
+</span>
+
 <div style="min-height: 100%;">
 
 	<div class="container">
-		<img src="${resource(dir: 'images', file: 'ChemicalLab.png')}" alt="ChemicalLab" style="width:98%; border-radius: 5px"/>
+		<img src="${resource(dir: 'images', file: 'ChemicalLab.png')}" alt="ChemicalLab" style="width:100%"/>
 		<h1 style="font-size:1.5em">Available Areas:</h1>
 	</div>
 
-	<div style="min-height: 11em">
+	<div class="areaContainer">
 		<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 			<g:if test="${c.name != 'Dbdoc'}">
 				<g:link controller="${c.logicalPropertyName}">
