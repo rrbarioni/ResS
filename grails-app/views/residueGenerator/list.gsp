@@ -58,7 +58,7 @@
 				</g:each>
 				</tbody>
 			</table>
-			<div class="pagination">
+
 			<div class="pagination">
 				<g:paginate total="${residueGeneratorInstanceTotal}" />
 			</div>
