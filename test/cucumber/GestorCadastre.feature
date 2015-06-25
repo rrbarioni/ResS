@@ -40,10 +40,9 @@ Feature: Gestor cadastre
     And  try to create my account
     Then i should see a message confirming the creation
 
-
-  Scenario: gestor cadastre with phone number field not containing only numbers
+  Scenario: gestor cadastre with phone number field not containing only numbers web
 
     Given i am at the gestor cadastre page
     When i fill the "phone number" field with "fa22-gja2"
-    And i click the button "Create my account"
+    And i try to create my account
     Then the system doesn't store the account
