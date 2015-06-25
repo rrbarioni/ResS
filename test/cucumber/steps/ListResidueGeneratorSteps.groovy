@@ -13,14 +13,24 @@ Given(~'^the system has a Residue Generator at "([^"]*)" in it$'){String address
     assert generator != null
 }
 
+When(~'^the system list all existing Residue Generators$'){->
+    def allResidue = ResidueGenerator.list()
+}
+
+Then(~'^the system list contains "([^"]*)"$'){String address->
+    def allResidue = ResidueGenerator.list()
+    def foundResidue = ResidueGenerator.findByAddressGenerator(address)
+    allResidue.find{foundResidue}
+}
+
 When(~'^I create a list with all Residue Generators$'){->
-    residueGen = ResidueGenerator.findAll()
-    assert residueGen != null
+    def allResidue = ResidueGenerator.list()
 }
 
 Then(~'^a list of results containing a Residue Generator at "([^"]*)" appears$'){String address ->
-    residueGen = ResidueGenerator.findAll()
-    assert GeneratorTestDataAndOperations.containResidueGenerator(address,residueGen)
+    def residueGen = ResidueGenerator.list()
+    def wantedResGen = GeneratorTestDataAndOperations.findGeneratorByAddress(address)
+    assert residueGen.contains(wantedResGen)
 }
 
 Given(~'^the system has a Residue Generator at "([^"]*)" with average daily meal of "([^"]*)"$'){String address, int avgDaily ->
@@ -34,7 +44,7 @@ When(~'^I sort the list content by average daily meals$'){->
     assert GeneratorTestDataAndOperations.isSorted(residueGeneratorSorted);
 }
 
-Then(~'^a list of results sorted by daily meals containing a Residue Generator with address "([^"]*)" appears before "([^"]*)"$') { String before, String after ->
+Then(~'^the order of the system list have been modified to have address "([^"]*)" before "([^"]*)"$') { String before, String after ->
     residueGeneratorSorted = ResidueGenerator.listOrderByAverageDailyMeals(order: "desc");
     generatorFirst = ResidueGenerator.findByAddressGenerator(before);
     generatorLatter = ResidueGenerator.findByAddressGenerator(after);
@@ -48,7 +58,7 @@ Given(~'^I am at the Residue Generator Show page$'){ ->
     at ResidueGeneratorShowPage
 }
 
-When(~'^I click on the List Residue Generators button$'){->
+When(~'^I go to the List Residue Generators page$'){->
     page.selectListResidueGenerators()
 }
 
@@ -62,12 +72,12 @@ Given(~'^I am at the Residue Generators List page$'){->
     at ResidueGeneratorListPage
 }
 
-When(~'^I click on the Sort by Average Daily Meal button$'){ ->
+When(~'^I sort by Average Daily Meal$'){ ->
     page.selectSortByAverageDailyMeal()
 }
 
-Then(~'^a list with Residue Generators sorted by average daily meal appears$'){ ->
-    //TODO
+Then(~'^the displayed list is sorted by Average Daily Meal$'){ ->
+
 }
 
 Given(~'^there are no Residue Generator in the system$') { ->

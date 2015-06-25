@@ -21,11 +21,11 @@ Feature: register a residue collector
 
   Scenario: entering on the collector creation page
     Given I am at the collector list page
-    When I click on the new collector button
+    When I go to the new collector page
     Then I am at the collector creation page
 
   Scenario: creating a collector through UI
     Given I am at the collector creation page
     When I insert all informations correctly
-    And I click on the create button
+    And I create a new collector
     Then a new collector is created

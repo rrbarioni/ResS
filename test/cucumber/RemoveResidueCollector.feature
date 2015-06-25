@@ -11,8 +11,8 @@ Feature: remove a residue collector
   Scenario: remove a collector GUI
     Given I am at the collector list page
     And a collector with CNPJ "53.406.847/0001-37" exists in the system
-    When I click on collector with CNPJ "53.406.847/0001-37" instance
-    And I click on delete button
+    When I select the collector with CNPJ "53.406.847/0001-37"
+    And I delete the collector
     Then I am at the collector list page
     And a collector with CNPJ "53.406.847/0001-37" does not appear on the list
 

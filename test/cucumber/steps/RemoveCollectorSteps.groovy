@@ -16,11 +16,11 @@ Then(~'^a collector with CNPJ "([^"]*)" no longer exists in the system$'){String
     assert ResidueCollector.findByCnpj(p) == null
 }
 
-When(~'^I click on collector with CNPJ "([^"]*)" instance$'){ String p ->
+When(~'^I select the collector with CNPJ "([^"]*)"$'){ String p ->
     page.selectResidueCollectorByCNPJ(p)
 }
 
-When(~'^I click on delete button$'){->
+When(~'^I delete the collector$'){->
     page.selectDeleteResidueCollector()
 }
 

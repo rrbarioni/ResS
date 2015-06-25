@@ -38,7 +38,7 @@ Given(~'^I am at the collector list page$'){ ->
     at ResidueCollectorListPage
 }
 
-When(~'^I click on the new collector button$'){->
+When(~'^I go to the new collector page$'){->
     page.selectNewCollector()
 }
 
@@ -51,7 +51,7 @@ When(~'^I insert all informations correctly$'){->
     page.insertCollectorInfo()
 }
 
-When(~'^I click on the create button$'){->
+When(~'^I create a new collector$'){->
     page.selectCreateCollector()
 }
 
