@@ -53,6 +53,16 @@ class HistoricoTestDataAndOperations {
 
     }
 
+    static public void editDataColeta(@Format("dd/MM/yyyy") Date novaData,Coleta coleta){
+        def colet = coleta
+        colet.setDate(novaData)
+        def cont =  new ColetaController()
+        cont.params << colet.properties
+        cont.update()
+
+
+    }
+
     static public void deleteColeta(Coleta coleta){
         def cont = new ColetaController()
         cont.params << [id: coleta.id]

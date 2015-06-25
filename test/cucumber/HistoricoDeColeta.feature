@@ -8,6 +8,12 @@ Feature: Gerar historico de coleta
     When tento criar uma nova coleta com nome "RU" e data "08/05/2015"
     Then nao eh criada a nova coleta
 
+  Scenario: editar data de restaurante da coleta com nome e data ja existente
+    Given ja existe uma coleta com nome "RU" e data "08/05/2015"
+    And  existe outra coleta com nome "RU" e data "07/11/2015"
+    When tento editar a data "07/11/2015" para "08/05/2015"
+    Then a edicao nao sera realizada
+
   Scenario: Adicionar coleta do dia no sistema
     Given estou na pagina de adicionar coleta
     When preencho os campos necessarios com informaçoes validas
@@ -64,3 +70,4 @@ Feature: Gerar historico de coleta
      And  existe outra coleta com nome "cantina" e data "08/05/2015"
      When tento editar o nome "cantina" para "RU"
      Then a edicao nao sera realizada
+

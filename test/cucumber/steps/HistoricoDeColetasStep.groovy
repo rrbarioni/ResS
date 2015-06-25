@@ -104,6 +104,7 @@ And(~'^existe outra coleta com nome "([^"]*)" e data "([^"]*)"$'){String nome, @
     HistoricoTestDataAndOperations.CreateHistorico(nome,dia)
     coletaEditada = Coleta.findByNomeAndData(nome,dia)
     nomeAntigo = nome
+    dataAntiga = dia
 }
 When(~'^tento editar o nome "cantina" para "([^"]*)"$') {String novoNome->
 
@@ -111,4 +112,10 @@ When(~'^tento editar o nome "cantina" para "([^"]*)"$') {String novoNome->
 }
 Then(~'^a edicao nao sera realizada$') { ->
     assert coletaEditada.nome == nomeAntigo
+    assert coletaEditada.data == dataAntiga
+}
+
+When(~'^tento editar a data "07/11/2015" para "([^"]*)"$') { @Format("dd/MM/yyyy") Date novoDia->
+
+    HistoricoTestDataAndOperations.editDataColeta(novoDia,coletaEditada)
 }

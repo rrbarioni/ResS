@@ -1,5 +1,7 @@
 package HistoricoDeColeta
 
+import cucumber.api.Format
+
 class Coleta {
 
     String nome // nome do estabelecimento
@@ -19,4 +21,9 @@ class Coleta {
         }
     }
 
+    void setDate(@Format("dd/MM/yyyy")Date novaData){
+        if(Coleta.findByNomeAndData(this.nome,novaData) == null){
+            this.data = novaData
+        }
+    }
 }
