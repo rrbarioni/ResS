@@ -19,4 +19,9 @@ Feature: Pesquisa de pontos de coleta
     When pesquiso pelo ponto "Area 2"
     Then Nao eh possivel se obter o ponto "Area 2"
 
+  Scenario: Pesquisa de pontos encontrados
+    Given Eu estou logado na pagina de pesquisa
+    When pesquiso por "RU"
+    Then A lista de pontos com o nome procurado aparecera
+
 

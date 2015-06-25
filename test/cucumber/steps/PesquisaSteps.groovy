@@ -1,5 +1,6 @@
 package steps
 
+import pages.ResultadosPesquisaPages
 import residueGenerator.ResidueGenerator
 import pages.PesquisaPages
 import static cucumber.api.groovy.EN.*
@@ -35,4 +36,16 @@ When(~'^pesquiso pelo ponto "([^"]*)"$'){ String gerador ->
 }
 Then(~'^Nao eh possivel se obter o ponto "([^"]*)"$'){ String gerador ->
     GeneratorTestDataAndOperations.showGenerator(gerador)
+}
+
+Given(~'Eu estou logado na pagina de pesquisa'){ ->
+    to PesquisaPages
+    at PesquisaPages
+}
+When(~'^pesquiso por "([^"]*)"$'){ String gerador ->
+    assert page.realizarBusca(gerador) != null
+}
+
+Then(~'A lista de pontos com o nome procurado aparecera'){ ->
+    at ResultadosPesquisaPages
 }

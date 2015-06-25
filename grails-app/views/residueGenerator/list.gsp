@@ -15,10 +15,10 @@
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
-		<form name = "search">
+		<form name = "search" action="search.gsp" method="get">
 			<div id ="filters" style="  margin-top: 20px; margin-left: 26px;">
-				<input type="text" id ="generatorName">
-				<input type="submit" name="search" value="Search" id="searchButton">
+				<g:textField name="Search"> </g:textField>
+				<g:actionSubmit id="searchButton" class="button" action="search" value="Search" formnovalidate="" onclick="action='search'"/>
  			</div>
 		</form>
 		<div id="list-residueGenerator" class="content scaffold-list" role="main">
@@ -44,8 +44,9 @@
 					
 					</tr>
 				</thead>
-				<tbody>
+				<g>
 				<g:each in="${residueGeneratorInstanceList}" status="i" var="residueGeneratorInstance">
+
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${residueGeneratorInstance.id}">${fieldValue(bean: residueGeneratorInstance, field: "nameGenerator")}</g:link></td>
@@ -64,6 +65,7 @@
 				</g:each>
 				</tbody>
 			</table>
+
 			<div class="pagination">
 				<g:paginate total="${residueGeneratorInstanceTotal}" />
 			</div>

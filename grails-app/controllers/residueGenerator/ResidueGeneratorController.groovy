@@ -10,6 +10,11 @@ class ResidueGeneratorController {
         redirect(action: "list", params: params)
     }
 
+    def search(Integer max){
+        params.max = Math.min(max ?: 10, 100)
+        [residueGeneratorInstanceList: ResidueGenerator.list(params), residueGeneratorInstanceTotal: ResidueGenerator.count()]
+    }
+
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         [residueGeneratorInstanceList: ResidueGenerator.list(params), residueGeneratorInstanceTotal: ResidueGenerator.count()]

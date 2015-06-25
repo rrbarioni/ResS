@@ -11,8 +11,8 @@ class PesquisaPages extends Page{
         title ==~ titulo
     }
 
-    def realizarBusca(String gerador){
-        $("form").generatorName = gerador
+    def realizarBusca(String gerador) {
+        $("form", name: "search").add(gerador)
         $("input", id: "searchButton").click()
     }
 }
