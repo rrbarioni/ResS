@@ -13,5 +13,10 @@ class Coleta {
         data blank: false, nullable: false
         volume  blank: false, nullable: false
     }
+    void setNome(String novoNome){
+        if(Coleta.findByNomeAndData(novoNome,this.data) == null){
+            this.nome = novoNome
+        }
+    }
 
 }

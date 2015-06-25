@@ -43,7 +43,15 @@ class HistoricoTestDataAndOperations {
         cont.update()
     }
 
+    static public void editNomeColeta(String novoNome,Coleta coleta){
+        def colet = coleta
+        colet.setNome(novoNome)
+        def cont =  new ColetaController()
+        cont.params << colet.properties
+        cont.update()
 
+
+    }
 
     static public void deleteColeta(Coleta coleta){
         def cont = new ColetaController()
