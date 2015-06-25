@@ -32,7 +32,7 @@ When(~'^i try to create an account with CNPJ"([^"]*)" without a website$'){ Stri
 }
 
 Then(~'^the account is properly stored in the system$') { ->
-    assert GestorTestDataAndOperations.findGestorByCnpj(cnpj) != null
+    assert GestorTestDataAndOperations.findGestorByCnpj(CNPJ) != null
 }
 
 //Gestor cadastre with Phone number field not containing only numbers
@@ -53,8 +53,14 @@ Given(~'^i am at the gestor cadastre page$') { ->
     to GestorCreatePage
     at GestorCreatePage
 }
+
+//Gestor cadastre web without website field
+When(~'^i fill all the registration data fields except for the website$') { ->
+    page.fillGestorDetails(CNPJ)
+}
+
 When(~'^i fill all the registration data fields correctly$') { ->
-    page.fillGestorDetails()
+    page.fillGestorDetails(cnpj)
 }
 And(~'^try to create my account') { ->
     page.selectCreateGestor()
@@ -66,3 +72,4 @@ And(~'^i am redirected to the home page$') {  ->
     to ResidueGeneratorShowPage
     at ResidueGeneratorShowPage
 }
+
