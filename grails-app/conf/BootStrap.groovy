@@ -28,8 +28,21 @@ class BootStrap {
                 harvestSolicitation: null
         )
 
+        def stockResidueGenerator2 = new ResidueGenerator(
+                nameGenerator: "Nuka Cola",
+                type: "Restaurante",
+                cnpj: "0000000",
+                addressGenerator: "Elm Street number 14",
+                averageDailyMeals: 20,
+                averageMonthlyMeals: 1000,
+                hasActiveHarvest: false,
+                harvestSolicitation: null
+        )
+
+
         ru.save(failOnError: true)
         stockResidueGenerator.save(failOnError: true)
+        stockResidueGenerator2.save(failOnError: true)
         stockHarvestCompany1.save(failOnError: true);
         stockHarvestCompany2.save(failOnError: true);
         stockHarvestCompany3.save(failOnError: true);
