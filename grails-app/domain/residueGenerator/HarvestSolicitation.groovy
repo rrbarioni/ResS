@@ -8,6 +8,9 @@ class HarvestSolicitation {
     String status;
     int estimatedAmountOfResidue;
     Date solicitationDate;
+    ResidueGenerator residueGenerator;
+
+    static belongsTo = [residueGenerator : ResidueGenerator]
 
     static constraints = {
         harvester nullable: false,blank: false
