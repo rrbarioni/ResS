@@ -22,6 +22,14 @@ class GestorTestDataAndOperations{
              email:"maria@hotmail.com",
              homePage:""],
 
+            [nomeDaEmpresa:"IFPE",
+             cNPJ:"24192843",
+             endereco:"Bubble Street number 12",
+             telefone:"fa22-gja0",
+             email:"ifpe@hotmail.com",
+             homePage:"ifpe.com.br"],
+
+
 
     ]
 

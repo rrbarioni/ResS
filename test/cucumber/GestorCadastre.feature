@@ -13,7 +13,7 @@ Feature: Gestor cadastre
 
   Scenario: gestor cadastre without website
 
-    Given the system has got no cadastre with CNPJ "58391029"
+    Given the system has no cadastre with CNPJ "58391029"
     When i try to create an account with CNPJ"58391029" without a website
     Then the account is properly stored in the system
 
@@ -35,14 +35,15 @@ Feature: Gestor cadastre
   Scenario: gestor cadastre without website web
 
     Given i am at the gestor cadastre page
-    And the system has no cadastre with CNPJ "77.274.871/0001-28"
+    And the system has no cadastre with CNPJ ""
     When i fill all the registration data fields except for the website
     And  try to create my account
     Then i should see a message confirming the creation
 
+
   Scenario: gestor cadastre with phone number field not containing only numbers web
 
     Given i am at the gestor cadastre page
-    When i fill the "phone number" field with "fa22-gja2"
-    And i try to create my account
-    Then the system doesn't store the account
+    When i fill the "phone number" field with "fa22-gja0"
+    And try to create my account
+    Then i should see an error message
