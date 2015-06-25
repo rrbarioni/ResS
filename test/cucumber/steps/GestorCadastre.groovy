@@ -21,11 +21,6 @@ Then(~'^the account is stored properly in the system$') { ->
 }
 
 //Gestor cadastre without website
-Given(~'^the system has got no cadastre with CNPJ "([^"]*)"$') { String cnpj ->
-    gestor = GestorGenerator.findByCNPJ(cnpj)
-    assert gestor == null
-}
-
 When(~'^i try to create an account with CNPJ"([^"]*)" without a website$'){ String cnpj ->
     GestorTestDataAndOperations.createGestor(cnpj)
     CNPJ = cnpj
@@ -73,3 +68,11 @@ And(~'^i am redirected to the home page$') {  ->
     at ResidueGeneratorShowPage
 }
 
+//Gestor cadastre web with phone number not containing only numbers
+When(~'^i fill the "phone number" field with "([^"]*)"$'){ String numberField ->
+    gestorTest = GestorTestDataAndOperations.findGestorByPhone(numberField)
+    page.fillGestorDetails(gestorTest.cNPJ)
+}
+Then(~'^i should see an error message$'){ ->
+
+}
