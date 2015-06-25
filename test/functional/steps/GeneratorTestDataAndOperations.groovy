@@ -41,7 +41,7 @@ class GeneratorTestDataAndOperations{
 
     static public void findGeneratorByName(String name){
         generators.find {generator ->
-            generator.nameGenerator == name
+                generator.nameGenerator == name
         }
     }
     static public void findGeneratorByCnpj(String CNPJ){
@@ -89,7 +89,7 @@ class GeneratorTestDataAndOperations{
     static public void showGenerator(String name){
         def cont = new ResidueGeneratorController()
         def newGenerator = findGeneratorByName(name)
-        cont.show(newGenerator)
+            cont.show(newGenerator)
     }
 
     static public void showGeneratorByCnpj(String cnpj){

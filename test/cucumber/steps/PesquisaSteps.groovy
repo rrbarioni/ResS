@@ -7,7 +7,7 @@ import static cucumber.api.groovy.EN.*
 Given(~'^Existe no sistema um ponto chamado "([^"]*)"$') { String Gerador ->
     assert GeneratorTestDataAndOperations.createGeneratorName(Gerador) == null
 }
-When (~'^pesquiso o pelo ponto "([^"]*)"$') { String nomeGerador ->
+When (~'^procuro por "([^"]*)"$') { String nomeGerador ->
     assert ResidueGenerator.findByNameGenerator(nomeGerador) != null
 }
 Then (~'^consigo obter o perfil do "([^"]*)"$'){ String gerador ->
@@ -24,4 +24,15 @@ When(~'^pesquiso o ponto pelo cnpj "([^"]*)"$'){ String cnpj ->
 
 Then(~'^consigo obter o perfil do ponto com cnpj "([^"]*)"$'){ String cnpj->
     GeneratorTestDataAndOperations.showGeneratorByCnpj(cnpj)
+}
+
+Given(~'^Nao existe no sistema um ponto chamado "([^"]*)"$'){ String gerador ->
+    assert ResidueGenerator.findByNameGenerator(gerador) == null
+}
+
+When(~'^pesquiso pelo ponto "([^"]*)"$'){ String gerador ->
+    assert ResidueGenerator.findByNameGenerator(gerador) == null
+}
+Then(~'^Nao eh possivel se obter o ponto "([^"]*)"$'){ String gerador ->
+    GeneratorTestDataAndOperations.showGenerator(gerador)
 }
