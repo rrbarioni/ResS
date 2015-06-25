@@ -56,13 +56,17 @@ class GeneratorTestDataAndOperations{
 
     static public void createGeneratorName(String name){
         def cont = new ResidueGeneratorController()
-        def newGenerator = findGeneratorByName(name)
+        def newGenerator = [nome: name,
+                            type: "Restaurante",
+                            cnpj: "testecnpj1",
+                            addressGenerator: "Bubble Street number 7",
+                            averageMonthlyMeals: 0,
+                            averageDailyMeals: 0]
         cont.params << newGenerator
         cont.create()
         cont.save()
         cont.response.reset()
     }
-
     static public void showGenerator(String name){
         def cont = new ResidueGeneratorController()
         def newGenerator = findGeneratorByName(name)
