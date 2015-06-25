@@ -25,8 +25,8 @@ class GestorTestDataAndOperations{
 
     ]
 
-    static public def getGestor(){
-        return findGestorByCnpj("77.274.871/0001-28")
+    static public def getGestor(String cnpj){
+        return findGestorByCnpj(cnpj)
     }
 
     static public def findGestorByCnpj(String cnpj) {

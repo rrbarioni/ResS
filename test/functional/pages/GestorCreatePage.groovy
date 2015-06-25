@@ -13,9 +13,9 @@ class GestorCreatePage extends Page {
         title ==~ titulo
     }
 
-    def fillGestorDetails(){
+    def fillGestorDetails(String cnpj){
         GestorTestDataAndOperations GTDO = new GestorTestDataAndOperations();
-        LinkedHashMap gestor = GTDO.getGestor();
+        LinkedHashMap gestor = GTDO.getGestor(cnpj);
         $("form").nomeDaEmpresa = gestor.nomeDaEmpresa
         $("form").cNPJ = gestor.cNPJ
         $("form").endereco = gestor.endereco
