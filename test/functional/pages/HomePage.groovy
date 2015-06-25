@@ -12,4 +12,8 @@ class HomePage extends Page {
     def selectResidueGeneratorArea(){
         $('#ResidueGenerator').click();
     }
+
+    def selectGithubRibbon(){
+        $('#forkongithublink').click();
+    }
 }

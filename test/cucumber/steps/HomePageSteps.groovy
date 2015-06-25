@@ -1,5 +1,6 @@
 package steps
 
+import pages.GithubPage
 import pages.HomePage
 import pages.ResidueGeneratorIndexPage
 
@@ -16,4 +17,12 @@ When(~'I access the Residue Generator area$'){ ->
 
 Then(~'I should be at the residue generator index page$'){ ->
     at ResidueGeneratorIndexPage
+}
+
+When(~'I select the github ribbon$'){ ->
+    page.selectGithubRibbon()
+}
+
+Then(~'I should be at the ResS github repository page$'){ ->
+    at GithubPage
 }
