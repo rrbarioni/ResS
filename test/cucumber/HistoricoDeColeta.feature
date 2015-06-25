@@ -9,15 +9,13 @@ Feature: Gerar historico de coleta
     And clico em adicionar coleta do dia
     Then eh adicionada com sucesso
 
-  //falta teste
   @ignore
-  Scenario: Adicionar a pagina de historico de coletas como um cliente
-    Given eu estou logado no sistema como cliente "RU"
+    Scenario: Adicionar a pagina de historico de coletas como um cliente
+    Given eu estou logado no sistema como um cliente "RU"
     And estou na pagina Home
     When clico no botao "historico de coleta"
     Then apenas coletas do "RU" estara na lista
 
-  //falta teste
   @ignore
   Scenario: Acessar o historico de coletas do dia como administrador
     Given eu estou logado no sistema como administrador
@@ -26,7 +24,6 @@ Feature: Gerar historico de coleta
     And escolho o dia "08/04/2015"
     Then apenas coletas do dia "08/04/2015" estara na lista
 
-  //falta teste
   @ignore
   Scenario: Acessar o historico de coletas geral como administrador
     Given eu estou logado no sistema como administrador
@@ -48,9 +45,7 @@ Feature: Gerar historico de coleta
     Given existe uma coleta do dia "08/04/2015" do restaurante "RU"
     When seleciono remover esta coleta
     Then nao existem mais coleta dia "08/04/2015" do restaurante "RU"
-
-
-
+    
   Scenario: Editar Coleta GUI
     Given estou na pagina de editar coleta
     When coloco o novo volume "10" a ser adicionado
@@ -58,3 +53,7 @@ Feature: Gerar historico de coleta
     And e envio as mudancas
     Then o volume eh alterado com sucesso
 
+  Scenario: adicionar coleta ja existente
+    Given ja existe uma coleta com nome "RU" e data "08/05/2015"
+    When tento criar uma nova coleta com nome "RU" e data "08/05/2015"
+    Then nao eh criada a nova coleta

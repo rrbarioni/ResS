@@ -1,11 +1,11 @@
 package steps
 
 import cucumber.api.Format
+import pages.ColetaDeletePage
 import pages.ColetaEditPage
 import pages.HistoricoPage
 import static cucumber.api.groovy.EN.*
 import HistoricoDeColeta.Coleta
-import geb.Page
 
 Given (~'^estou na pagina de adicionar coleta$'){ ->
     to HistoricoPage
@@ -44,6 +44,7 @@ Given (~'^ja foi criado o relatorio de coleta do dia "([^"]*)" do restaurante "(
 When (~'altero o valor do volume da coleta para "([^\"]*)"$') { int vol ->
     volume = vol
     HistoricoTestDataAndOperations.editColeta(volume, c)
+
 }
 Then (~'o valor do volume eh atualizado$') { ->
     c = Coleta.findByDataAndNome(dat,rest)
@@ -82,3 +83,17 @@ And(~'^e envio as mudancas'){ ->
 Then (~'^o volume eh alterado com sucesso$'){ ->
 }
 
+
+Given(~'^ja existe uma coleta com nome "([^"]*)" e data "([^"]*)"$'){String nome, @Format("dd/MM/yyyy") Date dia ->
+    HistoricoTestDataAndOperations.CreateHistorico(nome,dia)
+    coletaAntiga = Coleta.findByNome(nome)
+}
+When(~'^tento criar uma nova coleta com nome "([^"]*)" e data "([^"]*)"$') {String novoNome, @Format("dd/MM/yyyy") Date novoDia ->
+    HistoricoTestDataAndOperations.CreateHistorico(novoNome,novoDia)
+    coletaNova = Coleta.findByNome(novoNome)
+}
+Then(~'^nao eh criada a nova coleta$') { ->
+    c =  Coleta.findAllByNome(coletaAntiga.nome)
+    assert c[0] == coletaAntiga
+    assert c[1] != coletaNova
+}

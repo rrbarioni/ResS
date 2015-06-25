@@ -21,6 +21,7 @@ class ColetaController {
 
     def save() {
         def coletaInstance = new Coleta(params)
+        if(Coleta.findByNomeAndData(coletaInstance.nome,coletaInstance.data) == null){
         if (!coletaInstance.save(flush: true)) {
             render(view: "create", model: [coletaInstance: coletaInstance])
             return
@@ -28,6 +29,7 @@ class ColetaController {
 
         flash.message = message(code: 'default.created.message', args: [message(code: 'coleta.label', default: 'Coleta'), coletaInstance.id])
         redirect(action: "show", id: coletaInstance.id)
+        }
     }
 
     def show(Long id) {
