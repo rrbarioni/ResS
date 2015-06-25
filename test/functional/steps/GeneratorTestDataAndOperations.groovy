@@ -44,7 +44,11 @@ class GeneratorTestDataAndOperations{
             generator.nameGenerator == name
         }
     }
-
+    static public void findGeneratorByCnpj(String CNPJ){
+        generators.find {generator ->
+            generator.cnpj== CNPJ
+        }
+    }
     static public void createGenerator(String address){
         def cont = new ResidueGeneratorController()
         def novoGenerator = findGeneratorByAddress(address)
@@ -67,9 +71,30 @@ class GeneratorTestDataAndOperations{
         cont.save()
         cont.response.reset()
     }
+
+    static public void createGeneratorCnpj(String CNPJ){
+        def cont = new ResidueGeneratorController()
+        def newGenerator = [nome: "RU",
+                            type: "Restaurante",
+                            cnpj: CNPJ,
+                            addressGenerator: "Bubble Street number 7",
+                            averageMonthlyMeals: 0,
+                            averageDailyMeals: 0]
+        cont.params << newGenerator
+        cont.create()
+        cont.save()
+        cont.response.reset()
+    }
+
     static public void showGenerator(String name){
         def cont = new ResidueGeneratorController()
         def newGenerator = findGeneratorByName(name)
+        cont.show(newGenerator)
+    }
+
+    static public void showGeneratorByCnpj(String cnpj){
+        def cont = new ResidueGeneratorController()
+        def newGenerator = findGeneratorByCnpj(cnpj)
         cont.show(newGenerator)
     }
 

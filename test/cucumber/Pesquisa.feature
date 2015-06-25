@@ -9,4 +9,9 @@ Feature: Pesquisa de pontos de coleta
     When pesquiso o pelo ponto "RU"
     Then consigo obter o perfil do "RU"
 
+  Scenario: Pesquisa por nome do administrador do ponto
+    Given Existe um cnpj de ponto de coleta com o numero "testecnpj1"
+    When pesquiso o ponto pelo cnpj "testecnpj1"
+    Then consigo obter o perfil do ponto com cnpj "testecnpj1"
+
 
