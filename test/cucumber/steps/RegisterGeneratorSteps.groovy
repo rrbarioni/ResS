@@ -13,7 +13,20 @@ Given(~'^The system has no generator with the address "([^"]*)"$') { String addr
     assert generator == null
 }
 
+When(~'I register a different generator of residue with the address "([^"]*)"$'){ String address ->
+    GeneratorTestDataAndOperations.createAltGenerator(address)
+
+
+}
+
 When (~'^I register a new generator of residue with the address "([^"]*)"$'){String address ->
+    endereco = address
+    GeneratorTestDataAndOperations.createGenerator(address)
+    generator = ResidueGenerator.findByAddressGenerator(address)
+    assert generator != null
+}
+
+Given (~'^The system has a generator with the address "([^"]*)" already stored$$'){String address ->
     endereco = address
     GeneratorTestDataAndOperations.createGenerator(address)
 
@@ -31,15 +44,53 @@ Given(~'^I am at the register new generator page$'){ ->
 
 }
 
-When(~'^I fill the generator details with valid info$'){ ->
-
-    page.fillGeneratorDetails()
+When(~'^I fill the generator details with the address "([^"]*)"$'){String address ->
+    GeneratorTestDataAndOperations GTDO = new GeneratorTestDataAndOperations();
+    LinkedHashMap generator = GTDO.findGeneratorByAddress(address);
+    page.fillGeneratorDetails(generator)
 }
 
 And(~'^I register the new generator$'){ ->
     page.selectCreateGenerator()
 }
 
-Then (~'^I should see a message indicating that the action was successful'){ ->
+Then (~'^I should see a message indicating that the action was successful$'){ ->
     assert page.readFlashMessage() != null
+}
+
+Then (~'^The new residue generator is not stored twice by the system$') { ->
+    generator = ResidueGenerator.findByAddressGenerator("Bubble Street number 7")
+    assert generator.nameGenerator != "Alt"
+}
+
+When (~'^I register a different generator with the address "([^"]*)"$'){ String address ->
+    to GeneratorCreatePage
+    GeneratorTestDataAndOperations GTDO = new GeneratorTestDataAndOperations();
+    LinkedHashMap generator = GTDO.getAltGenerator(address);
+    page.fillGeneratorDetails(generator)
+}
+
+Then(~'^I should see an error message$'){ ->
+    assert page.hasErrors()
+}
+
+When (~'I register a new generator of residue with some info left incomplete$'){ ->
+
+}
+
+And(~'The address "([^"]*)"$'){ String address ->
+    endereco = address
+    GeneratorTestDataAndOperations.createIncompleteGenerator(address)
+}
+
+Then(~'The new residue generator is not stored by the system$'){->
+    assert ResidueGenerator.findByAddressGenerator(endereco) == null
+}
+
+When(~'I fill the generator details with some fields left incomplete$'){->
+    to GeneratorCreatePage
+    GeneratorTestDataAndOperations GTDO = new GeneratorTestDataAndOperations();
+    LinkedHashMap generator = GTDO.getGenerator();
+    page.fillGeneratorDetailsIncomplete(generator)
+
 }

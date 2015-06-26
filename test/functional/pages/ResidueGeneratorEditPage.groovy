@@ -5,7 +5,7 @@ import steps.GeneratorTestDataAndOperations
 
 class ResidueGeneratorEditPage extends Page{
 
-    def titulo = "Edit ResidueGenerator"
+    def titulo = "Editar ResidueGenerator"
     static url = "/ResS/residueGenerator/edit/1"
 
     static at = {
@@ -28,6 +28,17 @@ class ResidueGeneratorEditPage extends Page{
 
     def submitChanges(){
         $("input", name: "edit").click()
+    }
+
+    def boolean hasInvalidMessage(){
+
+        def invalidField = $('input:invalid')
+
+        if(invalidField != null){
+            return true
+        } else {
+            return false
+        }
     }
 
 

@@ -10,14 +10,18 @@ class ResidueGeneratorController {
         redirect(action: "list", params: params)
     }
 
+    def search(Integer max){
+        params.max = Math.min(max ?: 10, 100)
+        [residueGeneratorInstanceList: ResidueGenerator.list(params), residueGeneratorInstanceTotal: ResidueGenerator.count()]
+    }
+
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         [residueGeneratorInstanceList: ResidueGenerator.list(params), residueGeneratorInstanceTotal: ResidueGenerator.count()]
     }
 
     def create() {
-        def residueGenerator = new ResidueGenerator(params)
-        [residueGeneratorInstance: residueGenerator]
+        [residueGeneratorInstance: new ResidueGenerator(params)]
     }
 
     def save() {
