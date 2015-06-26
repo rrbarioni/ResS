@@ -6,17 +6,17 @@ Feature: register a residue collector
 
   Scenario: new collector
     Given the system has no collector with CNPJ "01.752.271/0001-66"
-    When I create a new collector with CNPJ "01.752.271/0001-66"
+    When I create a new collector with name "test1" and CNPJ "01.752.271/0001-66"
     Then a collector with CNPJ "01.752.271/0001-66" is stored in the system
 
   Scenario: duplicated collector
-    Given a collector with CNPJ "01.752.271/0001-66" exists in the system
-    When I create a new collector with CNPJ "01.752.271/0001-66"
+    Given a collector with name "Teste 6" and CNPJ "01.752.271/0001-66" exists in the system
+    When I create a new collector with name "Teste 6" and CNPJ "01.752.271/0001-66"
     Then only one collector with CNPJ "01.752.271/0001-66" is stored in the system
 
   Scenario: collector with incorrect information
     Given the system has no collector with CNPJ "cnpj_invalido"
-    When I create a new collector with CNPJ "cnpj_invalido"
+    When I create a new collector with name "Teste 5" and CNPJ "cnpj_invalido"
     Then no collector with CNPJ "cnpj_invalido" is stored in the system
 
   Scenario: entering on the collector creation page

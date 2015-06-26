@@ -25,6 +25,6 @@ When(~'^I delete the collector$'){->
 }
 
 Then(~'^a collector with CNPJ "([^"]*)" does not appear on the list$'){String a->
-    listaCollectors = ResidueCollector.findByCnpj(a)
-    assert listaCollectors == null
+    def b = ResidueCollector.findAll()
+    assert ResidueCollector.findByCnpj(a) == null
 }

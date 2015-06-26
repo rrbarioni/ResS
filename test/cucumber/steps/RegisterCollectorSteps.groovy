@@ -11,17 +11,17 @@ Given(~'^the system has no collector with CNPJ "([^"]*)"$') { String cnpj ->
 }
 
 
-When(~'^I create a new collector with CNPJ "([^"]*)"$') { String cnpj ->
-    CollectorTestDataAndOperations.createCollector("Nome teste",cnpj)
+When(~'^I create a new collector with name "([^"]*)" and CNPJ "([^"]*)"$') { String nome, String cnpj ->
+    CollectorTestDataAndOperations.createCollector(nome,cnpj)
 }
 
 Then(~'^a collector with CNPJ "([^"]*)" is stored in the system$'){String cnpj ->
-    assert ResidueCollector.findAllByCnpj(cnpj) != null
+    assert ResidueCollector.findByCnpj(cnpj) != null
 }
 
-Given(~'^a collector with CNPJ "([^"]*)" exists in the system$'){String cnpj ->
-    CollectorTestDataAndOperations.createCollector("Nome teste 2", cnpj)
-    assert ResidueCollector.findAllByCnpj(cnpj) !=null
+Given(~'^a collector with name "([^"]*)" and CNPJ "([^"]*)" exists in the system$'){String nome, String cnpj ->
+    CollectorTestDataAndOperations.createCollector(nome,cnpj)
+    assert ResidueCollector.findByCnpj(cnpj) !=null
 }
 
 Then(~'^only one collector with CNPJ "([^"]*)" is stored in the system$'){String cnpj ->

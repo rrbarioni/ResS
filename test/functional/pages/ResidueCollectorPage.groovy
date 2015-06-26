@@ -49,7 +49,7 @@ class ResidueCollectorShowPage extends Page{
     }
 
     def selectDeleteResidueCollector(){
-        $("input",name: "Delete").click()
+        $("input",name: "delete").click()
     }
 
 }
