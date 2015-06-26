@@ -3,6 +3,7 @@ package steps
 import cucumber.api.Format
 import pages.ColetaDeletePage
 import pages.ColetaEditPage
+import pages.ColetaListPage
 import pages.HistoricoPage
 import static cucumber.api.groovy.EN.*
 import HistoricoDeColeta.Coleta
@@ -118,4 +119,27 @@ Then(~'^a edicao nao sera realizada$') { ->
 When(~'^tento editar a data "07/11/2015" para "([^"]*)"$') { @Format("dd/MM/yyyy") Date novoDia->
 
     HistoricoTestDataAndOperations.editDataColeta(novoDia,coletaEditada)
+}
+
+Given(~'^estou na pagina de listagem de coletas$'){->
+    to ColetaListPage
+    at ColetaListPage
+}
+And(~'existe uma coleta na listagem$'){->
+    to HistoricoPage
+    page.fillColetaInfo()
+    page.selectAdicionarColeta();
+    to ColetaListPage
+    at ColetaListPage
+}
+And(~'^seleciono esta coleta$') { ->
+    to ColetaDeletePage
+}
+When(~'^aperto o botao Delete$') { ->
+    assert withConfirm(true) {
+        $("input", name: "_action_delete").click()} != "Are you sure?"
+
+}
+Then(~'^estou na pagina de listagem e esta coleta nao consta mais$') { ->
+    at ColetaListPage
 }

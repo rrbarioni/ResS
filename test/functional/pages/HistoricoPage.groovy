@@ -19,8 +19,6 @@ class HistoricoPage extends Page{
         $("form").data_year = "2015"
         $("form").volume = 101
 
-       // assert $("form").data_day == "8" && $("form").data_month == "4" && $("form").data_year == "2015"
-
     }
 
     def selectAdicionarColeta(){

@@ -20,8 +20,10 @@ class ColetaController {
     }
 
     def save() {
+        Coleta a = new Coleta(params)
+        if(Coleta.findByNomeAndData(a.nome,a.data) == null){
         def coletaInstance = new Coleta(params)
-        if(Coleta.findByNomeAndData(coletaInstance.nome,coletaInstance.data) == null){
+
         if (!coletaInstance.save(flush: true)) {
             render(view: "create", model: [coletaInstance: coletaInstance])
             return

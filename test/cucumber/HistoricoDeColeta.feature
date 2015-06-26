@@ -65,9 +65,15 @@ Feature: Gerar historico de coleta
     Then o volume eh alterado com sucesso
 
 
-   Scenario: editar nome de restaurante da coleta com nome e data ja existente
-     Given ja existe uma coleta com nome "RU" e data "08/05/2015"
-     And  existe outra coleta com nome "cantina" e data "08/05/2015"
-     When tento editar o nome "cantina" para "RU"
-     Then a edicao nao sera realizada
+  Scenario: editar nome de restaurante da coleta com nome e data ja existente
+    Given ja existe uma coleta com nome "RU" e data "08/05/2015"
+    And  existe outra coleta com nome "cantina" e data "08/05/2015"
+    When tento editar o nome "cantina" para "RU"
+    Then a edicao nao sera realizada
 
+  Scenario: apagar coleta GUI
+    Given estou na pagina de listagem de coletas
+    And existe uma coleta na listagem
+    And seleciono esta coleta
+    When aperto o botao Delete
+    Then estou na pagina de listagem e esta coleta nao consta mais
