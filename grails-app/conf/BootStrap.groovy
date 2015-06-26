@@ -47,6 +47,126 @@ class BootStrap {
         stockHarvestCompany2.save(failOnError: true);
         stockHarvestCompany3.save(failOnError: true);
 
+        def area2 = new ResidueGenerator(
+                nameGenerator:"CCEN/Área II",
+                type: "Cantina",
+                cnpj: "testecnpj2",
+                addressGenerator: "UFPE1",
+                averageMonthlyMeals: 0,
+                averageDailyMeals: 0
+        )
+
+        area2.save(failOnError: true)
+
+        def bomCafe = new ResidueGenerator(
+                nameGenerator:"Bom Café – CTG",
+                type: "Restaurante",
+                cnpj: "testecnpj3",
+                addressGenerator: "UFPE2",
+                averageMonthlyMeals: 0,
+                averageDailyMeals: 0
+        )
+
+        bomCafe.save(failOnError: true)
+        def rotadoLanche = new ResidueGenerator(
+                nameGenerator:"Rota do Lanche",
+                type: "Restaurante",
+                cnpj: "testecnpj4",
+                addressGenerator: "UFPE3",
+                averageMonthlyMeals: 0,
+                averageDailyMeals: 0
+        )
+        rotadoLanche.save(failOnError: true)
+
+        def cantinaCssa = new ResidueGenerator(
+                nameGenerator:"Cantina CCSA",
+                type: "Cantina",
+                cnpj: "testecnpj5",
+                addressGenerator: "UFPE4",
+                averageMonthlyMeals: 0,
+                averageDailyMeals: 0
+        )
+
+        cantinaCssa.save(failOnError: true)
+        def quiosqueCssa = new ResidueGenerator(
+                nameGenerator:"Quiosque CCSA",
+                type: "Cantina",
+                cnpj: "testecnpj6",
+                addressGenerator: "UFPE5",
+                averageMonthlyMeals: 0,
+                averageDailyMeals: 0
+        )
+        quiosqueCssa.save(failOnError: true)
+
+        def planetRefeicoesCTG = new ResidueGenerator(
+                nameGenerator:"Planet Refeições – CTG",
+                type: "Restaurante",
+                cnpj: "testecnpj7",
+                addressGenerator: "UFPE6",
+                averageMonthlyMeals: 0,
+                averageDailyMeals: 0
+        )
+        planetRefeicoesCTG.save(failOnError: true)
+
+        def planetRefeicoesCCS = new ResidueGenerator(
+                nameGenerator:"Planet Refeições – CCS",
+                type: "Restaurante",
+                cnpj: "testecnpj8",
+                addressGenerator: "UFPE7",
+                averageMonthlyMeals: 0,
+                averageDailyMeals: 0
+        )
+
+        planetRefeicoesCCS.save(failOnError: true)
+        def planetRefeicoesCE = new ResidueGenerator(
+                nameGenerator:"Planet Refeições – CE",
+                type: "Restaurante",
+                cnpj: "testecnpj9",
+                addressGenerator: "UFPE8",
+                averageMonthlyMeals: 0,
+                averageDailyMeals: 0
+        )
+
+        planetRefeicoesCE.save(failOnError: true)
+        def chefPlataoCCSA = new ResidueGenerator(
+                nameGenerator:"Chef Platão – CCSA",
+                type: "Restaurante",
+                cnpj: "testecnpj10",
+                addressGenerator: "UFPE9",
+                averageMonthlyMeals: 0,
+                averageDailyMeals: 0
+        )
+
+        chefPlataoCCSA.save(failOnError: true)
+
+        def chefPlataoCFCH = new ResidueGenerator(
+                nameGenerator:"Chef Platão – CFCH",
+                type: "Restaurante",
+                cnpj: "testecnpj11",
+                addressGenerator: "UFPE10",
+                averageMonthlyMeals: 0,
+                averageDailyMeals: 0
+        )
+        chefPlataoCFCH.save(failOnError: true)
+        def aquarela = new ResidueGenerator(
+                nameGenerator:"Aquarela - CAC",
+                type: "Restaurante",
+                cnpj: "testecnpj12",
+                addressGenerator: "UFPE11",
+                averageMonthlyMeals: 0,
+                averageDailyMeals: 0
+        )
+        aquarela.save(failOnError: true)
+
+        def sinhaPimenta = new ResidueGenerator(
+                nameGenerator:"Sinhá Pimenta – CCB",
+                type: "Restaurante",
+                cnpj: "testecnpj13",
+                addressGenerator: "UFPE12",
+                averageMonthlyMeals: 0,
+                averageDailyMeals: 0
+        )
+        sinhaPimenta.save(failOnError: true)
 
     }
     def destroy = {
