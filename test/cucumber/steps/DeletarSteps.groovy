@@ -10,7 +10,7 @@ Given(~'^Estou na pagina de editar do ponto "([^"]*)"$'){
 }
 
 When(~'^deleto o ponto aceitando a mensagem de confirmação'){ ->
-    assert withConfirm(true) {$("input", name: "_action_delete").click() } != "Tem certeza?"
+    assert withConfirm(true) {$("input", name: "_action_delete").click() } == "Tem certeza?"
 }
 
 Then(~'^a deleção é confirmada'){ ->

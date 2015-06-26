@@ -4,7 +4,7 @@ import geb.Page
 
 class PesquisaPages extends Page{
 
-    def titulo = "ResidueGenerator Listagem"
+    def titulo = "Residue Generator List"
     static url = "ResS/residueGenerator/list"
 
     static at = {

@@ -3,7 +3,7 @@ Feature: register a residue generator
   I want to register residue generators
   So that I can use and manage information of these generators
 
-
+@ignore
   Scenario: new valid generator
     Given The system has no generator with the address "Bubble Street number 7"
     When I register a new generator of residue with the address "Bubble Street number 7"
