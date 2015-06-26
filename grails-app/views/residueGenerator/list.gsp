@@ -5,7 +5,7 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'residueGenerator.label', default: 'ResidueGenerator')}" />
-		<title><g:message code="default.list.label" args="[entityName]" /></title>
+		<title>Residue Generator List</title>
 	</head>
 	<body>
 		<a href="#list-residueGenerator" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -22,7 +22,7 @@
  			</div>
 		</form>
 		<div id="list-residueGenerator" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+			<h1>Residue Generator List</h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -30,15 +30,15 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="nameGenerator" title="${message(code: 'residueGenerator.nameGenerator.label', default: 'Name Generator')}" />
+						<g:sortableColumn property="nameGenerator" title="${message(code: 'residueGenerator.nameGenerator.label', default: 'Name')}" />
 					
 						<g:sortableColumn property="type" title="${message(code: 'residueGenerator.type.label', default: 'Type')}" />
 					
-						<g:sortableColumn property="addressGenerator" title="${message(code: 'residueGenerator.addressGenerator.label', default: 'Address Generator')}" />
+						<g:sortableColumn property="addressGenerator" title="${message(code: 'residueGenerator.addressGenerator.label', default: 'Address')}" />
 					
-						<g:sortableColumn property="averageDailyMeals" title="${message(code: 'residueGenerator.averageDailyMeals.label', default: 'Average Daily Meals')}" />
+						<g:sortableColumn property="averageDailyMeals" title="${message(code: 'residueGenerator.averageDailyMeals.label', default: 'Avg Daily Meals')}" />
 					
-						<g:sortableColumn property="averageMonthlyMeals" title="${message(code: 'residueGenerator.averageMonthlyMeals.label', default: 'Average Monthly Meals')}" />
+						<g:sortableColumn property="averageMonthlyMeals" title="${message(code: 'residueGenerator.averageMonthlyMeals.label', default: 'Avg Monthly Meals')}" />
 					
 						<g:sortableColumn property="cnpj" title="${message(code: 'residueGenerator.cnpj.label', default: 'Cnpj')}" />
 					

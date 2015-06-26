@@ -4,7 +4,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: residueGeneratorInstance, field: 'nameGenerator', 'error')} ">
 	<label for="nameGenerator">
-		<g:message code="residueGenerator.nameGenerator.label" default="Name Generator" />
+		<g:message code="residueGenerator.nameGenerator.label" default="Name" />
 		
 	</label>
 	<g:textField name="nameGenerator" value="${residueGeneratorInstance?.nameGenerator}"/>
@@ -20,7 +20,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: residueGeneratorInstance, field: 'addressGenerator', 'error')} required">
 	<label for="addressGenerator">
-		<g:message code="residueGenerator.addressGenerator.label" default="Address Generator" />
+		<g:message code="residueGenerator.addressGenerator.label" default="Address" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="addressGenerator" maxlength="40" required="" value="${residueGeneratorInstance?.addressGenerator}"/>
