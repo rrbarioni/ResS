@@ -3,7 +3,7 @@ import geb.Page
 import steps.GeneratorTestDataAndOperations
 
 class ResidueGeneratorListPage extends Page{
-    def titulo = "ResidueGenerator List"
+    def titulo = "Residue Generator List"
     static url = "/ResS/residueGenerator/list"
 
     static at = {
