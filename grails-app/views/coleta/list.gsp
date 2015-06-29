@@ -5,7 +5,7 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'coleta.label', default: 'Coleta')}" />
-		<title><g:message code="default.list.label" args="[entityName]" /></title>
+		<title>Coleta List</title>
 	</head>
 	<body>
 		<a href="#list-coleta" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>

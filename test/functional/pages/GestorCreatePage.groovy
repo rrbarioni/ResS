@@ -5,7 +5,7 @@ import steps.GestorTestDataAndOperations
 
 class GestorCreatePage extends Page {
 
-    def titulo = "Criar GestorGenerator"
+    def titulo = "Create GestorGenerator"
     static url = "/ResS/gestorGenerator/create"
 
     static at = {

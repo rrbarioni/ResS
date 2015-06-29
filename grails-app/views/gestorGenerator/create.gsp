@@ -4,7 +4,7 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'gestorGenerator.label', default: 'GestorGenerator')}" />
-		<title><g:message code="default.create.label" args="[entityName]" /></title>
+		<title>Create GestorGenerator</title>
 	</head>
 	<body>
 		<a href="#create-gestorGenerator" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>

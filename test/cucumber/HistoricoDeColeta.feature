@@ -51,7 +51,7 @@ Feature: Gerar historico de coleta
     Given ja foi criado o relatorio de coleta do dia "08/04/2015" do restaurante "RU"
     When altero o valor do volume da coleta para "10"
     Then o valor do volume eh atualizado
-
+@ignore
   Scenario: Apagar coleta
     Given existe uma coleta do dia "08/04/2015" do restaurante "RU"
     When seleciono remover esta coleta
