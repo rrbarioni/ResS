@@ -1,11 +1,9 @@
 package pages
 import geb.Page
-import steps.GeneratorTestDataAndOperations
-
 
 class GeneratorCreatePage extends Page{
 
-    def titulo = "Create ResidueGenerator"
+    def titulo = "Create Residue Generator"
     static url = "/ResS/residueGenerator/create"
 
     static at = {
@@ -13,9 +11,8 @@ class GeneratorCreatePage extends Page{
          title ==~ titulo
     }
 
-    def fillGeneratorDetails(){
-        GeneratorTestDataAndOperations GTDO = new GeneratorTestDataAndOperations();
-        LinkedHashMap gerador = GTDO.getGenerator();
+    def fillGeneratorDetails(LinkedHashMap gerador){
+
         $("form").nameGenerator = gerador.nameGenerator
         $("form").type = gerador.type
         $("form").cnpj = gerador.cnpj
@@ -25,8 +22,26 @@ class GeneratorCreatePage extends Page{
 
     }
 
+    def fillGeneratorDetailsIncomplete(LinkedHashMap gerador){
+
+        $("form").nameGenerator = gerador.nameGenerator
+        $("form").type = gerador.type
+        $("form").cnpj = ""
+        $("form").averageMonthlyMeals = gerador.averageMonthlyMeals
+        $("form").averageDailyMeals = gerador.averageDailyMeals
+
+    }
+
     def selectCreateGenerator(){
         $("input", name: "create").click()
+    }
+
+    def boolean hasErrors(){
+        if($(".errors") == null){
+            return false
+        }else{
+            return true
+        }
     }
 
 }

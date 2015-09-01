@@ -4,7 +4,7 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'residueGenerator.label', default: 'ResidueGenerator')}" />
-		<title><g:message code="default.edit.label" args="[entityName]" /></title>
+		<title>Editar ResidueGenerator</title>
 	</head>
 	<body>
 		<a href="#edit-residueGenerator" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
