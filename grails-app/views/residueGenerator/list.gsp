@@ -15,12 +15,6 @@
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
-		<form name = "search" action="search.gsp" method="get">
-			<div id ="filters" style="  margin-top: 20px; margin-left: 26px;">
-				<g:textField name="Search"> </g:textField>
-				<g:actionSubmit id="searchButton" class="button" action="search" value="Search" formnovalidate="" onclick="action='search'"/>
- 			</div>
-		</form>
 		<div id="list-residueGenerator" class="content scaffold-list" role="main">
 			<h1>Residue Generator List</h1>
 			<g:if test="${flash.message}">
