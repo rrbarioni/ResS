@@ -1,8 +1,8 @@
 package steps
 
 import pages.ResidueGeneratorEditPage
-import residueGenerator.ResidueGenerator
-import pages.PesquisaPages
+import pages.ResidueGeneratorIndexPage
+
 import static cucumber.api.groovy.EN.*
 
 Given(~'^Estou na pagina de editar do ponto "([^"]*)"$'){
@@ -14,7 +14,7 @@ When(~'^deleto o ponto aceitando a mensagem de confirmação'){ ->
 }
 
 Then(~'^a deleção é confirmada'){ ->
-    at PesquisaPages
+    at ResidueGeneratorIndexPage
 }
 
 Then(~'^O ponto continua no sistema'){ ->
