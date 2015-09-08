@@ -41,7 +41,6 @@ grails.project.dependency.resolution = {
     }
     dependencies {
         compile "org.spockframework:spock-grails-support:0.7-groovy-1.8"
-
         test "org.gebish:geb-junit4:0.9.2"
         test "org.seleniumhq.selenium:selenium-support:2.39.0"
         test "org.seleniumhq.selenium:selenium-chrome-driver:2.39.0"
@@ -49,6 +48,7 @@ grails.project.dependency.resolution = {
 
     plugins {
         compile ":remote-control:1.4"
+        compile ":jquery-ui:1.10.4"
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.8.3"
         runtime ":resources:1.1.6"

@@ -88,7 +88,7 @@
         </ul>
     </div>
     <div>
-        <a href="/ResS/"  class="action-button shadow animate green">Ok</a>
+        <a href="/ResS/Dashboard/"  class="action-button shadow animate green">Ok</a>
     </div>
 </div>
 </body>
