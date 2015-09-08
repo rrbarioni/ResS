@@ -2,11 +2,11 @@ package pages
 import geb.Page
 class HomePage extends Page {
 
-    def título = "ResS"
-    static url = "/ResS"
+    def titulo = "ResS"
+    static url = "/ResS/dashboard"
 
     static at = {
-        title ==~ título
+        title ==~ titulo
     }
 
     def selectResidueGeneratorArea(){
