@@ -13,6 +13,8 @@ class BootStrap {
                 averageDailyMeals: 0
         )
 
+
+
         def stockHarvestCompany1 = new HarvestCompany(name: "Garbage Co")
         def stockHarvestCompany2 = new HarvestCompany( name: "Reciclatron")
         def stockHarvestCompany3 = new HarvestCompany( name: "Clean Planet")
