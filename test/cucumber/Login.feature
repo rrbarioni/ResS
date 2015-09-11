@@ -1,9 +1,11 @@
+#if($Login) 
+
 FEATURE: Proper account authentication
 	As a stakeholder
 	I want to login into my account 
 	So I can access the information relevant to me stored in the system 
 
-//Controller
+#Controller
 SCENARIO: Login with correct credentials
 	Given that I have an account registered in the system
 	AND that I have entered the right credentials
@@ -16,7 +18,7 @@ SCENARIO: Login with wrong credentials
 	When I submit the credentials
 	Then I'm not granted access to the repository of information in the system
 
-//GUI
+#GUI
 SCENARIO: Logging-in through the access page with correct credentials	
 	Given that I have an account registered in the system
 	When I enter my CNPJ in the CNPJ field
@@ -32,3 +34,5 @@ SCENARIO: Logging-in through the access page with incorrect credentials
 	AND I submit the form via the "Login" button
 	Then the access page is reloaded
 	And I get flashed a notice saying that I've entered incorrect credentials
+
+#end
