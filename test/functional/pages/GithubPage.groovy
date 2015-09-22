@@ -8,6 +8,6 @@ class GithubPage extends Page {
     static url = "https://github.com/pauloborba/ResS"
 
     static at = {
-        title ==~ título
+        title ==~ titulo
     }
 }
