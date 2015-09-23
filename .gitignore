@@ -15,3 +15,4 @@ stacktrace.log
 /web-app/WEB-INF/classes
 .idea/workspace.xml
 /grails-app/conf/BuildConfig.groovy
+*.properties
