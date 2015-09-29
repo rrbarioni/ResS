@@ -4,6 +4,7 @@
 	See: http://www.gebish.org/manual/current/configuration.html
 */
 
+import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.firefox.FirefoxDriver
 import org.openqa.selenium.firefox.FirefoxProfile
 
@@ -15,6 +16,12 @@ driver = {
 	def driverInstance = new FirefoxDriver(profile) 
 	driverInstance.manage().window().maximize() 
 	driverInstance
+}
+
+driver = {
+    File file = new File("chromedrivers/chromedriver.exe");
+    System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+    new ChromeDriver();
 }
 
 baseNavigatorWaiting = true
