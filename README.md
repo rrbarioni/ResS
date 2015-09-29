@@ -23,7 +23,7 @@ functional.GebConfig.groovy
 conf.spring.CucumberConfig.groovy
 -------------------------------------------------------------------------------------------------------------------
 
-P/ testar:  test-app -Dgeb.env=chrome functional:cucumber --stacktrace
+P/ testar:  test-app -Dgeb.env=chrome functional:cucumber
 
 -------------------------------------------------------------------------------------------------------------------
 
