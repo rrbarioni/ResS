@@ -27,7 +27,7 @@ P/ testar:  test-app -Dgeb.env=chrome functional:cucumber
 
 -------------------------------------------------------------------------------------------------------------------
 
-Integração com o Travis-ci <br />
+<h2>Integração com o Travis-ci</h2> <br />
 Entre em [Travis-CI](https://travis-ci.org/) <br />
 Selecione o botão no canto superior direito "Sign in with github" <br />
 Clique em seu nome no canto superior direito <br />
