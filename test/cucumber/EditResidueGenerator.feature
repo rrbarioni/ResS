@@ -10,9 +10,9 @@ Feature: Edit the residue generator registration data
     When I change it to "Fool street number 0"
     Then the system should store the residue generator with the new address in the data base
   #end
-@ignore
-  #if($Residue generator registration data edit success web page)
 
+  #if($Residue generator registration data edit success web page)
+@ignore
   Scenario: Residue generator registration data edit success web page
     Given I am at the residue generator edit page
     When  I fill the address field with "Fool's street number 0"
