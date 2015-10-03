@@ -10,6 +10,8 @@ class GeneratorTestDataAndOperations{
             [nameGenerator:"RU",
              type: "Restaurante",
              cnpj: "testecnpj1",
+             username: "Los_Pollos",
+             password: "@Abcd1234",
              addressGenerator: "Bubble Street number 7",
              averageMonthlyMeals: 0,
              averageDailyMeals: 0],
@@ -17,6 +19,8 @@ class GeneratorTestDataAndOperations{
             [nameGenerator:"Clovis Palace",
              type: "Restaurante",
              cnpj: "testecnpj2",
+             username: "Los_Pollos2",
+             password: "@Abcd1238",
              addressGenerator: "Bubble Street number 4",
              averageMonthlyMeals: 0,
              averageDailyMeals: 0],
@@ -24,27 +28,48 @@ class GeneratorTestDataAndOperations{
             [nameGenerator:"China Dragon",
              type: "Restaurante",
              cnpj: "testecnpj3",
+             username: "Los_Pollos3",
+             password: "@Abcd1239",
              addressGenerator: "Donut Street number 5",
              averageMonthlyMeals: 0,
              averageDailyMeals: 0]
     ]
 
     static public def getGenerator(){
-        return findGeneratorByAddress("Bubble Street number 7")
+        return getGeneratorByAddress("Bubble Street number 7")
+    }
+    static public def findAllGeneratorByUsername(String username){
+        return ResidueGenerator.findAllByUsername(username)
+    }
+    static public def findGeneratorByUsername(String username){
+        return ResidueGenerator.findByUsername(username)
+    }
+    static public def findGeneratorByAddress(String address){
+        return ResidueGenerator.findByAddressGenerator(address)
+    }
+    static public def findGeneratorByName(String name){
+        return ResidueGenerator.findByNameGenerator(name)
+    }
+    static public def findGeneratorByCnpj(String cnpj){
+        return ResidueGenerator.findByCnpj(cnpj)
     }
 
-    static public def findGeneratorByAddress(String address) {
+    static public def getGeneratorByAddress(String address) {
         generators.find { generator ->
             generator.addressGenerator == address
         }
     }
-
-    static public void findGeneratorByName(String name){
+    static public def getGeneratorByUsername(String username) {
+        generators.find { generator ->
+            generator.username == username
+        }
+    }
+    static public void getGeneratorByName(String name){
         generators.find {generator ->
                 generator.nameGenerator == name
         }
     }
-    static public void findGeneratorByCnpj(String CNPJ){
+    static public void getGeneratorByCnpj(String CNPJ){
         generators.find {generator ->
             generator.cnpj== CNPJ
         }
@@ -85,7 +110,41 @@ class GeneratorTestDataAndOperations{
         cont.save()
         cont.response.reset()
     }
+    static public void createGeneratorUsernamePasswordAddress(String username, String password, String address ){
+        def cont = new ResidueGeneratorController()
+        def newGenerator = [nome: "RU",
+                            type: "Restaurante",
+                            cnpj: "testecnpj2",
+                            username: username,
+                            password: password,
+                            addressGenerator: address,
+                            averageMonthlyMeals: 0,
+                            averageDailyMeals: 0]
+        cont.params << newGenerator
+        cont.create()
+        cont.save()
+        cont.response.reset()
+    }
+    static public void createGeneratorUsername(String username){
+        def cont = new ResidueGeneratorController()
+        def newGenerator = [nome: "RU",
+                            type: "Restaurante",
+                            cnpj: "testecnpj2",
+                            username: username,
+                            password: "@Abcd1234",
+                            addressGenerator: "Bubble Street number 7",
+                            averageMonthlyMeals: 0,
+                            averageDailyMeals: 0]
+        cont.params << newGenerator
+        cont.create()
+        cont.save()
+        cont.response.reset()
+    }
 
+    static public boolean verifySecurityOfPassword(String password){
+        def cont = new ResidueGeneratorController()
+        cont.verifySecurityOfPassword(password)
+    }
     static public void showGenerator(String name){
         def cont = new ResidueGeneratorController()
         def newGenerator = findGeneratorByName(name)
