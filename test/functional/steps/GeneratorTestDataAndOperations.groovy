@@ -11,7 +11,7 @@ class GeneratorTestDataAndOperations{
              type: "Restaurante",
              cnpj: "testecnpj1",
              username: "Los_Pollos",
-             password: "@Abcd1234",
+             password: "Abcd1234@",
              addressGenerator: "Bubble Street number 7",
              averageMonthlyMeals: 0,
              averageDailyMeals: 0],
@@ -20,7 +20,7 @@ class GeneratorTestDataAndOperations{
              type: "Restaurante",
              cnpj: "testecnpj2",
              username: "Los_Pollos2",
-             password: "@Abcd1238",
+             password: "Abcd1238@",
              addressGenerator: "Bubble Street number 4",
              averageMonthlyMeals: 0,
              averageDailyMeals: 0],
@@ -29,7 +29,7 @@ class GeneratorTestDataAndOperations{
              type: "Restaurante",
              cnpj: "testecnpj3",
              username: "Los_Pollos3",
-             password: "@Abcd1239",
+             password: "Abcd1239@",
              addressGenerator: "Donut Street number 5",
              averageMonthlyMeals: 0,
              averageDailyMeals: 0]
@@ -76,7 +76,7 @@ class GeneratorTestDataAndOperations{
     }
     static public void createGenerator(String address){
         def cont = new ResidueGeneratorController()
-        def novoGenerator = findGeneratorByAddress(address)
+        def novoGenerator = getGeneratorByAddress(address)
         cont.params << novoGenerator
         cont.create()
         cont.save()
@@ -147,18 +147,18 @@ class GeneratorTestDataAndOperations{
     }
     static public void showGenerator(String name){
         def cont = new ResidueGeneratorController()
-        def newGenerator = findGeneratorByName(name)
+        def newGenerator = getGeneratorByName(name)
             cont.show(newGenerator)
     }
 
     static public void showGeneratorByCnpj(String cnpj){
         def cont = new ResidueGeneratorController()
-        def newGenerator = findGeneratorByCnpj(cnpj)
+        def newGenerator = getGeneratorByCnpj(cnpj)
         cont.show(newGenerator)
     }
 
     static public void editGenerator(String address, def residueGenerator){
-        def existingGenerator = findGeneratorByAddress(address)
+        def existingGenerator = getGeneratorByAddress(address)
         if(address != null && existingGenerator == null) {
             def cont = new ResidueGeneratorController()
             cont.params << [name: "Clovis Palace"] << [type: "Restaurante"] << [cnpj: "testecnpj2"] << [addressGenerator: address] << [averageMonthlyMeals: 0] << [averageDailyMeals: 0] << [id: residueGenerator.getId()]
@@ -204,7 +204,7 @@ class GeneratorTestDataAndOperations{
     //LIST FEATURES
     static public void createGeneratorWithDailyMeal(String address, int dailymeal){
         def cont = new ResidueGeneratorController()
-        def novoGenerator = findGeneratorByAddress("Bubble Street number 7")
+        def novoGenerator = getGeneratorByAddress("Bubble Street number 7")
         cont.params << novoGenerator
         cont.params << [addressGenerator: address] << [averageDailyMeals: dailymeal]
         cont.create()
@@ -214,7 +214,7 @@ class GeneratorTestDataAndOperations{
 
 
     static public boolean containResidueGenerator(String address,ResGen){
-        def testresidue = ResidueGenerator.findByAddressGenerator(address)
+        def testresidue = ResidueGenerator.getByAddressGenerator(address)
         return ResGen.contains(testresidue)
     }
 

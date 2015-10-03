@@ -23,17 +23,15 @@ Given(~'^That there is no generator with address "([^"]*)"$') { String address -
     generator = ResidueGenerator.findByAddressGenerator(address)
     assert generator == null
 }
-And(~'^there is no registered username "([^"]*)"$'){String username->
+And(~'there is no registered username "([^"]*)" in the database"$'){String username->
     generator = GeneratorTestDataAndOperations.findGeneratorByUsername(username)
     assert generator == null
 
 }
-And(~'^the password "([^"]*)" follow the security rules"$'){String password->
+And(~'^the password "([^"]*)" follow the security rules$'){String password->
     assert  GeneratorTestDataAndOperations.verifySecurityOfPassword(address)
 
-
 }
-
 When(~'I register the residue generator account "([^"]*)" with password "([^"]*)“ and address "([^"]*)"$'){ String username, String password, String address ->
     endereco = address
     GeneratorTestDataAndOperations.createGeneratorUsernamePasswordAddress(username,password,address)
@@ -54,7 +52,7 @@ Then (~'^The account "([^"]*)" with password "([^"]*)" is created$'){ String use
 //Then: The account new "Los_Pollos" with password "Abcd1234@" is not created
 
 
-And(~'^there is a registered username "([^"]*)"$'){String username->
+And(~'there is a registered username "([^"]*)" in the database$'){String username->
     GeneratorTestDataAndOperations.createGeneratorUsername(username)
     generator = GeneratorTestDataAndOperations.findGeneratorByUsername(username)
     assert generator != null
@@ -81,8 +79,8 @@ Given(~'^I am at the register new generator page$'){ ->
 
 }
 
-
-When(~'^I fill the residue generator information with username "([^"]*)"$'){String username ->
+When(~'^I fill the residue generators information with username "([^"]*)"$') { String username ->
+    // Express the Regexp above with the code you wish you had
     GeneratorTestDataAndOperations GTDO = new GeneratorTestDataAndOperations();
     LinkedHashMap generator = GTDO.getGeneratorByUsername(username);
     page.fillGeneratorDetails(generator)
@@ -98,7 +96,7 @@ And(~'^I register the new generator'){ ->
 }
 
 Then(~'^I see a confirmation message'){ ->
-    assert !page.hasErrors()
+    assert withConfirm(true) { $("input", name: "showConfirm").click() } == "Generator was created!"
 }
 
 //Scenario: duplicated residue generator username web
@@ -115,13 +113,6 @@ And(~'^username "([^"]*)" has already been created'){String username ->
 
 Then(~'^I see a error message'){ ->
     assert page.hasErrors()
-}
-
-
-When(~'^I fill the generator details with the address "([^"]*)"$'){String address ->
-    GeneratorTestDataAndOperations GTDO = new GeneratorTestDataAndOperations();
-    LinkedHashMap generator = GTDO.getGeneratorByAddress(address);
-    page.fillGeneratorDetails(generator)
 }
 
 
@@ -154,21 +145,10 @@ Then (~'^The new residue generator is properly stored by the system$'){ ->
 }
 
 
-Given(~'^I am at the register new generator page$'){ ->
-
-    to GeneratorCreatePage
-    at GeneratorCreatePage
-
-}
-
 When(~'^I fill the generator details with the address "([^"]*)"$'){String address ->
     GeneratorTestDataAndOperations GTDO = new GeneratorTestDataAndOperations();
     LinkedHashMap generator = GTDO.getGeneratorByAddress(address);
     page.fillGeneratorDetails(generator)
-}
-
-And(~'^I register the new generator$'){ ->
-    page.selectCreateGenerator()
 }
 
 Then (~'^I should see a message indicating that the action was successful$'){ ->
