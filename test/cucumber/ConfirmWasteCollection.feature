@@ -3,7 +3,7 @@ As a residue generator
 I want to confirm the collection of my waste
 So the other stakeholders can access this information
 
-#if ($confirmaWasteCollection)
+#if ($confirmationWasteCollection)
 Scenario: Confirmation of pending waste collection
 Given the system has a waste collection solicitation by “RU” residue generator
 And the solicitation is pending

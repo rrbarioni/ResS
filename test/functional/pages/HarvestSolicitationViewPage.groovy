@@ -22,4 +22,10 @@ class HarvestSolicitationViewPage extends Page {
             return false
         }
     }
+
+    def confirmCollection() {
+
+        $("input", type: "button").click()
+
+    }
 }
