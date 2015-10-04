@@ -29,7 +29,7 @@ And(~'there is no registered username "([^"]*)" in the database"$'){String usern
 
 }
 And(~'^the password "([^"]*)" follow the security rules$'){String password->
-    assert  GeneratorTestDataAndOperations.verifySecurityOfPassword(address)
+    assert  GeneratorTestDataAndOperations.verifySecurityOfPassword(password)
 
 }
 When(~'I register the residue generator account "([^"]*)" with password "([^"]*)“ and address "([^"]*)"$'){ String username, String password, String address ->

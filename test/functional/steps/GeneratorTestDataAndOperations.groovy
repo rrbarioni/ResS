@@ -10,7 +10,7 @@ class GeneratorTestDataAndOperations{
             [nameGenerator:"RU",
              type: "Restaurante",
              cnpj: "testecnpj1",
-             username: "Los_Pollos",
+             username: "Los_Pollos9",
              password: "Abcd1234@",
              addressGenerator: "Bubble Street number 7",
              averageMonthlyMeals: 0,
@@ -88,6 +88,8 @@ class GeneratorTestDataAndOperations{
         def newGenerator = [nome: name,
                             type: "Restaurante",
                             cnpj: "testecnpj1",
+                            username: "Los_Pollos5",
+                            password: "@Abcd1234",
                             addressGenerator: "Bubble Street number 7",
                             averageMonthlyMeals: 0,
                             averageDailyMeals: 0]
@@ -99,9 +101,11 @@ class GeneratorTestDataAndOperations{
 
     static public void createGeneratorCnpj(String CNPJ){
         def cont = new ResidueGeneratorController()
-        def newGenerator = [nome: "RU",
+        def newGenerator = [nome: "RUcnpj",
                             type: "Restaurante",
                             cnpj: CNPJ,
+                            username: "Los_Pollos6",
+                            password: "@Abcd1234",
                             addressGenerator: "Bubble Street number 7",
                             averageMonthlyMeals: 0,
                             averageDailyMeals: 0]
