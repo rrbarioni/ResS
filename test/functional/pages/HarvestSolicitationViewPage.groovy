@@ -25,7 +25,8 @@ class HarvestSolicitationViewPage extends Page {
 
     def confirmCollection() {
 
-        $("input", type: "button").click()
+        $("input", name: "confirmButton").click()
 
     }
+
 }

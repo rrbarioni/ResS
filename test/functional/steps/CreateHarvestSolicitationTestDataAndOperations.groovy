@@ -26,8 +26,19 @@ class CreateHarvestSolicitationTestDataAndOperations {
                     addressGenerator: "Any Street number 5",
                     averageDailyMeals: 50,
                     averageMonthlyMeals: 2000,
-                    hasActiveHarvest: false,
+                    hasActiveHarvest: true,
                     harvestSolicitation: findHarvestByGeneratorName("RU")
+            ],
+
+            [
+                    nameGenerator: "RU",
+                    type: "Restaurante",
+                    cnpj: "0000000",
+                    addressGenerator: "Any Street number 5",
+                    averageDailyMeals: 50,
+                    averageMonthlyMeals: 2000,
+                    hasActiveHarvest: false,
+                    harvestSolicitation: null
             ]
     ]
 
@@ -50,6 +61,15 @@ class CreateHarvestSolicitationTestDataAndOperations {
                     estimatedAmountOfResidue: 60,
                     solicitationDate: new Date(),
                     residueGenerator: findGeneratorByName("RU")
+            ],
+
+            [
+                    harvesterId: 3,
+                    generatorId: 1,
+                    status: "Confirmed",
+                    estimatedAmountOfResidue: 60,
+                    solicitationDate: new Date(),
+                    residueGenerator: findGeneratorByName("RU")
             ]
     ]
 
@@ -62,7 +82,22 @@ class CreateHarvestSolicitationTestDataAndOperations {
 
     static public def findGeneratorByName(String name) {
         generators.find { generator ->
-            generator.nameGenerator == name
+            if(generator.nameGenerator == name) {
+
+                generator.hasActiveHarvest == true
+
+            }
+        }
+
+    }
+
+    static public def findAlreadyCollectedGeneratorByName(String name) {
+        generators.find { generator ->
+            if(generator.nameGenerator == name) {
+
+                generator.hasActiveHarvest == false
+
+            }
         }
 
     }
@@ -76,7 +111,23 @@ class CreateHarvestSolicitationTestDataAndOperations {
 
     static public def findHarvestByGeneratorName(String name) {
         harvestSolicitations.find { harvest ->
-            harvest.residueGenerator.nameGenerator == name
+            if (harvest.residueGenerator.nameGenerator == name) {
+
+                harvest.status == "Pending"
+
+            }
+        }
+
+    }
+
+    static public def findConfirmedHarvestByGeneratorName(String name) {
+        harvestSolicitations.find { harvest ->
+            if(harvest.residueGenerator.nameGenerator == name) {
+
+                harvest.status == "Confirmed"
+
+            }
+
         }
 
     }
@@ -100,6 +151,15 @@ class CreateHarvestSolicitationTestDataAndOperations {
         controller.response.reset()
     }
 
+    static public void createAlreadyCollectedGeneratorByName (String name) {
+        def controller = new ResidueGeneratorController()
+        def newGenerator = findAlreadyCollectedGeneratorByName(name)
+        controller.params << newGenerator
+        controller.create()
+        controller.save()
+        controller.response.reset()
+    }
+
     static public void createHarvestSolicitation(String amount){
         def cont = new GeneratorHarvestSolicitationController()
         def newHarvest = findHarvestByAmount(amount)
@@ -116,5 +176,12 @@ class CreateHarvestSolicitationTestDataAndOperations {
         controller.response.reset()
     }
 
+    static public void createConfirmedHarvestSolicitationByGenerator(ResidueGenerator residueGenerator) {
+        def controller = new GeneratorHarvestSolicitationController()
+        def newHarvest = findConfirmedHarvestByGeneratorName(residueGenerator.nameGenerator)
+        controller.params << newHarvest
+        controller.save()
+        controller.response.reset()
+    }
 
 }
