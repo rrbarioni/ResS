@@ -32,8 +32,8 @@ grails.project.dependency.resolution = {
         mavenCentral()
 
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
-        mavenRepo "http://snapshots.repository.codehaus.org"
-        mavenRepo "http://repository.codehaus.org"
+        //mavenRepo "http://snapshots.repository.codehaus.org"
+        //mavenRepo "http://repository.codehaus.org"
         mavenRepo "http://download.java.net/maven/2/"
         mavenRepo "http://repository.jboss.com/maven2/"
         mavenRepo "https://repo.grails.org/grails/plugins"
@@ -41,6 +41,7 @@ grails.project.dependency.resolution = {
     }
     dependencies {
         compile "org.spockframework:spock-grails-support:0.7-groovy-1.8"
+        //test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
         test "org.gebish:geb-junit4:0.9.2"
         test "org.seleniumhq.selenium:selenium-support:2.39.0"
         test "org.seleniumhq.selenium:selenium-chrome-driver:2.39.0"
