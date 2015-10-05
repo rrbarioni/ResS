@@ -23,7 +23,7 @@ And no report is shown
 Scenario: Report generation
 Given the system has a request to generate a report by a restaurant
 When the system confirms that collections were made on that restaurant on the last month
-Then a report is generated containing those collection’s informations
+Then a report is generated containing those collectionâ€™s information
 
 Scenario: Empty report generation
 Given the system has a request to generate a report by a restaurant
