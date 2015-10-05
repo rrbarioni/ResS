@@ -5,7 +5,7 @@ import residueGenerator.HarvestSolicitation
 import residueGenerator.GeneratorHarvestSolicitationController
 import residueGenerator.ResidueGeneratorController
 
-class CreateHarvestSolicitationTestDataAndOperations {
+class SolicitacaoColetaTestDataAndOperations {
 
     static generators = [
             [
