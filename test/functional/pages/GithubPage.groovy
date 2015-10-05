@@ -5,6 +5,10 @@ import geb.Page
 class GithubPage extends Page {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9963147504843f021cbd0de6022fbec879b71213
     def titulo = "pauloborba/ResS · GitHub"
 =======
     def titulo = "pauloborba/ResS ï¿½ GitHub"
