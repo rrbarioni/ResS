@@ -55,14 +55,14 @@ And (~'I fill the other fields$'{ ->
     page.fillDataAndVolume()
 }
 
-And (~'Select “Create”$'){ ->
+And (~'Select â€œCreateâ€$'){ ->
     page.submit()
 }
 
 Then (~'I see a error message$'){ ->
     to ColetaListPage
     at ColetaListPage
-    assert !page.hasErrors()
+    assert page.hasErrors()
 }
 
 //CENARIO GUI:
@@ -81,12 +81,12 @@ And (~'I fill the other fields$'){ ->
     page.fillNameAndData()
 }
 
-And (~'Select “Create”$'){ ->
+And (~'Select â€œCreateâ€$'){ ->
     page.submit()
 }
 
 Then (~'I see a error message$'){ ->
     to ColetaListPage
     at ColetaListPage
-    assert !page.hasErrors()
+    assert page.hasErrors()
 }
