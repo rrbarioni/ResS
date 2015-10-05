@@ -21,11 +21,11 @@ And no report is shown
 #CONTROLLER
 
 Scenario: Report generation
-Given the system has a request to generate a report by a restaurant
-When the system confirms that collections were made on that restaurant on the last month
+Given the system has a request to generate a report by "RU" residue generator
+When the system confirms that collections were made on "RU" on the last month
 Then a report is generated containing those collection’s information
 
 Scenario: Empty report generation
-Given the system has a request to generate a report by a restaurant
-When the system finds that no collections were made on that restaurant on the last month
+Given the system has a request to generate a report "RU" residue generator
+When the system finds that no collections were made on "RU" on the last month
 Then a empty report message is generated
