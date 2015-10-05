@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07ff5d98-2710-41a8-800d-503bca32aacb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/pages/LoginPage.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/cucumber/steps/LoginSteps.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/steps/LoginTestDataAndOperations.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/cucumber/EditRestaurant'sAccount.feature" afterPath="$PROJECT_DIR$/test/cucumber/EditRestaurantsAccount.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/CollectionNotice.feature" afterPath="$PROJECT_DIR$/test/cucumber/CollectionNotice.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/steps/GeneratorTestDataAndOperations.groovy" afterPath="$PROJECT_DIR$/test/functional/steps/GeneratorTestDataAndOperations.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/GithubPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/GithubPage.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/Login.feature" afterPath="$PROJECT_DIR$/test/cucumber/Login.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/NotificationOfWasteCollectionConfirmation.feature" afterPath="$PROJECT_DIR$/test/cucumber/NotificationOfWasteCollectionConfirmation.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/RegisterGenerator.feature" afterPath="$PROJECT_DIR$/test/cucumber/RegisterGenerator.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResS.iml" afterPath="$PROJECT_DIR$/ResS.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/ResidueCollector.feature" afterPath="$PROJECT_DIR$/test/cucumber/ResidueCollector.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/ResidueGeneratorIndexPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/ResidueGeneratorIndexPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application.properties" afterPath="$PROJECT_DIR$/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ResS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LoginSteps.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginSteps.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/cucumber/steps/LoginSteps.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9322289">
+            <state vertical-scroll-proportion="0.0">
               <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
               <folding>
                 <element signature="e#16#38#0" expanded="true" />
@@ -54,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.feature" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Login.feature" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/cucumber/Login.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="57" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.5256024">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -120,9 +105,9 @@
         <option value="$PROJECT_DIR$/test/cucumber/ResidueCollector.feature" />
         <option value="$PROJECT_DIR$/test/functional/steps/LoginTestDataAndOperations.groovy" />
         <option value="$PROJECT_DIR$/test/functional/steps/GeneratorTestDataAndOperations.groovy" />
-        <option value="$PROJECT_DIR$/test/cucumber/Login.feature" />
         <option value="$PROJECT_DIR$/test/functional/pages/LoginPage.groovy" />
         <option value="$PROJECT_DIR$/test/cucumber/steps/LoginSteps.groovy" />
+        <option value="$PROJECT_DIR$/test/cucumber/Login.feature" />
       </list>
     </option>
   </component>
@@ -776,12 +761,12 @@
       <option name="number" value="Default" />
       <updated>1443016046177</updated>
       <workItem from="1443016054550" duration="238000" />
-      <workItem from="1443999119820" duration="9864000" />
+      <workItem from="1443999119820" duration="9974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10102000" />
+    <option name="totallyTimeSpent" value="10212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="27" width="1400" height="761" extended-state="0" />
@@ -1152,21 +1137,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/cucumber/Login.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="57" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/cucumber/steps/LoginSteps.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9322289">
+        <state vertical-scroll-proportion="0.0">
           <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
           <folding>
             <element signature="e#16#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/cucumber/Login.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5256024">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
