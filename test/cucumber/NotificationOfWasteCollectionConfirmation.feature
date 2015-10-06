@@ -10,13 +10,7 @@
     When I submit the email request
     And there is internet connection
     Then the system sends an email confirmation for the registered stakeholders
-
-
-#/*Given that the system has a waste collection confirmed
-#When I submit the email request
-#And there is internet connection
-#Then the system sends an email confirmation for the registered stakeholders
-#*/
+    
   Scenario: failure confirmation sending
     Given   that the system has a waste collection confirmed
     When there isn’t internet connection
