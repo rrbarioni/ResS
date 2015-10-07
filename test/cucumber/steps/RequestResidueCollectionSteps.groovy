@@ -26,7 +26,7 @@ Then (~'^The residue request is not generated$'){ ->
 //CENARIO CONTROLADOR:
 //Scenario: Invalid volume input
 
-Given (~'^I am logged in the system as a restaurant$'){ ->
+Given (~'^I am logged on the system as a restaurant$'){ ->
     //login not implemented yet
 }
 
@@ -35,7 +35,7 @@ When (~'^I register a residue collection request with Volume "([^"]*)"$'){String
     CreateColetaTestDataAndOperations.createColetaWithVolume(volume)
 }
 
-Then (~'^The residue request is not generated$'){ ->
+Then (~'^The residue request is not created$'){ ->
     assert Coleta.findByVolume(keepVolume) == null
 }
 
@@ -51,15 +51,15 @@ When (~'^I fill the request information with Name "([^"]*)"$'){String name ->
     page.fillName(name)
 }
 
-And (~'^I fill the other fields$'){ ->
+And (~'^I fill data and volume fields$'){ ->
     page.fillDataAndVolume()
 }
 
-And (~'^Select “Create”$'){ ->
+And (~'^Choose “Create”$'){ ->
     page.submit()
 }
 
-Then (~'^I see a error message$'){ ->
+Then (~'^I should see a error message$'){ ->
     to ColetaListPage
     at ColetaListPage
     assert page.hasErrors()
@@ -68,7 +68,7 @@ Then (~'^I see a error message$'){ ->
 //CENARIO GUI:
 //Scenario: Invalid volume input
 
-Given (~'^I am at creating collection page$'){ ->
+Given (~'^I am on creating collection page$'){ ->
     to ColetaCreatePage
     at ColetaCreatePage
 }
@@ -77,7 +77,7 @@ When (~'^I fill the request information with Volume "([^"]*)"$'){String volume -
     page.fillVolume(volume)
 }
 
-And (~'^I fill the other fields$'){ ->
+And (~'^I fill name and data fields$'){ ->
     page.fillNameAndData()
 }
 
