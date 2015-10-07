@@ -12,21 +12,21 @@ When I register a residue collection request with Name “”
 Then The residue request is not generated
 
 Scenario: Invalid volume input
-Given I am logged in the system as a restaurant
+Given I am logged on the system as a restaurant
 When I register a residue collection request with Volume “0”
-Then The residue request is not generated
+Then The residue request is not created
 
 #GUI
 Scenario: Blank Name input
 Given I am at creating collection page
 When I fill the request information with Name “”
-And I fill the other fields
-And Select “Create”
-Then I see a error message
+And I fill data and volume fields
+And Choose “Create”
+Then I should see a error message
 
 Scenario: Invalid volume input
-Given I am at creating collection page
+Given I am on creating collection page
 When I fill the request information with Name “RU”
-And I fill the other fields
+And I fill name and data fields
 And Select “Create”
 Then I see a error message
