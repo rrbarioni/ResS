@@ -51,7 +51,7 @@ When (~'^I fill the request information with Name "([^"]*)"$'){String name ->
     page.fillName(name)
 }
 
-And (~'^I fill the other fields$'{ ->
+And (~'^I fill the other fields$'){ ->
     page.fillDataAndVolume()
 }
 
