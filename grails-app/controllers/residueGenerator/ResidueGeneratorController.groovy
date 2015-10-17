@@ -21,14 +21,32 @@ class ResidueGeneratorController {
     }
 
     def create() {
+        boolean var = verifySecurityOfPassword(params.password)
         [residueGeneratorInstance: new ResidueGenerator(params)]
     }
+    //#if ($RegisterAResidueGenerator)
     def verifySecurityOfPassword(String password){
+        int countUpperCase = 0
+        int countLowerCase= 0
+        int countSpecial = 0
 
-        true
+        for(int i =0 ;i<password.length();i++){
+            char cAtIndex = password.charAt(i)
+            if( cAtIndex >= 'a' && cAtIndex<='z') {
+                countLowerCase++;
+            }else if(cAtIndex >= 'A' && cAtIndex<='Z'){
+                countUpperCase++;
+            }else{
+                countSpecial++;
+            }
+        }
+
+        return (countLowerCase>0) && (countUpperCase >0) && (countSpecial >0) && (password.length() >=8)
     }
+    //#end
     def save() {
         def residueGeneratorInstance = new ResidueGenerator(params)
+
         if (!residueGeneratorInstance.save(flush: true)) {
             render(view: "create", model: [residueGeneratorInstance: residueGeneratorInstance])
             return
