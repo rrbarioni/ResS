@@ -8,7 +8,6 @@
           <root url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/remote-control-1.4/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/jquery-1.10.2/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/jquery-ui-1.10.4/web-app" relative="/" />
-          <root url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/mail-1.0.7/grails-app/views" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
@@ -47,12 +46,6 @@
     <content url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/jquery-ui-1.10.4">
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/jquery-ui-1.10.4/grails-app/taglib" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/mail-1.0.7">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/mail-1.0.7/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/mail-1.0.7/grails-app/i18n" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/mail-1.0.7/grails-app/services" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/mail-1.0.7/grails-app/taglib" isTestSource="false" />
-    </content>
     <content url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/remote-control-1.4">
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/remote-control-1.4/src/groovy" isTestSource="false" />
     </content>
@@ -62,6 +55,7 @@
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/resources-1.1.6/grails-app/i18n" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/resources-1.1.6/grails-app/taglib" isTestSource="false" />
     </content>
+    <content url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/spock-0.7" />
     <content url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/tomcat-2.1.5" />
     <content url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/webxml-1.4.1">
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/webxml-1.4.1/src/groovy" isTestSource="false" />
