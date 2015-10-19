@@ -27,7 +27,7 @@ Then (~'^the system resends the email with the data of the pending requests to t
 //resend email is not implemented yet
 }
 
-And(~'^ generates a notification of email sending confirmation) {
+And(~'^ generates a notification of email sending confirmation') {
 //not implemented yet
 }
 
@@ -39,7 +39,7 @@ Given(~'I am logged into the restaurant account in which I work$') { ->
     //login not implemented yet
 }
 
-And(~'I'm on the page of requested collections$'){ ->
+And(~'I am on the page of requested collections$'){ ->
     to SolicitacaoColetaViewPage
     at SolicitacaoColetaViewPage
 }
