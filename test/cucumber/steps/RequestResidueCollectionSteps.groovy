@@ -5,7 +5,7 @@ import pages.ColetaListPage
 import HistoricoDeColeta.Coleta
 import static cucumber.api.groovy.EN.*
 
-//Created by Ricardo Barioni on 03/10/2015
+//Updated by Ricardo Barioni on 19/10/2015
 
 //CENARIO CONTROLADOR:
 //Scenario: Blank Name input
@@ -15,12 +15,11 @@ Given (~'^I am logged in the system as a restaurant$'){ ->
 }
 
 When (~'^I register a residue collection request with Name "([^"]*)"$'){String name ->
-    keepName = name
     CreateColetaTestDataAndOperations.createColetaWithName(name)
 }
 
-Then (~'^The residue request is not generated$'){ ->
-    assert Coleta.findByName(keepName) == null
+Then (~'^The residue request with name "([^"]*)" is not generated$'){String name ->
+    assert Coleta.findByNome(name) == null
 }
 
 //CENARIO CONTROLADOR:
@@ -31,12 +30,11 @@ Given (~'^I am logged on the system as a restaurant$'){ ->
 }
 
 When (~'^I register a residue collection request with Volume "([^"]*)"$'){String volume ->
-    keepVolume = volume
     CreateColetaTestDataAndOperations.createColetaWithVolume(volume)
 }
 
-Then (~'^The residue request is not created$'){ ->
-    assert Coleta.findByVolume(keepVolume) == null
+Then (~'^The residue request with volume "([^"]*)" is not created$'){String volume ->
+    assert Coleta.findByVolume(volume) == null
 }
 
 //CENARIO GUI:
@@ -55,7 +53,7 @@ And (~'^I fill data and volume fields$'){ ->
     page.fillDataAndVolume()
 }
 
-And (~'^Choose “Create”$'){ ->
+And (~'^Choose "Create"$'){ ->
     page.submit()
 }
 
@@ -81,7 +79,7 @@ And (~'^I fill name and data fields$'){ ->
     page.fillNameAndData()
 }
 
-And (~'^Select “Create”$'){ ->
+And (~'^Select "Create"$'){ ->
     page.submit()
 }
 
