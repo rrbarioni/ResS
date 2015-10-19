@@ -22,7 +22,7 @@ Scenario: Failure resending Notification
 #GUI
 Scenario: Resending email Notification
 	Given that I am logged into the restaurant account in which I work
-	And I'm on the page of requested collections
+	And I am on the page of requested collections
 	And there has been a open collection request for some time
 	When I select the resend email notification option
 	And I have internet connection
@@ -30,8 +30,8 @@ Scenario: Resending email Notification
 	And the email is resent
 
 Scenario:  Failure resending email Notification
-	Given that I'm logged in the account of the restaurant in which I work
-	And I'm on the page of requested collections
+	Given that I am logged in the account of the restaurant in which I work
+	And I am on the page of requested collections
 	And there has been a open collection request for some time
 	And I do not have internet connection
 	When I select the resend email notification option
