@@ -18,7 +18,7 @@ Feature: admin user
   Scenario: Add a new user (gui)
 	Given I’m at the sign up page
 	When I ask the system to add a user called "John Doe", with CPF "123.456.789-12", login "admin", password "abcdef", email "johndoe@johndoe.com" and phone "0000-0000"
-	Then I see a confirmation message
+	Then I see a message confirming the user registration
 
   Scenario: Add a new user with existing login (gui)
 	Given I’m at the sign up page
