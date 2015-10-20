@@ -24,13 +24,13 @@ Feature: register a residue generator
 #GUI
 
   Scenario: new valid generator web
-    Given I am at the home page
-    When I select the "Register new Generator" option
-    And I fill the residue generator information with username "Los Pollos"
-    And username "Los Pollos" has not been created yet
-    And select "register"
-    Then I see a confirmation message
-    And I am back to the home page
+
+    Given I am at the register new generator page
+    When I fill the residue generators information with username "Los_Pollos"
+    And username "Los_Pollos" has not been created yet
+    And I register the new generator
+    Then I see the show generator page
+
 
   Scenario: duplicated residue generator username web
     Given I am at the home page
