@@ -3,7 +3,7 @@ package steps
 import pages.HarvestSolicitationViewPage
 import residueGenerator.HarvestSolicitation
 import residueGenerator.ResidueGenerator
-
+/*
 //CONTROLLER
 
 //Scenario: Sending confirmation
@@ -50,7 +50,8 @@ Given(~'^that I’m logged in the system$'){
 
 }
 
-And(~'I am on the page of collection confirmation$'){ ->
+And(~'^I’m on the page of collection confirmation$'){ ->
+
 
     to ConfirmaColetaViewPage
     at ConfirmaColetaViewPage
@@ -75,7 +76,5 @@ And(~'^I see a success message$') {
     assert page.hasOk()
     
 
-}
-}
-*/
+}*/
 
