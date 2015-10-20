@@ -2,7 +2,7 @@ package steps
 
 import pages.HarvestSolicitationViewPage
 import residueGenerator.ResidueGenerator
-
+/*
 //CONTROLLER
 
 //Scenario: Report generation
@@ -30,17 +30,17 @@ Given(~'^I am at the HarvestSolicitationViewPage page$'){ ->
     at HarvestSolicitationViewPage
 }
 
-When(~'I select the "Generate Report" option$') { ->
+When(~'^I select the "Generate Report" option$') { ->
 	page.generateReport()
 }
 
-And(~'collections were made on the previous month at "RU" residue generator$') { String name ->
+And(~'^collections were made on the previous month at "RU" residue generator$') { String name ->
 	GeneratorTestDataAndOperations.createGeneratorByName(name)
     residueGenerator = ResidueGenerator.findByNameGenerator(name)
 
     assert residueGenerator != null && residueGenerator.hasMonthlyHarvest
 }
 
-Then(~'I see the generated report$') { ->
+Then(~'^I see the generated report$') { ->
 	printRelatorio()
-}
+}*/
