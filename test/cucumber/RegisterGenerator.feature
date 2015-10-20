@@ -24,7 +24,7 @@ Feature: register a residue generator
     When I fill the residue generators information with username "Los_Pollos"
     And username "Los_Pollos" has not been created yet
     And I register the new generator
-    Then I see a confirmation message
+    Then I see the show generator page
 
   Scenario: duplicated residue generator username web
     Given I am at the register new generator page

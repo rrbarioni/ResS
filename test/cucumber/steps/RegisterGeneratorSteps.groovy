@@ -1,6 +1,7 @@
 package steps
 
 import pages.GeneratorCreatePage
+import pages.ResidueGeneratorShowPage
 import residueGenerator.ResidueGenerator
 import static cucumber.api.groovy.EN.*
 
@@ -87,6 +88,11 @@ When(~'^I fill the residue generators information with username "([^"]*)"$') { S
 }
 
 And(~'^username "([^"]*)" has not been created yet'){String username ->
+
+    generator = GeneratorTestDataAndOperations.findGeneratorByUsername(username)
+    if(generator != null){
+        generator.delete(flush:true)
+    }
     generator = GeneratorTestDataAndOperations.findGeneratorByUsername(username)
     assert  generator == null
 }
@@ -95,8 +101,9 @@ And(~'^I register the new generator'){ ->
     page.selectCreateGenerator()
 }
 
-Then(~'^I see a confirmation message'){ ->
-    assert withConfirm(true) { $("input", name: "showConfirm").click() } == "Generator was created!"
+Then(~'^I see the show generator page'){ ->
+    at ResidueGeneratorShowPage
+    //assert withConfirm(true) { $("input", name: "showConfirm").click() } == "Generator was created!"
 }
 
 //Scenario: duplicated residue generator username web

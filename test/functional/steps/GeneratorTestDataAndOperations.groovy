@@ -10,7 +10,7 @@ class GeneratorTestDataAndOperations{
             [nameGenerator:"RU",
              type: "Restaurante",
              cnpj: "testecnpj1",
-             username: "Los_Pollos9",
+             username: "Los_Pollos",
              password: "Abcd1234@",
              addressGenerator: "Bubble Street number 7",
              averageMonthlyMeals: 0,
@@ -176,6 +176,8 @@ class GeneratorTestDataAndOperations{
         def novoGenerator =  [nameGenerator: "Alt",
                               type: "Restaurante",
                               cnpj: "testecnpj1",
+                              username:"LosPollos",
+                              password: "Abcd1234@",
                               addressGenerator: address,
                               averageMonthlyMeals: 0,
                               averageDailyMeals: 0];
