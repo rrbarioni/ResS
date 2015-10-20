@@ -2,7 +2,6 @@ package steps
 
 import user.AdminUserController
 
-
 public class AdminUserTestDataAndOperations {
 
     static users = {
