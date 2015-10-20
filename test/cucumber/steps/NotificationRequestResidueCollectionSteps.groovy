@@ -27,7 +27,7 @@ Then (~'^the system resends the email with the data of the pending requests to t
 //resend email is not implemented yet
 }
 
-And(~'^ generates a notification of email sending confirmation) {
+And(~'^ generates a notification of email sending confirmation$') {
 //not implemented yet
 }
 
@@ -35,23 +35,23 @@ And(~'^ generates a notification of email sending confirmation) {
 
 //GUI
 
-Given(~'I am logged into the restaurant account in which I work$') { ->
+Given(~'^I am logged into the restaurant account in which I work$') { ->
     //login not implemented yet
 }
 
-And(~'I'm on the page of requested collections$'){ ->
+And(~'^I’m on the page of requested collections$'){ ->
     to SolicitacaoColetaViewPage
     at SolicitacaoColetaViewPage
 }
-And (~'there has been a open collection request for some time$') { ->
+And (~'^there has been a open collection request for some time$') { ->
 //not implemented yet
 }
 
-When(~'I select the "resend email notification" button$') {
+When(~'^I select the "resend email notification" button$') {
  // not implemented yet
 }
 
-Then(~'I see a confirmation message$') { ->
+Then(~'^I see a confirmation message$') { ->
 	to SolicitacaoColetaViewPage
     at SolicitacaoColetaViewPage
     assert !page.hasOk()
