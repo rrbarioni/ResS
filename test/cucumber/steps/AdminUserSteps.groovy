@@ -47,6 +47,6 @@ When(~'^When I ask the system to add a user called"[^"*]", with CPF "[^"*]", log
         page.fillUserInfo(name, cpf, login, password, email, phone)
         page.submitUserInfo()
 }
-Then(~'^I see a confirmation message$'){->
+Then(~'^I see a message confirming the user registration$'){->
     assert page.hasMessage()
 }
