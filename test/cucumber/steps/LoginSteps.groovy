@@ -1,5 +1,5 @@
 package steps
-
+#if($Login)
 
 import pages.LoginPage
 import pages.HomePage
@@ -62,3 +62,4 @@ And (~'^I get flashed a notice saying that I\'ve logged in'){
     -> at HomePage
     LoginPage.select("flash")
 }
+#end

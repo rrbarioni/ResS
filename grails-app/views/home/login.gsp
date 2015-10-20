@@ -53,10 +53,19 @@
 </div>
 <br>
 <div class="login">
-    <input type="text" placeholder="username" name="user"><br>
+    <!--input type="text" placeholder="username" name="user"><br>
     <input type="password" placeholder="password" name="password"><br>
-    <input type="button" value="Login" onclick="clickLink()">
-    <g:link  class="hiddenDashboard" controller="dashboard" action="index" style="display: none"/>
+    <input type="button" value="Login" onclick="clickLink()"-->
+    
+    <g:if test="${flash.message}">
+        <div class="alert alert-error" style="display: block">${flash.message}</div>
+    </g:if>
+     <g:form controller="Home" action="logar" method="post">
+
+        <g:textField placeholder="CNPJ" name="cnpj" /><br>
+        <g:textField placeholder="password" name="password" /><br>
+        <g:actionSubmit value="Login"/>
+      </g:form>  
 </div>
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
