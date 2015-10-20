@@ -37,7 +37,7 @@ When(~'^I change my cnpj to ([^"]*)$'){String newCnpj ->
 Then(~'^generator with cnpj ([^"]*) is properly edited$'){->
     assert ResidueGenerator.findGeneratorByCnpj(cnpj) != null
 }
-
+/*
 Given(~'^I am at the residue generator edit page'){ ->
     to ResidueGeneratorEditPage
     at ResidueGeneratorEditPage
@@ -60,7 +60,7 @@ Then(~'^I can see a confirmation message'){->
 
     assert hasMessage != null
 }
-
+*/
 
 //----------------------------------------------------- FILL CNPJ INCORRECTLY-------------------------
 
@@ -74,7 +74,7 @@ Then(~'^the new cnpj is not edited'){
 }
 
 
-
+/*
 When(~'^I fill the cnpj field with "([^"]*)"$'){ String cnpj ->
     page.fillCnpjField(cnpj)
 
@@ -86,7 +86,7 @@ Then(~'^I can see a confirmation message'){
     def errorBoolean = page.hasInvalidMessage()
     assert errorBoolean != false
 }
-
+*/
 
 
 
