@@ -28,5 +28,11 @@ class HarvestSolicitationViewPage extends Page {
         $("input", name: "confirmButton").click()
 
     }
+    
+    def generateReport(){
+	}
+	
+	def printReport(){
+	}
 
 }
