@@ -221,7 +221,7 @@ class GeneratorTestDataAndOperations{
        return true //não há armazenamento de coletas feitas implementadas ainda
     }
     static public void createReport(ResidueGenerator residueGenerator){
-        def cont = new ReportGeneratorController()
+        //def cont = new ReportGeneratorController()
         // criação impossível devido à implementação do controle de coletas feitas não ter sido feito
     }
 

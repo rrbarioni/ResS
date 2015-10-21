@@ -1,7 +1,7 @@
 /**
  * Created by ess on 20/10/15.
  */
- 
+ /*
 package steps
 
 import pages.HarvestSolicitationViewPage
@@ -11,7 +11,7 @@ import steps.GeneratorTestDataAndOperations
 
 //CONTROLLER
 
-/*
+
 
 //Scenario: Report generation
 Given(~'^that collections were made on "([^"]*)" residue generator on the last month$') { String name ->
@@ -50,4 +50,4 @@ Then(~'I see the generated report$') { ->
 
     page.printReport()
 }
-
+*/
