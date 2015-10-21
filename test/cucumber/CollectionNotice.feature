@@ -11,6 +11,7 @@ Feature: Collection notice
     Then the system resends the email with the data of the pending requests to the city hall and the researcher
     And generates a notification of email sending confirmation
 
+
   Scenario: Failure resending Notification
     Given that the system receives a request for an email to be resent
     When the system confirms that there are pending requests
@@ -18,6 +19,7 @@ Feature: Collection notice
     And generates an error notification
 
 #GUI
+
   
   Scenario: Resending email Notification
     Given I am on the page of requested collections
