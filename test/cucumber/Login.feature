@@ -7,9 +7,9 @@ Feature: Proper account authentication
 
 #Controller
   Scenario: Login with correct credentials
-	Given that there is an account registered by "Los Pollos" in the system
-	When I submit the "testecnpj1" CNPJ
-    And I submit the "Abcd1234@" password
+	Given that there is an account registered by "LosPolos" in the system
+	When I submit the "testecnpj" CNPJ
+    And I submit the "345" password
 	Then I get access to repository of information in the system
 
   @ignore
@@ -22,8 +22,8 @@ Feature: Proper account authentication
 #GUI
   Scenario: Logging-in through the access page with correct credentials
 	Given that I have an account registered in the system
-	When I enter "testecnpj1" in the CNPJ field
-    And I enter "Abcd1234@" password in the password field
+	When I enter "12434" in the CNPJ field
+    And I enter "345" password in the password field
     And I submit the form via the "Login" button
 	Then I get redirected to my dashboard page
     And I get flashed a notice saying that I've logged in

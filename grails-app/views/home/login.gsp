@@ -60,11 +60,11 @@
     <g:if test="${flash.message}">
         <div class="alert alert-error" style="display: block">${flash.message}</div>
     </g:if>
-     <g:form controller="Home" action="logar" method="post">
+     <g:form action="logar" method="post">
 
-        <g:textField placeholder="CNPJ" name="cnpj" /><br>
-        <g:textField placeholder="password" name="password" /><br>
-        <g:actionSubmit value="Login"/>
+        <input type="text" placeholder="CNPJ" name="cnpj" ><br>
+        <input type="password"  placeholder="password" name="password" ><br>
+        <input type="submit" name="_action_logar" value="Login">
       </g:form>  
 </div>
 
