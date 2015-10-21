@@ -1,7 +1,10 @@
 package residueGenerator
 
 class ResidueGenerator {
-
+    //#if ($RegisterAResidueGenerator)
+    String username
+    String password
+    //#end
     String nameGenerator // nome do estabelecimento
     String type// tipo de estabelecimento
     String addressGenerator // endere�o do gerador n�o confundir...
@@ -16,7 +19,11 @@ class ResidueGenerator {
     static  hasOne = [harvestSolicitation:HarvestSolicitation]
 
     static constraints = {
+        //#if ($RegisterAResidueGenerator)
+        username  nullable:true, blank: false, unique: true, minSize: 4, maxSize:30
+        password  nullable:true, blank: false, minSize:8, maxSize:30
 
+        //#end
         nameGenerator nullable:true,blank:true // no caso de ser ecoponto pode n�o ter nome
         type inList: ["Restaurante","Cantina","Ecoponto"], nullable:false, blank:false
         addressGenerator blank: false, nullable: false, maxSize: 40, unique: true
