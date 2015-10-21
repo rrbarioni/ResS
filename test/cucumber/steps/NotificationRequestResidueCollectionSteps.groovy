@@ -26,10 +26,11 @@ When (~'^the system confirms that there are pending requests$') {
 Then (~'^the system resends the email with the data of the pending requests to the city hall and the researcher$') { ->
 //resend email is not implemented yet
 }
-
-And(~'^ generates a notification of email sending confirmation') {
+/*
+And(~'^ generates a notification of email sending confirmation) {
 //not implemented yet
 }
+*/
 
 
 
@@ -55,4 +56,7 @@ Then(~'I see a confirmation message$') { ->
 	to SolicitacaoColetaViewPage
     at SolicitacaoColetaViewPage
     assert !page.hasOk()
+
 }
+}
+

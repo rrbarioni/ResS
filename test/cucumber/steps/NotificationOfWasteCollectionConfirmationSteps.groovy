@@ -7,6 +7,10 @@ import residueGenerator.ResidueGenerator
 //CONTROLLER
 
 //Scenario: Sending confirmation
+
+/*
+
+
 Given(~'^that the system has a waste collection "([^"]*)" confirmed$'){ String name ->
     CreateHarvestSolicitationTestDataAndOperations.createGeneratorByName(name)
     residueGenerator = ResidueGenerator.findByNameGenerator(name)
@@ -34,16 +38,19 @@ Then(~'^the system sends an email confirmation for the registered stakeholders$'
 
 }
 
+
 //GUI
 
 //Scenario: Send request confirmation
+
 
 Given(~'^that I’m logged in the system$'){ 
 
 //isn't implemented
 
 }
-And(~'I'm on the page of collection confirmation$'){ ->
+
+And(~'I am on the page of collection confirmation$'){ ->
 
     to ConfirmaColetaViewPage
     at ConfirmaColetaViewPage
@@ -67,4 +74,8 @@ And(~'^I see a success message$') {
     
     assert page.hasOk()
     
+
 }
+}
+*/
+

@@ -5,6 +5,8 @@ import residueGenerator.ResidueGenerator
 
 //CONTROLLER
 
+/*
+>>>>>>> 338ca28a7469bed1e3ccd102638bbf3c817f6d0f
 //Scenario: Report generation
 Given(~'^that collections were made on "([^"]*)" residue generator on the last month$') { String name ->
 	GeneratorTestDataAndOperations.createGeneratorByName(name)
@@ -22,8 +24,10 @@ Then(~'^a report is generated containing those collection’s information$') { -
 	assert reportGenerator != null
 }
 
+*/
 //GUI
-
+/*
+>>>>>>> 338ca28a7469bed1e3ccd102638bbf3c817f6d0f
 //Scenario: Generate new report
 Given(~'^I am at the HarvestSolicitationViewPage page$'){ ->
 	to HarvestSolicitationViewPage
@@ -43,4 +47,3 @@ And(~'collections were made on the previous month at "RU" residue generator$') {
 
 Then(~'I see the generated report$') { ->
 	printRelatorio()
-}
