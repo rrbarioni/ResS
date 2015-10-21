@@ -5,7 +5,7 @@ Feature: Collection notice
 
 #Controller
 
-Scenario: Resend email Notification
+  Scenario: Resend email Notification
 	Given that the system receives a request for an email to be resent
 	When the system confirms that there are pending requests
 	And there is internet connection
@@ -20,6 +20,7 @@ Scenario: Failure resending Notification
 	And generates an error notification
 
 #GUI
+
 Scenario: Resending email Notification
 	Given that I am logged into the restaurant account in which I work
 	And I am on the page of requested collections
