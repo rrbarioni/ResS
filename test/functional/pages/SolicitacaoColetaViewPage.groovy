@@ -5,7 +5,11 @@ import geb.Page
 
 class SolicitacaoColetaViewPage extends Page {
     def titulo = "Solicitacao de coleta"
+
     static url = "ResS/generatorHarvestSolicitation/index/1"
+
+   // static url = "ResS/solicitacaoColetas/index/3"
+
 
     static at = {
         title ==~ titulo

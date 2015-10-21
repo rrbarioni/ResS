@@ -216,6 +216,14 @@ class GeneratorTestDataAndOperations{
         cont.save()
         cont.response.reset()
     }
+	
+	static public boolean hasMonthlyHarvest(ResidueGenerator resGen){
+       return true //não há armazenamento de coletas feitas implementadas ainda
+    }
+    static public void createReport(ResidueGenerator residueGenerator){
+        def cont = new ReportGeneratorController()
+        // criação impossível devido à implementação do controle de coletas feitas não ter sido feito
+    }
 
 
     static public boolean containResidueGenerator(String address,ResGen){
