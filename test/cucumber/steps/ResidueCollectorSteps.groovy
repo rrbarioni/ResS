@@ -7,6 +7,9 @@ package steps
 
 
 //Controller
+
+/*
+
 Given (~'^That there is no collector with the email "([^"]*)"$'){ String email ->
     collector = ResidueCollector.findByEmailCollector(email)
     assert collector == null
@@ -40,8 +43,11 @@ And (~'^CNPJ "([^"]*)" is created in the system$'){ String cnpj ->
 }
 
 
+*/
 
 //Gui
+/*
+
 Given (~'^That I am in the form page of register new collector$'){
     to CollectorCreatePage
     at CollectorCreatePage
@@ -71,3 +77,6 @@ Then (~'^The system show me a success message "([^"]*)" $'){String msg ->
     assert withConfirm(true) { $("input", name: "showConfirm").click()} == "The collector has been registered with success!"
 
 }
+
+*/
+

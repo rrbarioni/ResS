@@ -63,7 +63,7 @@ Then(~'^I can see a confirmation message'){->
 
 
 //----------------------------------------------------- FILL CNPJ INCORRECTLY-------------------------
-
+/*
 When(~'^I fill my cnpj to "([^"]*)"$'){ String cnpj ->
     newCnpj = cnpj
     GeneratorTestDataAndOperations.editGeneratorCnpj(newCnpj,generator)
@@ -117,7 +117,7 @@ Then(~'^I should see a message indicating that the changes are properly stored')
 
     assert hasMessage != null
 }
-
+*/
 //---------------------------------------------LEAVING BLANK FIELDS------------------------------------------------------------
 
 
