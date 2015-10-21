@@ -1,32 +1,30 @@
 Feature: Request a new residue collection at a restaurant
-As a restaurant owner
-I want to be able to request a residue collection
-So I can have my residue collected when I need
+  As a restaurant owner
+  I want to be able to request a residue collection
+  So I can have my residue collected when I need
 
-#Created by Ricardo Barioni
+  #Controller
+  Scenario: Request new residue collection
+    Given I am logged in the system as a restaurant
+    When I register a residue collection request with Nome “RU”, Data “6/August/2010” and Volume “800”
+    Then The residue request with Nome “RU”, Data “6/August/2010” and Volume “800” is generated
 
-#Controller
-Scenario: Blank Name input
-Given I am logged in the system as a restaurant
-When I register a residue collection request with Name ""
-Then The residue request with name "" is not generated
+  Scenario: Failed request new residue collection
+    Given I am logged in the system as a restaurant
+    When I register a residue collection request with Nome “RU”, Data “6/August/2010” and Volume “0”
+    Then The residue request with Nome “RU”, Data “6/August/2010” and Volume “0” is not generated
 
-Scenario: Invalid volume input
-Given I am logged on the system as a restaurant
-When I register a residue collection request with Volume "0"
-Then The residue request with volume "0" is not created
+  #GUI
+  Scenario: Request new residue collection
+    Given I am at “Create coleta” page
+    When I fill the request information with Nome “RU”, Data “6/August/2010” and Volume “800”
+    And Select “Create”
+    Then I see a confirmation message
 
-#GUI
-Scenario: Blank Name input
-Given I am at creating collection page
-When I fill the request information with Name ""
-And I fill data and volume fields
-And Choose "Create"
-Then I should see a error message
+  Scenario: Failed request new residue collection
+    Given I am at “Create coleta” page
+    When I fill the request information with Nome “RU”, Data “6/August/2010” and Volume “0”
+    And Select “Create”
+    Then I see a error message
 
-Scenario: Invalid volume input
-Given I am on creating collection page
-When I fill the request information with Name "RU"
-And I fill name and data fields
-And Select "Create"
-Then I see a error message
+

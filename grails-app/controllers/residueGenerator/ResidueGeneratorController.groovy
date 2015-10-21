@@ -23,10 +23,7 @@ class ResidueGeneratorController {
     def create() {
         [residueGeneratorInstance: new ResidueGenerator(params)]
     }
-    def verifySecurityOfPassword(String password){
 
-        true
-    }
     def save() {
         def residueGeneratorInstance = new ResidueGenerator(params)
         if (!residueGeneratorInstance.save(flush: true)) {

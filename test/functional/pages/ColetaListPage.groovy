@@ -1,8 +1,6 @@
 package pages
 import geb.Page
 
-//Modified by Ricardo Barioni
-
 class ColetaListPage extends Page{
 
     def titulo = "Coleta List"
@@ -13,12 +11,5 @@ class ColetaListPage extends Page{
         title ==~ titulo
     }
 
-	def boolean hasErrors(){
-		if($(".errors") == null){
-			return false
-		}else{
-			return true
-		}
-	}
-	
+
 }
