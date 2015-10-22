@@ -55,6 +55,7 @@
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/resources-1.1.6/grails-app/i18n" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/resources-1.1.6/grails-app/taglib" isTestSource="false" />
     </content>
+    <content url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/spock-0.7" />
     <content url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/tomcat-2.1.5" />
     <content url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/webxml-1.4.1">
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.5/projects/ResS/plugins/webxml-1.4.1/src/groovy" isTestSource="false" />
