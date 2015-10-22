@@ -20,4 +20,5 @@ branches:
   only:
     - master
 
-script: grails -Dgeb.env=firefox test-app functional:cucumber --non-interactive RegisterGenerator.feature --stacktrace
+script: grails -Dgeb.env=firefox test-app functional:cucumber --non-interactive --stacktrace
+

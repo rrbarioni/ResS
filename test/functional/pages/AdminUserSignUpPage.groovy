@@ -3,7 +3,7 @@ import geb.Page
 
 class AdminUserSignUpPage {
     def titulo = "Admin User Sign Up"
-    static url = "/ResS/adminUser/signUp"
+    static url = "/ResS/adminUser/create"
 
     static at = {
         title ==~ titulo
