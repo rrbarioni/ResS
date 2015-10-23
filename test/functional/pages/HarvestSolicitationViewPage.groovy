@@ -29,4 +29,12 @@ class HarvestSolicitationViewPage extends Page {
 
     }
 
+    
+    def generateReport(){
+	}
+	
+	def printReport(){
+	}
+
+
 }

@@ -14,11 +14,19 @@ before_install:
 - ~/install_gvm.sh
 - echo sdkman_auto_answer=true > ~/.sdkman/etc/config
 - source "/home/travis/.sdkman/bin/sdkman-init.sh"
+<<<<<<< HEAD
 - sdk install grails 2.1.5 
+=======
+- sdk install grails 2.1.4 
+>>>>>>> 6ab03349cde6522d49cbe70516b785527b473582
 
 branches:
   only:
     - master
 
+<<<<<<< HEAD
 script: grails -Dgeb.env=firefox test-app functional:cucumber --non-interactive --stacktrace
 
+=======
+script: grails -Dgeb.env=firefox test-app functional:cucumber --non-interactive --stacktrace
+>>>>>>> 6ab03349cde6522d49cbe70516b785527b473582
