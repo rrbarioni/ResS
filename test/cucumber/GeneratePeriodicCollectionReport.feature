@@ -4,8 +4,12 @@ As a restaurant owner
 I want to generate a report
 So I can see the collections made on the last month  			
 
-
 #GUI
+
+<<<<<<< HEAD
+#GUI
+=======
+>>>>>>> 6ab03349cde6522d49cbe70516b785527b473582
 
 Scenario: Generate new report
 Given I am at the HarvestSolicitationViewPage page
@@ -20,7 +24,13 @@ And no collections were made on the previous month at "RU" residue generator
 Then I see an empty report error message
 And no report is shown
 
+<<<<<<< HEAD
 #CONTROLLER
+=======
+
+#CONTROLLER
+
+>>>>>>> 6ab03349cde6522d49cbe70516b785527b473582
 
 Scenario: Report generation
 Given that collections were made on "RU" residue generator on the last month
