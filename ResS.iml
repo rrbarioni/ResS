@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="EclipseModuleManager">
-    <conelement value="com.springsource.sts.grails.core.CLASSPATH_CONTAINER" />
-    <src_description expected_position="0">
-      <src_folder value="file://$MODULE_DIR$/src/java" expected_position="0" />
-      <src_folder value="file://$MODULE_DIR$/src/groovy" expected_position="1" />
-      <src_folder value="file://$MODULE_DIR$/grails-app/conf" expected_position="2" />
-      <src_folder value="file://$MODULE_DIR$/grails-app/controllers" expected_position="3" />
-      <src_folder value="file://$MODULE_DIR$/grails-app/domain" expected_position="4" />
-      <src_folder value="file://$MODULE_DIR$/grails-app/services" expected_position="5" />
-      <src_folder value="file://$MODULE_DIR$/grails-app/taglib" expected_position="6" />
-      <src_folder value="file://$MODULE_DIR$/test/integration" expected_position="7" />
-      <src_folder value="file://$MODULE_DIR$/test/unit" expected_position="8" />
-    </src_description>
-  </component>
   <component name="FacetManager">
     <facet type="web" name="Web">
       <configuration>
@@ -97,16 +83,6 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.seleniumhq.selenium/selenium-api/jars/selenium-api-2.39.0.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.seleniumhq.selenium/selenium-support/jars/selenium-support-2.39.0.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/xalan/serializer/jars/serializer-2.7.1.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.grails.plugins/spock/zips/spock-0.7.zip!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.grails.plugins/database-migration/zips/database-migration-1.3.2.zip!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.grails.plugins/resources/zips/resources-1.1.6.zip!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.grails.plugins/hibernate/zips/hibernate-2.1.5.zip!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.grails.plugins/webxml/zips/webxml-1.4.1.zip!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.grails.plugins/cache/zips/cache-1.0.1.zip!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.grails.plugins/jquery/zips/jquery-1.10.2.zip!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.grails.plugins/jquery-ui/zips/jquery-ui-1.10.4.zip!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.grails.plugins/remote-control/zips/remote-control-1.4.zip!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.grails.plugins/tomcat/zips/tomcat-2.1.5.zip!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

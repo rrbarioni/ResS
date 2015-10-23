@@ -8,7 +8,6 @@ class BootStrap {
                 nameGenerator:"RU",
                 type: "Restaurante",
                 cnpj: "testecnpj1",
-                password: "12345678",
                 addressGenerator: "Bubble road number 4",
                 averageMonthlyMeals: 0,
                 averageDailyMeals: 0

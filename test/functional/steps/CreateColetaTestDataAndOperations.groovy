@@ -8,35 +8,31 @@ import HistoricoDeColeta.ColetaController
 class CreateColetaTestDataAndOperations {
 
     static coletaName = [
-
-            [
-                    nome: "",
-                    data: ("03/10/2015"),
-                    volume: 30
-            ]
+        [
+            nome: "",
+            data: ("03/10/2015"),
+            volume: 30,
+        ]
     ]
-
+    
     static coletaVolume = [
-            [
-                    nome: "Cuscuz",
-                    data: ("03/10/2015"),
-                    volume: 0
-            ]
-
+        [
+            nome: "Cuscuz",
+            data: ("03/10/2015"),
+            volume: 0,
+        ]
     ]
 
     static public def findColetaByName (String name) {
         coletaName.find { coleta ->
-
-            coleta.nome == name
+            coleta.nome = name
         }
     }
-
+    
     static public def findColetaByVolume (String volume) {
         int volumeNumber = volume.toInteger();
         coletaVolume.find { coleta ->
-            coleta.volume == volumeNumber
-
+            coleta.nome = volumeNumber
         }
     }
 
@@ -48,8 +44,7 @@ class CreateColetaTestDataAndOperations {
         cont.save()
         cont.response.reset()
     }
-
-
+    
     static public void createColetaWithVolume (String volume) {
         def cont = new ColetaController()
         def novaColeta = findColetaByVolume(volume)
@@ -60,4 +55,3 @@ class CreateColetaTestDataAndOperations {
     }
 
 }
-

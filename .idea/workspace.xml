@@ -2,137 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac9a22df-e0db-40f5-a4be-8dae518814d2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/domain/reportGenerator/ReportGenerator.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/controllers/reportGenerator/ReportGeneratorController.groovy" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/AdminUser.feature" afterPath="$PROJECT_DIR$/test/cucumber/AdminUser.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/user/AdminUser.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/user/AdminUser.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/user/AdminUserController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/user/AdminUserController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/AdminUserSignUpPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/AdminUserSignUpPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/AdminUserSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/AdminUserSteps.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/steps/AdminUserTestDataAndOperations.groovy" afterPath="$PROJECT_DIR$/test/functional/steps/AdminUserTestDataAndOperations.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/ApplicationResources.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/ApplicationResources.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/HistoricoDeColeta/Coleta.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/HistoricoDeColeta/Coleta.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/HistoricoDeColeta/ColetaController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/HistoricoDeColeta/ColetaController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/HistoricoDeColeta/ColetaControllerTests.groovy" afterPath="$PROJECT_DIR$/test/unit/HistoricoDeColeta/ColetaControllerTests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/ColetaDeletePage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/ColetaDeletePage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/ColetaEditPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/ColetaEditPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/ColetaListPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/ColetaListPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/HistoricoDeColeta/ColetaTest.groovy" afterPath="$PROJECT_DIR$/test/unit/HistoricoDeColeta/ColetaTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/CollectionNotice.feature" afterPath="$PROJECT_DIR$/test/cucumber/CollectionNotice.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/ConfirmWasteCollection.feature" afterPath="$PROJECT_DIR$/test/cucumber/ConfirmWasteCollection.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/ConfirmWasteCollectionSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/ConfirmWasteCollectionSteps.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/steps/CreateColetaTestDataAndOperations.groovy" afterPath="$PROJECT_DIR$/test/functional/steps/CreateColetaTestDataAndOperations.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/CreateHarvestSolicitation.feature" afterPath="$PROJECT_DIR$/test/cucumber/CreateHarvestSolicitation.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/CreateHarvestSolicitationPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/CreateHarvestSolicitationPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/CreateHarvestSolicitationSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/CreateHarvestSolicitationSteps.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/steps/CreateHarvestSolicitationTestDataAndOperations.groovy" afterPath="$PROJECT_DIR$/test/functional/steps/CreateHarvestSolicitationTestDataAndOperations.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/CucumberConfig.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/CucumberConfig.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/CucumberGebSupport.gdsl" afterPath="$PROJECT_DIR$/test/cucumber/CucumberGebSupport.gdsl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/dashboard/DashboardController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/dashboard/DashboardController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/dashboard/DashboardControllerTests.groovy" afterPath="$PROJECT_DIR$/test/unit/dashboard/DashboardControllerTests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/Deletar.feature" afterPath="$PROJECT_DIR$/test/cucumber/Deletar.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/DeletarSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/DeletarSteps.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/EditAccount'sCnpj.feature" afterPath="$PROJECT_DIR$/test/cucumber/EditAccount'sCnpj.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/EditResidueGenerator.feature" afterPath="$PROJECT_DIR$/test/cucumber/EditResidueGenerator.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/EditResidueGeneratorSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/EditResidueGeneratorSteps.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/EditRestaurantsAccount.feature" afterPath="$PROJECT_DIR$/test/cucumber/EditRestaurantsAccount.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/GebConfig.groovy" afterPath="$PROJECT_DIR$/test/functional/GebConfig.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/GeneratePeriodicCollectionReport.feature" afterPath="$PROJECT_DIR$/test/cucumber/GeneratePeriodicCollectionReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/GeneratePeriodicCollectionReportSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/GeneratePeriodicCollectionReportSteps.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/GeneratorCreatePage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/GeneratorCreatePage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/residueGenerator/GeneratorHarvestSolicitationController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/residueGenerator/GeneratorHarvestSolicitationController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/residueGenerator/GeneratorHarvestSolicitationControllerTests.groovy" afterPath="$PROJECT_DIR$/test/unit/residueGenerator/GeneratorHarvestSolicitationControllerTests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/steps/GeneratorTestDataAndOperations.groovy" afterPath="$PROJECT_DIR$/test/functional/steps/GeneratorTestDataAndOperations.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/GithubPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/GithubPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/harvestCompany/HarvestCompany.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/harvestCompany/HarvestCompany.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/residueGenerator/HarvestSolicitation.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/residueGenerator/HarvestSolicitation.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/HarvestSolicitationViewPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/HarvestSolicitationViewPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/HistoricoDeColeta.feature" afterPath="$PROJECT_DIR$/test/cucumber/HistoricoDeColeta.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/HistoricoDeColetasStep.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/HistoricoDeColetasStep.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/HistoricoPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/HistoricoPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/steps/HistoricoTestDataAndOperations.groovy" afterPath="$PROJECT_DIR$/test/functional/steps/HistoricoTestDataAndOperations.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/home/HomeController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/home/HomeController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/home/HomeControllerTests.groovy" afterPath="$PROJECT_DIR$/test/unit/home/HomeControllerTests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/HomePage.feature" afterPath="$PROJECT_DIR$/test/cucumber/HomePage.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/HomePage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/HomePage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/HomePageSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/HomePageSteps.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/ListResidueGenerator.feature" afterPath="$PROJECT_DIR$/test/cucumber/ListResidueGenerator.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/ListResidueGeneratorSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/ListResidueGeneratorSteps.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/Login.feature" afterPath="$PROJECT_DIR$/test/cucumber/Login.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/LoginPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/LoginPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/LoginSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/LoginSteps.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/steps/LoginTestDataAndOperations.groovy" afterPath="$PROJECT_DIR$/test/functional/steps/LoginTestDataAndOperations.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/NotificationOfWasteCollectionConfirmation.feature" afterPath="$PROJECT_DIR$/test/cucumber/NotificationOfWasteCollectionConfirmation.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/NotificationOfWasteCollectionConfirmationSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/NotificationOfWasteCollectionConfirmationSteps.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/NotificationRequestResidueCollectionSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/NotificationRequestResidueCollectionSteps.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/RegisterGenerator.feature" afterPath="$PROJECT_DIR$/test/cucumber/RegisterGenerator.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/RegisterGeneratorSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/RegisterGeneratorSteps.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/RequestResidueCollection.feature" afterPath="$PROJECT_DIR$/test/cucumber/RequestResidueCollection.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/RequestResidueCollectionSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/RequestResidueCollectionSteps.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResS-grailsPlugins.iml" afterPath="$PROJECT_DIR$/ResS-grailsPlugins.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ResS-grailsPlugins.iml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResS.iml" afterPath="$PROJECT_DIR$/ResS.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/ResidueCollector.feature" afterPath="$PROJECT_DIR$/test/cucumber/ResidueCollector.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/ResidueCollectorPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/ResidueCollectorPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/steps/ResidueCollectorSteps.groovy" afterPath="$PROJECT_DIR$/test/cucumber/steps/ResidueCollectorSteps.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/residueGenerator/ResidueGenerator.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/residueGenerator/ResidueGenerator.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/residueGenerator/ResidueGeneratorController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/residueGenerator/ResidueGeneratorController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/residueGenerator/ResidueGeneratorControllerTests.groovy" afterPath="$PROJECT_DIR$/test/unit/residueGenerator/ResidueGeneratorControllerTests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/ResidueGeneratorEditPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/ResidueGeneratorEditPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/ResidueGeneratorIndexPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/ResidueGeneratorIndexPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/ResidueGeneratorListPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/ResidueGeneratorListPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/ResidueGeneratorShowPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/ResidueGeneratorShowPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/residueGenerator/ResidueGeneratorTests.groovy" afterPath="$PROJECT_DIR$/test/unit/residueGenerator/ResidueGeneratorTests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/pages/SolicitacaoColetaViewPage.groovy" afterPath="$PROJECT_DIR$/test/functional/pages/SolicitacaoColetaViewPage.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/ress/TesteTests.groovy" afterPath="$PROJECT_DIR$/test/unit/ress/TesteTests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/user/User.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/user/User.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/coleta/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/coleta/_form.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/residueGenerator/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/residueGenerator/_form.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/coleta/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/coleta/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/generatorHarvestSolicitation/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/generatorHarvestSolicitation/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/residueGenerator/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/residueGenerator/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/coleta/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/coleta/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/residueGenerator/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/residueGenerator/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/cucumber/support/env.groovy" afterPath="$PROJECT_DIR$/test/cucumber/support/env.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/error.gsp" afterPath="$PROJECT_DIR$/grails-app/views/error.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/dashboard/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/dashboard/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/generatorHarvestSolicitation/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/generatorHarvestSolicitation/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/coleta/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/coleta/list.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/residueGenerator/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/residueGenerator/list.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/login.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/login.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_cs_CZ.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_cs_CZ.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_da.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_da.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_de.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_de.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_es.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_es.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_fr.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_fr.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_it.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_it.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_ja.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_ja.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_nl.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_nl.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_pl.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_pl.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_pt_BR.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_pt_BR.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_pt_PT.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_pt_PT.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_ru.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_ru.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_sv.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_sv.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_th.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_th.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_zh_CN.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages_zh_CN.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/spring/resources.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/spring/resources.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/coleta/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/coleta/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/residueGenerator/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/residueGenerator/show.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ResS.iws" />
@@ -157,10 +29,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ResS.iml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ResS.iml">
+      <file leaf-file-name="ResidueGeneratorController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/residueGenerator/ResidueGeneratorController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-22.4">
+              <caret line="44" column="56" selection-start-line="39" selection-start-column="8" selection-end-line="45" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResidueCollectorController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/residueCollector/ResidueCollectorController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.08">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.gsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/residueGenerator/_form.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.0689654">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -183,8 +75,6 @@
         <option value="$PROJECT_DIR$/grails-app/domain/residueCollector/ResidueCollector.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/residueCollector/ResidueCollectorController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/residueCollector/create.gsp" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/ResS.iml" />
       </list>
     </option>
   </component>
@@ -197,9 +87,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1215" />
-    <option name="height" value="734" />
+    <option name="y" value="24" />
+    <option name="width" value="1178" />
+    <option name="height" value="710" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -224,9 +114,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -269,12 +158,177 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="residueGenerator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="residueCollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="residueGenerator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="residueCollector" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,7 +336,6 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
-    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Grails.Grails:ResS">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -520,12 +573,6 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <pass-parent-envs>true</pass-parent-envs>
-      <envs />
       <method />
     </configuration>
     <configuration default="false" name="Grails:ResS" type="GrailsRunConfigurationType" factoryName="Grails">
@@ -543,9 +590,6 @@
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ac9a22df-e0db-40f5-a4be-8dae518814d2" name="Default" comment="" />
@@ -557,51 +601,43 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3591000" />
+    <option name="totallyTimeSpent" value="3047000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1215" height="734" extended-state="6" />
+    <frame x="65" y="24" width="1178" height="710" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24938272" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24957556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -611,35 +647,50 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/residueGenerator/ResidueGeneratorController.groovy">
+    <entry file="file://$PROJECT_DIR$/test/functional/pages/ResidueCollectorPage.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="0" selection-start-line="39" selection-start-column="8" selection-end-line="45" selection-end-column="60" />
-          <folding>
-            <marker date="1445558754000" expanded="true" signature="-1:-1" placeholder="{" />
-            <marker date="1445558754000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1445558754000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1445558754000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+        <state vertical-scroll-proportion="0.17298187">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/residueGenerator/_form.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/residueCollector/ResidueCollector.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6158358">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/residueGenerator/ResidueGenerator.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4281525">
           <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/residueGenerator/ResidueGeneratorController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.4">
+          <caret line="44" column="56" selection-start-line="39" selection-start-column="8" selection-end-line="45" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/residueCollector/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.9591837">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/residueGenerator/create.gsp">
@@ -650,46 +701,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/residueCollector/ResidueCollectorController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.08">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/residueGenerator/_form.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2166065">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/residueGenerator/ResidueGeneratorController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31141868">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding>
-            <marker date="1445558754000" expanded="true" signature="-1:-1" placeholder="{" />
-            <marker date="1445558754000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1445558754000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1445558754000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResS-grailsPlugins.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResS.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-2.0689654">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>

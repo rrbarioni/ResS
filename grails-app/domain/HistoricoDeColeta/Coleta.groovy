@@ -1,5 +1,3 @@
-//Modified by Ricardo Barioni
-
 package HistoricoDeColeta
 
 import cucumber.api.Format
@@ -13,9 +11,9 @@ class Coleta {
 
     static constraints = {
 
-        nome blank: false // ecoponto deve possuir um nome para identificação
+        nome blank: true // no caso de ser ecoponto pode n�o ter nome
         data blank: false, nullable: false
-        volume  blank: false, nullable: false, notEqual: 0 // volume para coleta não deve ser 0. deve-se haver algo a ser coletado
+        volume  blank: false, nullable: false
     }
     void setName(String novoNome){
         if(Coleta.findByNomeAndData(novoNome,this.data) == null){
