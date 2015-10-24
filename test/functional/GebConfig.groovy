@@ -3,7 +3,6 @@ import org.openqa.selenium.firefox.FirefoxDriver
 import org.openqa.selenium.firefox.FirefoxProfile
 
 driver = {
-
 //def driver = new HtmlUnitDriver()
 //driver.javascriptEnabled = true
 //driver
