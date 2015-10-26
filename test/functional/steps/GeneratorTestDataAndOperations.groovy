@@ -163,10 +163,13 @@ class GeneratorTestDataAndOperations{
     }
 
     static public void editGenerator(String address, def residueGenerator){
-        def existingGenerator = getGeneratorByAddress(address)
-        if(address != null && existingGenerator == null) {
+        def existingGenerator = ResidueGenerator.findByAddressGenerator(address)
+
+        if(address != null && existingGenerator != null) {
             def cont = new ResidueGeneratorController()
-            cont.params << [name: "Clovis Palace"] << [type: "Restaurante"] << [cnpj: "testecnpj2"] << [addressGenerator: address] << [averageMonthlyMeals: 0] << [averageDailyMeals: 0] << [id: residueGenerator.getId()]
+            existingGenerator.addressGenerator = address
+            cont.params << [name: "Clovis Palace"] << [type: "Restaurante"] << [cnpj: "testecnpj2"] << [addressGenerator: address] << [averageMonthlyMeals: 0] << [averageDailyMeals: 0] << [id: residueGenerator.getId()] << [username: existingGenerator.username] << [password: existingGenerator.password]
+            //cont.params = existingGenerator
             cont.edit()
             cont.save()
             cont.response.reset()
