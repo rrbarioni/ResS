@@ -4,7 +4,6 @@ As a restaurant owner
 I want to generate a report
 So I can see the collections made on the last month  			
 
-
 #GUI
 
 Scenario: Generate new report

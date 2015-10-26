@@ -7,8 +7,8 @@ Feature: Proper account authentication
 
 #Controller
   Scenario: Login with correct credentials
-	Given that there is an account registered by "Los Pollos" in the system
-	When I submit the "1243" CNPJ
+	Given that there is an account registered by "LosPolos" in the system
+	When I submit the "testecnpj" CNPJ
     And I submit the "345" password
 	Then I get access to repository of information in the system
 
