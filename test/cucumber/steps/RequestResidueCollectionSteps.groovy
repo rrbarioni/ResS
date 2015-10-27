@@ -71,7 +71,7 @@ And (~'^Select “Create”$'){ ->
     page.submit()
 }
 
-Then (~'^I see a error message$'){ ->
+Then (~'^I see an error message$'){ ->
 
     to ColetaListPage
     at ColetaListPage
