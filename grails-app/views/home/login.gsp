@@ -62,8 +62,8 @@
     </g:if>
      <g:form action="logar" method="post">
 
-        <input type="text" placeholder="CNPJ" name="cnpj" ><br>
-        <input type="password"  placeholder="password" name="password" ><br>
+        <input type="text" class="cnpj" placeholder="CNPJ" name="cnpj" ><br>
+        <input type="password"  class="pass" placeholder="password" name="password" ><br>
         <input type="submit" name="_action_logar" value="Login">
       </g:form>  
 </div>
