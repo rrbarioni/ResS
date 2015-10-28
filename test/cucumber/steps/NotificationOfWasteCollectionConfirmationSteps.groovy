@@ -3,12 +3,13 @@ package steps
 import pages.HarvestSolicitationViewPage
 import residueGenerator.HarvestSolicitation
 import residueGenerator.ResidueGenerator
-/*
+
+import static cucumber.api.groovy.EN.*
+
 //CONTROLLER
 
 //Scenario: Sending confirmation
 
-/*
 
 
 Given(~'^that the system has a waste collection "([^"]*)" confirmed$'){ String name ->
@@ -76,6 +77,5 @@ And(~'^I see a success message$') {
     
 
 }
-}
-*/
+
 
