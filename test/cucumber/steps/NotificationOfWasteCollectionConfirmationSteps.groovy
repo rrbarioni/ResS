@@ -12,7 +12,7 @@ import static cucumber.api.groovy.EN.*
 
 
 
-Given(~'^that the system has a waste collection "([^"]*)" confirmed$'){ String name ->
+Given(~'^that the system has a waste collection confirmed$'){->
     CreateHarvestSolicitationTestDataAndOperations.createGeneratorByName(name)
     residueGenerator = ResidueGenerator.findByNameGenerator(name)
 

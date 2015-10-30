@@ -1,6 +1,6 @@
 <%@ page import="residueGenerator.ResidueGenerator" %>
 
-<!-- #if($RegisterAResidueGenerator) -->
+
 <div class="fieldcontain ${hasErrors(bean: residueGeneratorInstance, field: 'username', 'error')} required ">
 	<label for="username">
 		<g:message code="residueGenerator.username.label" default="Username" />
@@ -16,7 +16,6 @@
 	</label>
 	<g:passwordField  name="password" maxlength="40" required="" value="${residueGeneratorInstance?.password}"/>
 </div>
-<!--#end -->
 
 <div class="fieldcontain ${hasErrors(bean: residueGeneratorInstance, field: 'nameGenerator', 'error')} ">
 	<label for="nameGenerator">
