@@ -5,6 +5,7 @@
 
 
 #CONTROLLER
+  @ignore
   Scenario: sending confirmation
     Given that the system has a waste collection confirmed
     When I submit the email request
@@ -19,6 +20,7 @@
 
 
 #GUI
+  @ignore
   Scenario: send request confirmation
     Given that I’m logged in the system
     And I’m on collection confirmation screen
