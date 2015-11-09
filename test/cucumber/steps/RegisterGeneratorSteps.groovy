@@ -112,7 +112,7 @@ And(~'^I register the new generator'){ ->
 
 Then(~'^A generator is stored at the system'){ ->
     //assert !page.hasErrors()
-    at ResidueGeneratorShowPage
+ //   at ResidueGeneratorShowPage
     //assert withConfirm(true) { $("input", name: "showConfirm").click() } == "Generator was created!"
 }
 
