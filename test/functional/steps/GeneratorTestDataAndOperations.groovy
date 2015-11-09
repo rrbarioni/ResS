@@ -32,7 +32,16 @@ class GeneratorTestDataAndOperations{
              password: "Abcd1239@",
              addressGenerator: "Donut Street number 5",
              averageMonthlyMeals: 0,
-             averageDailyMeals: 0]
+             averageDailyMeals: 0],
+
+            [nameGenerator:"China Dragon",
+             type: "Restaurante",
+             cnpj: "testecnpj3",
+             username: "Los_Pollos5",
+             password: "Abcd1239@",
+             addressGenerator: "Av. Capacanama",
+             averageMonthlyMeals: 0,
+             averageDailyMeals: 10]
 
     ]
 
@@ -217,7 +226,7 @@ class GeneratorTestDataAndOperations{
         def cont = new ResidueGeneratorController()
         def novoGenerator = getGeneratorByAddress("Bubble Street number 7")
         cont.params << novoGenerator
-        cont.params << [addressGenerator: address] << [averageDailyMeals: dailymeal]
+        cont.params << [addressGenerator: address] << [averageDailyMeals: dailymeal] <<[username: address]
         cont.create()
         cont.save()
         cont.response.reset()
