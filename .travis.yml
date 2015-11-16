@@ -20,7 +20,6 @@ before_install:
 branches:
   only:
     - master
-    - pauloborba-master
 
 <<<<<<< HEAD
 script: grails -Dgeb.env=firefox test-app functional:cucumber --non-interactive --stacktrace
