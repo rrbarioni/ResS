@@ -12,7 +12,7 @@ Feature: Edit the residue generator registration data
   #end
 
   #if($Residue generator registration data edit success web page)
-
+@ignore
   Scenario: Residue generator registration data edit success web page
     Given I am at the residue generator edit page
     When  I fill the address field with "Fool's street number 0"
