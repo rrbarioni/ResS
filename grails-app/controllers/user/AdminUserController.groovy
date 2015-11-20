@@ -1,5 +1,6 @@
 package user
 
+import org.springframework.dao.DataIntegrityViolationException
 import user.AdminUser
 
 class AdminUserController {
@@ -39,6 +40,24 @@ class AdminUserController {
         }
 
         [adminUserInstance: adminUserInstance]
+    }
+
+    def delete(Long id) {
+        def adminUserInstance = AdminUser.get(adminLogin)
+        if (!adminUserInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'adminUser.label', default: 'AdminUser'), adminLogin])
+            //redirect(action: "list")
+            return
+        }
+
+        try {
+            adminUserInstance.delete(flush: true)
+            flash.message = message(code: 'default.deleted.message', args: [message(code: 'adminUser.label', default: 'AdminUser'), adminLogin])
+            redirect(action: "list")
+        } catch (DataIntegrityViolationException e) {
+            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'adminUser.label', default: 'AdminUser'), adminLogin])
+            redirect(action: "show", id: adminLogin)
+        }
     }
 
 }
