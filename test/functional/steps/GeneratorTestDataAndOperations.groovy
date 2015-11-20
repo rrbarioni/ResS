@@ -10,7 +10,7 @@ class GeneratorTestDataAndOperations{
             [nameGenerator:"RU",
              type: "Restaurante",
              cnpj: "testecnpj1",
-             username: "Los_Pollos9",
+             username: "Los_Pollos",
              password: "Abcd1234@",
              addressGenerator: "Bubble Street number 7",
              averageMonthlyMeals: 0,
@@ -34,13 +34,14 @@ class GeneratorTestDataAndOperations{
              averageMonthlyMeals: 0,
              averageDailyMeals: 0],
 
-            [nameGenerator:"Los Polos",
+            [nameGenerator:"China Dragon",
              type: "Restaurante",
-             cnpj: "testecnpj1",
-             password: "345" ,
-             addressGenerator: "Bubble Street number 7",
+             cnpj: "testecnpj3",
+             username: "Los_Pollos5",
+             password: "Abcd1239@",
+             addressGenerator: "Av. Capacanama",
              averageMonthlyMeals: 0,
-             averageDailyMeals: 0]
+             averageDailyMeals: 10]
 
     ]
 
@@ -97,7 +98,7 @@ class GeneratorTestDataAndOperations{
         def newGenerator = [nome: name,
                             type: "Restaurante",
                             cnpj: "testecnpj1",
-                            username: "Los_Pollos5",
+                            username: "Los_Pollos",
                             password: "@Abcd1234",
                             addressGenerator: "Bubble Street number 7",
                             averageMonthlyMeals: 0,
@@ -171,12 +172,16 @@ class GeneratorTestDataAndOperations{
     }
 
     static public void editGenerator(String address, def residueGenerator){
-        def existingGenerator = getGeneratorByAddress(address)
-        if(address != null && existingGenerator == null) {
+        def existingGenerator = ResidueGenerator.findByAddressGenerator(address)
+
+        if(address != null && existingGenerator != null) {
             def cont = new ResidueGeneratorController()
-            cont.params << [name: "Clovis Palace"] << [type: "Restaurante"] << [cnpj: "testecnpj2"] << [addressGenerator: address] << [averageMonthlyMeals: 0] << [averageDailyMeals: 0] << [id: residueGenerator.getId()]
-            cont.edit()
-            cont.save()
+            //existingGenerator.addressGenerator = address
+            cont.params << [name: "Clovis Palace"] << [type: "Restaurante"] << [cnpj: "testecnpj2"] << [addressGenerator: address] << [averageMonthlyMeals: 0] << [averageDailyMeals: 0] << [id: residueGenerator.getId()] << [username: existingGenerator.username] << [password: existingGenerator.password]
+            //cont.params = existingGenerator
+            //cont.edit()
+            cont.update(existingGenerator.getId(),null)
+            //cont.save()
             cont.response.reset()
         }
     }
@@ -185,6 +190,8 @@ class GeneratorTestDataAndOperations{
         def novoGenerator =  [nameGenerator: "Alt",
                               type: "Restaurante",
                               cnpj: "testecnpj1",
+                              username:"LosPollos",
+                              password: "Abcd1234@",
                               addressGenerator: address,
                               averageMonthlyMeals: 0,
                               averageDailyMeals: 0];
@@ -219,10 +226,18 @@ class GeneratorTestDataAndOperations{
         def cont = new ResidueGeneratorController()
         def novoGenerator = getGeneratorByAddress("Bubble Street number 7")
         cont.params << novoGenerator
-        cont.params << [addressGenerator: address] << [averageDailyMeals: dailymeal]
+        cont.params << [addressGenerator: address] << [averageDailyMeals: dailymeal] <<[username: address] //guarantee that the username is not repeated
         cont.create()
         cont.save()
         cont.response.reset()
+    }
+	
+	static public boolean hasMonthlyHarvest(ResidueGenerator resGen){
+       return true //não há armazenamento de coletas feitas implementadas ainda
+    }
+    static public void createReport(ResidueGenerator residueGenerator){
+        //def cont = new ReportGeneratorController()
+        // criação impossível devido à implementação do controle de coletas feitas não ter sido feito
     }
 
 
