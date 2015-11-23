@@ -16,12 +16,12 @@ Feature: Residue Generator Production Report
     Then then report is empty
   @ignore
   Scenario: generate month based Residue Production report web
-    Given I am at the Residue Generator Report page
+    Given I am at the Create Residue Generator Report page
     When I click ask the system to produce a report based on the last "5" months
     Then I am at the Report Waste Production page
   @ignore
   Scenario: generate empty month based Residue Production report web
-    Given I am at the Residue Generator Report page
+    Given I am at the Create Residue Generator Report page
     And the system has no registered residue Generator
     When I click ask the system to produce a report based on the last "5" months
     Then I am at the Report Waste Production page

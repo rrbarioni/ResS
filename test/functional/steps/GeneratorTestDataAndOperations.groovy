@@ -41,7 +41,25 @@ class GeneratorTestDataAndOperations{
              password: "Abcd1239@",
              addressGenerator: "Av. Capacanama",
              averageMonthlyMeals: 0,
-             averageDailyMeals: 10]
+             averageDailyMeals: 10],
+
+            [nameGenerator:"RU",
+             type: "Restaurante",
+             cnpj: "testecnpj1",
+             username: "Los_Pollos6",
+             password: "Abcd1234@",
+             addressGenerator: "endereco",
+             averageMonthlyMeals: 0,
+             averageDailyMeals: 0],
+
+            [nameGenerator:"Clovis Palace",
+             type: "Restaurante",
+             cnpj: "testecnpj2",
+             username: "Los_Pollos7",
+             password: "Abcd1238@",
+             addressGenerator: "endereco2",
+             averageMonthlyMeals: 0,
+             averageDailyMeals: 0]
 
     ]
 
