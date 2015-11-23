@@ -4,8 +4,10 @@
 
 package steps
 
+import generatorProductionReport.GeneratorProductionReportController
 import pages.GeneratorCreatePage
 import pages.ResidueGeneratorShowPage
+import pages.ResidueProductionReportPage
 import residueGenerator.ResidueGenerator
 import generatorProductionReport.GeneratorProductionReport
 
@@ -16,16 +18,17 @@ import static cucumber.api.groovy.EN.*
 //When the system generate the general production report for the last "5" months
 //Then the residue generator at “endereco” appears at the report
 
-Given(~'^the system has a residue generator at "([^"]*)" registered$'){ String address ->
-
+Given(~'^the system has a residue generator at "([^"]*)" registered$'){ String address
+    GeneratorTestDataAndOperations.createGenerator(address);
 }
 
 When(~'^the system generate the general production report for the last "([^"]*)" months'){String months->
-
+    GeneratorProductionReportController controller = new GeneratorProductionReportController()
+    report  = controller.createMonthlyReport()
 }
 
 Then(~'^Then the residue generator at "([^"]*)" appears at the report') {String address->
-
+    assert report.hasGenerator(address)
 }
 
 //  Scenario: generate empty month based Residue Production report
@@ -34,11 +37,11 @@ Then(~'^Then the residue generator at "([^"]*)" appears at the report') {String 
 //Then then report is empty
 
 Given(~'^the system has no registered residue Generator'){
-
+    ResidueGenerator.deleteAll(ResidueGenerator.findAll())
 }
 
 Then(~'^then report is empty'){
-
+    report.isEmpty()
 }
 
 //  Scenario: generate month based Residue Production report web
@@ -46,14 +49,17 @@ Then(~'^then report is empty'){
 //When I click ask the system to produce a report based on the last "5" months
 //Then I am at the Report Waste Production page
 
-Given('I am at the Residue Generator Report page'){
+Given('I am at the Create Residue Generator Report page'){
+    to CreateResidueProductionReportPage
+    at CreateResidueProductionReportPage
 
 }
-When('I click ask the system to produce report based on the last "([^"]*)" months'){String months->
-
+When('I click ask the system to produce a report based on the last "([^"]*)" months'){String months->
+    page.fillPeriod(months)
+    page.clickNewMonthlyReport()
 }
 Then('I am at the Report Waste Production page'){
-
+    at ResidueProductionReportPage
 }
 
 // Scenario: generate empty month based Residue Production report web
@@ -64,8 +70,9 @@ Then('I am at the Report Waste Production page'){
 //And the report is empty
 
 And(~'^the system has no registered residue Generator'){
-
+    ResidueGenerator.deleteAll(ResidueGenerator.findAll())
 }
 And(~'^the report is empty'){
-
+    //??
+    assert page.hasEmptyMessage()
 }

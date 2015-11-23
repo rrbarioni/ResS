@@ -13,4 +13,10 @@ class GeneratorProductionReport {
 
     static hasMany = [harvestSolicitations:HarvestSolicitation]
 
+    def hasGenerator(String withAddress){
+        return false;
+    }
+    def isEmpty(){
+        return true
+    }
 }
