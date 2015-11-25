@@ -43,7 +43,7 @@ class GeneratorTestDataAndOperations{
              averageMonthlyMeals: 0,
              averageDailyMeals: 10],
 
-            [nameGenerator:"RU",
+            [nameGenerator:"RU2",
              type: "Restaurante",
              cnpj: "testecnpj1",
              username: "Los_Pollos6",
@@ -104,6 +104,7 @@ class GeneratorTestDataAndOperations{
     }
     static public void createGenerator(String address){
         def cont = new ResidueGeneratorController()
+        println address
         def novoGenerator = getGeneratorByAddress(address)
         cont.params << novoGenerator
         cont.create()

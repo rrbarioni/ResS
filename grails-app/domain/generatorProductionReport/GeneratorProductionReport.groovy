@@ -8,7 +8,8 @@ import residueGenerator.ResidueGenerator
  */
 class GeneratorProductionReport {
     Date creationDate
-    int numberOfGenerator
+    int numberOfGenerators
+    int monthsBack
 
 
     static hasMany = [harvestSolicitations:HarvestSolicitation]
