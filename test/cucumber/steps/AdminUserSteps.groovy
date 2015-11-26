@@ -11,11 +11,20 @@ Given the system has no user with the CPF "123.456.789-12"
 And has no user with the login "admin"
 When I register a user called "John Doe", with CPF "123.456.789-12", login "admin", password "abcdef", email "johndoe@johndoe.com" and phone "0000-0000"
 Then the user "admin" is stored in the system
+
+Given the system already has a user with the login "admin"
+When I ask the system to add a user called "John Doe", with CPF "123.456.789-12", login "admin", password "abcdef", email "johndoe@johndoe.com" and phone "0000-0000"
+Then the user "admin" is not stored in the system
 */
 
 Given(~'^the system has no user with the CPF "([^"]*)"$'){String cpf->
     userCpf = AdminUser.findByAdminCpf(cpf)
     assert userCpf == null
+}
+Given(~'^the system already has a user with the login "([^"]*)"$'){String login->
+    AdminUserTestDataAndOperations.createUser(login)
+    userLogin = AdminUser.findByAdminLogin(login)
+    assert userLogin != null
 }
 And(~'^has no user with the login "([^"]*)"$'){String login->
     userLogin = AdminUser.findByAdminLogin(login)
@@ -29,6 +38,11 @@ Then(~'^the user "([^"]*)" is stored in the system$'){ String login ->
     userLogin = AdminUser.findByAdminLogin(login)
     assert userLogin != null
 }
+Then(~'^the user "([^"]*)" is not stored in the system$'){ String login ->
+    userList = AdminUser.findAllByAdminLogin(login)
+    assert userList.size() == 1
+}
+
 
 /*
 GUI
