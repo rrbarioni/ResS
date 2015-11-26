@@ -9,12 +9,12 @@ Feature: admin user
 	And has no user with the login "admin"
 	When I register a user called "John Doe", with CPF "123.456.789-12", login "admin", password "abcdef", email "johndoe@johndoe.com" and phone "0000-0000"
 	Then the user "admin" is stored in the system
-@ignore
+
   Scenario: Add a new user with existing login
 	Given the system already has a user with the login "admin"
-	When I ask the system to add a user called "John Doe", with CPF "123.456.789-12", login "admin", password "abcdef", email "johndoe@johndoe.com" and phone "0000-0000"
+	When I register a user called "John Doe", with CPF "123.456.789-12", login "admin", password "abcdef", email "johndoe@johndoe.com" and phone "0000-0000"
 	Then the user "admin" is not stored in the system
-  
+
   Scenario: Add a new user (gui)
 	Given I’m at the sign up page
 	And there is no user with the login "admin"
