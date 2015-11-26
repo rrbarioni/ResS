@@ -29,4 +29,18 @@ public class AdminUserTestDataAndOperations {
         controller.response.reset()
     }
 
+    static public def createUser(String login){
+        def controller = new AdminUserController()
+        def newAdminUser = [adminName: "Name",
+                            adminCpf: "Cpf",
+                            adminLogin: login,
+                            adminPassword: "Password",
+                            adminEmail: "email",
+                            adminPhone: "phone"]
+        controller.params << newAdminUser
+        controller.create()
+        controller.save()
+        controller.response.reset()
+    }
+
 }
