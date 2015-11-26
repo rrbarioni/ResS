@@ -21,10 +21,10 @@ Feature: admin user
 	And there is no user with the CPF "123.456.789.12"
 	When I ask the system to add a user called "John Doe", with CPF "123.456.789-12", login "admin", password "abcdef", email "johndoe@johndoe.com" and phone "0000-0000"
 	Then I see a message confirming the user registration
-  @ignore
+
   Scenario: Add a new user with existing login (gui)
 	Given I’m at the sign up page
 	And there’s already a user with the login "admin"
 	When I ask the system to add a user called "John Doe", with CPF "123.456.789-12", login "admin", password "abcdef", email "johndoe@johndoe.com" and phone "0000-0000"
-	Then I see an error message
+	Then I see a message saying the registration failed
 #end
