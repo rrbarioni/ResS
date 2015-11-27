@@ -66,7 +66,7 @@ Given(~'^I’m at the sign up page$'){->
 And(~'^there’s already a user with the login "([^"]*)"$'){ String login->
     AdminUserTestDataAndOperations.createUser(login)
     user = AdminUser.findByAdminLogin(login)
-    user != null
+    assert user != null
 }
 And(~'^there is no user with the login "([^"]*)"$'){ String login->
     user = AdminUser.findByAdminLogin(login)
