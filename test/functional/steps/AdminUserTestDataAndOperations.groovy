@@ -64,4 +64,20 @@ public class AdminUserTestDataAndOperations {
         cont.response.reset()
     }
 
+    static public void editUser(String email, def adminUser){
+        def oldUser = AdminUser.findByAdminEmail(email)
+        def newAdminUser = [adminName:adminUser.getAdminName(),
+                            adminCpf: adminUser.getAdminCpf(),
+                            adminLogin: adminUser.getAdminLogin(),
+                            adminPassword: adminUser.getAdminPassword(),
+                            adminEmail: email,
+                            adminPhone: adminUser.getAdminPhone()]
+        if(email != null && oldUser != null) {
+            def cont = new AdminUserController()
+            cont.params << newAdminUser
+            cont.edit(adminUser)
+            cont.response.reset()
+        }
+    }
+
 }
