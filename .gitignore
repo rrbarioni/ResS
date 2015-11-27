@@ -17,3 +17,4 @@ stacktrace.log
 /grails-app/conf/BuildConfig.groovy
 /test/functional/GebConfig.groovy
 *.properties
+GebConfig.groovy

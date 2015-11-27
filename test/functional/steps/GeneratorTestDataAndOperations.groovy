@@ -10,7 +10,7 @@ class GeneratorTestDataAndOperations{
             [nameGenerator:"RU",
              type: "Restaurante",
              cnpj: "testecnpj1",
-             username: "Los_Pollos9",
+             username: "Los_Pollos",
              password: "Abcd1234@",
              addressGenerator: "Bubble Street number 7",
              averageMonthlyMeals: 0,
@@ -31,6 +31,33 @@ class GeneratorTestDataAndOperations{
              username: "Los_Pollos3",
              password: "Abcd1239@",
              addressGenerator: "Donut Street number 5",
+             averageMonthlyMeals: 0,
+             averageDailyMeals: 0],
+
+            [nameGenerator:"China Dragon",
+             type: "Restaurante",
+             cnpj: "testecnpj3",
+             username: "Los_Pollos5",
+             password: "Abcd1239@",
+             addressGenerator: "Av. Capacanama",
+             averageMonthlyMeals: 0,
+             averageDailyMeals: 10],
+
+            [nameGenerator:"RU2",
+             type: "Restaurante",
+             cnpj: "testecnpj1",
+             username: "Los_Pollos6",
+             password: "Abcd1234@",
+             addressGenerator: "endereco",
+             averageMonthlyMeals: 0,
+             averageDailyMeals: 0],
+
+            [nameGenerator:"Clovis Palace",
+             type: "Restaurante",
+             cnpj: "testecnpj2",
+             username: "Los_Pollos7",
+             password: "Abcd1238@",
+             addressGenerator: "endereco2",
              averageMonthlyMeals: 0,
              averageDailyMeals: 0]
 
@@ -77,6 +104,7 @@ class GeneratorTestDataAndOperations{
     }
     static public void createGenerator(String address){
         def cont = new ResidueGeneratorController()
+        println address
         def novoGenerator = getGeneratorByAddress(address)
         cont.params << novoGenerator
         cont.create()
@@ -163,12 +191,16 @@ class GeneratorTestDataAndOperations{
     }
 
     static public void editGenerator(String address, def residueGenerator){
-        def existingGenerator = getGeneratorByAddress(address)
-        if(address != null && existingGenerator == null) {
+        def existingGenerator = ResidueGenerator.findByAddressGenerator(address)
+
+        if(address != null && existingGenerator != null) {
             def cont = new ResidueGeneratorController()
-            cont.params << [name: "Clovis Palace"] << [type: "Restaurante"] << [cnpj: "testecnpj2"] << [addressGenerator: address] << [averageMonthlyMeals: 0] << [averageDailyMeals: 0] << [id: residueGenerator.getId()]
-            cont.edit()
-            cont.save()
+            //existingGenerator.addressGenerator = address
+            cont.params << [name: "Clovis Palace"] << [type: "Restaurante"] << [cnpj: "testecnpj2"] << [addressGenerator: address] << [averageMonthlyMeals: 0] << [averageDailyMeals: 0] << [id: residueGenerator.getId()] << [username: existingGenerator.username] << [password: existingGenerator.password]
+            //cont.params = existingGenerator
+            //cont.edit()
+            cont.update(existingGenerator.getId(),null)
+            //cont.save()
             cont.response.reset()
         }
     }
@@ -177,6 +209,8 @@ class GeneratorTestDataAndOperations{
         def novoGenerator =  [nameGenerator: "Alt",
                               type: "Restaurante",
                               cnpj: "testecnpj1",
+                              username:"LosPollos",
+                              password: "Abcd1234@",
                               addressGenerator: address,
                               averageMonthlyMeals: 0,
                               averageDailyMeals: 0];
@@ -211,7 +245,7 @@ class GeneratorTestDataAndOperations{
         def cont = new ResidueGeneratorController()
         def novoGenerator = getGeneratorByAddress("Bubble Street number 7")
         cont.params << novoGenerator
-        cont.params << [addressGenerator: address] << [averageDailyMeals: dailymeal]
+        cont.params << [addressGenerator: address] << [averageDailyMeals: dailymeal] <<[username: address]
         cont.create()
         cont.save()
         cont.response.reset()
