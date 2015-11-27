@@ -60,5 +60,34 @@ class AdminUserController {
         }
     }
 
+    def edit (Long id) {
+        def adminUserInstance = AdminUser.get(params.id)
+        if (!adminUserInstance) {
+            flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'adminUser.label'), params.id])}"
+            redirect(action: "list")
+        }
+        else {
+            return [adminUserInstance: adminUserInstance]
+        }
+    }
+
+    def update(Long id, Long version) {
+        def adminUserInstance = AdminUser.get(id)
+        if (!adminUserInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'adminUser.label', default: 'adminUser'), id])
+            redirect(action: "list")
+            return
+        }
+
+        adminUserInstance.properties = params
+
+        if (!adminUserInstance.save(flush: true)) {
+            render(view: "edit", model: [adminUserInstance: adminUserInstance])
+            return
+        }
+
+        flash.message = message(code: 'default.updated.message', args: [message(code: 'adminUser.label', default: 'AdminUser'), adminUserInstance.adminLogin])
+        redirect(action: "show", id: adminUserInstance.adminLogin)
+    }
 
 }
