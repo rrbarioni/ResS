@@ -4,6 +4,7 @@ Feature: admin user
   So that I can have a bigger control of all the information
 
 #if($adminUserRegistration)
+
   Scenario: Add a new user
 	Given the system has no user with the CPF "123.456.789-12"
 	And has no user with the login "admin"
@@ -27,4 +28,11 @@ Feature: admin user
 	And there’s already a user with the login "admin"
 	When I ask the system to add a user called "John Doe", with CPF "123.456.789-12", login "admin", password "abcdef", email "johndoe@johndoe.com" and phone "0000-0000"
 	Then I see a message saying the registration failed
+#end
+
+#if ($deleteAdminUser)
+  Scenario: delete admin user
+	Given the system has a user with login "admin"
+	When I ask the system to delete it
+	Then the user "admin" should not be stored anymore
 #end
