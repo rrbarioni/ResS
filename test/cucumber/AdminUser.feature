@@ -36,3 +36,10 @@ Feature: admin user
 	When I ask the system to delete it
 	Then the user "admin" should not be stored anymore
 #end
+
+#if ($editAdminUser)
+  Scenario: edit admin user leaving blank field
+	Given the system has an user with the email "johndoe@johndoe.com"
+	And I leave the new email blank
+	Then the new information is not stored in the system
+#end
