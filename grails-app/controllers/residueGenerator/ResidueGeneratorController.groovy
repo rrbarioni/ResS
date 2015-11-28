@@ -26,6 +26,7 @@ class ResidueGeneratorController {
     }
     //#if ($RegisterAResidueGenerator)
     def verifySecurityOfPassword(String password){
+
         if(password ==null) return false
 
         return password.length() >=8

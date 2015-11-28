@@ -1,5 +1,6 @@
 package generatorProductionReport
 
+
 import residueGenerator.HarvestSolicitation
 import residueGenerator.ResidueGenerator
 

@@ -41,6 +41,7 @@ class AdminUserController {
             return
         }
 
+
         [adminUserInstance: adminUserInstance]
     }
 

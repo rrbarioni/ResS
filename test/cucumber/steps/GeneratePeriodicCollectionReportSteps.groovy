@@ -36,8 +36,9 @@ Given(~'^I am at the HarvestSolicitationViewPage page$'){ ->
 }
 
 
-When(~'^I select the "Generate Report" option$') { ->
-	page.generateReport()
+
+When(~'I select the "Generate Report" option$') { ->
+    page.generateReport()
 
 }
 

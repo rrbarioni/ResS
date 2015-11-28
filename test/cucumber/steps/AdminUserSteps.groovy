@@ -98,5 +98,4 @@ Then(~'^I see a message confirming the user registration$'){->
 }
 Then(~'^I see a message saying the registration failed$'){->
     assert page.readFlashMessage() != null
-
 }

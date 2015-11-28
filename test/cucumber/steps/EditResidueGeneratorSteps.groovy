@@ -93,6 +93,22 @@ Given(~'^I am at the residue generator edit page'){ ->
 }
 
 
+Then(~'^I can see a confirmation message'){
+    at ResidueGeneratorEditPage
+    def errorBoolean = page.hasInvalidMessage()
+    assert errorBoolean != false
+}
+*/
+
+
+
+
+
+Given(~'^I am at the residue generator edit page'){ ->
+    to ResidueGeneratorEditPage
+    at ResidueGeneratorEditPage
+}
+
 When(~'^I fill the address field with "([^"]*)"'){String address ->
     page.fillAddressField(address)
 }

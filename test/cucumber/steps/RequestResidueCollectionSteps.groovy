@@ -20,7 +20,9 @@ Given (~'^I am logged in the system as a restaurant$'){ ->
 
 When (~'^I register a residue collection request with Name "([^"]*)"$'){String name ->
 
+
     keepName = name
+
     CreateColetaTestDataAndOperations.createColetaWithName(name)
 }
 
@@ -39,6 +41,7 @@ Given (~'^I am logged in the system as a restaurant$'){ ->
 }
 
 When (~'^I register a residue collection request with Volume "([^"]*)"$'){String volume ->
+
 
     keepVolume = volume
     CreateColetaTestDataAndOperations.createColetaWithVolume(volume)
@@ -96,6 +99,7 @@ And (~'^I fill the other fields$'){ ->
 
 
 And (~'^Select “Create”$'){ ->
+
 
     page.submit()
 }

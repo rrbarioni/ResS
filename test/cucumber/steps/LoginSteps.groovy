@@ -36,7 +36,8 @@ Then (~'^I get access to repository of information in the system'){
 //GUI
 
 Given (~'^that I have an account registered in the system$'){
-     -> to LoginPage
+    -> to LoginPage
+
 }
 
 When (~'^I enter "([^"]*)" in the CNPJ field$'){
@@ -55,6 +56,8 @@ And (~'^I submit the form via the Login button$'){
      ->at LoginPage
         page.submit()
 }
+
+
 
 Then (~'^I get redirected to my dashboard page'){
     ->at LoginPage
