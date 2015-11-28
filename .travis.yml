@@ -21,9 +21,5 @@ branches:
   only:
     - master
 
-<<<<<<< HEAD
 script: grails -Dgeb.env=firefox test-app functional:cucumber --non-interactive --stacktrace
 
-=======
-script: grails test-app -Dgeb.env=firefox --non-interactive --stacktrace
->>>>>>> Update .travis.yml

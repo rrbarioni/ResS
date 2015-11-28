@@ -29,6 +29,7 @@ Then (~'^the system resends the email with the data of the pending requests to t
 }
 
 
+
 And(~'^generates a notification of email sending confirmation$') {->
 
 //not implemented yet

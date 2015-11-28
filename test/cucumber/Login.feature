@@ -28,6 +28,7 @@ Feature: Proper account authentication
 	Then I get redirected to my dashboard page
   And I get flashed a notice saying that I've logged in
 
+
   @ignore
   Scenario: Logging-in through the access page with incorrect credentials
 	Given that I have an account registered in the system

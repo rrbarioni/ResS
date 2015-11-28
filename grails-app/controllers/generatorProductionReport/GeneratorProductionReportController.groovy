@@ -1,5 +1,6 @@
 package generatorProductionReport
 
+
 import residueGenerator.HarvestSolicitation
 import residueGenerator.ResidueGenerator
 
@@ -7,6 +8,7 @@ import residueGenerator.ResidueGenerator
  * Created by ess on 16/11/15.
  */
 class GeneratorProductionReportController {
+
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
     GeneratorProductionReport gen;
@@ -65,4 +67,5 @@ class GeneratorProductionReportController {
         [generatorProductionReportInstance: generatorProductionReportInstance]
 
     }
+
 }

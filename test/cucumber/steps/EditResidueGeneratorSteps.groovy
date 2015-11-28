@@ -77,6 +77,22 @@ When(~'^I fill the cnpj field with "([^"]*)"$'){ String cnpj ->
 
 
 
+Then(~'^I can see a confirmation message'){
+    at ResidueGeneratorEditPage
+    def errorBoolean = page.hasInvalidMessage()
+    assert errorBoolean != false
+}
+*/
+
+
+
+
+
+Given(~'^I am at the residue generator edit page'){ ->
+    to ResidueGeneratorEditPage
+    at ResidueGeneratorEditPage
+}
+
 When(~'^I fill the address field with "([^"]*)"'){String address ->
     page.fillAddressField(address)
 }
@@ -128,4 +144,3 @@ Then(~'^I should see a message indicating that an error occurred$'){ ->
     def errorBoolean = page.hasInvalidMessage()
     assert errorBoolean != false
 }
-*/

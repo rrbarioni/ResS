@@ -1,6 +1,8 @@
 package generatorProductionReport
 
+
 import com.sun.org.apache.xml.internal.security.utils.resolver.implementations.ResolverDirectHTTP
+
 import residueGenerator.HarvestSolicitation
 import residueGenerator.ResidueGenerator
 
@@ -73,5 +75,6 @@ class GeneratorProductionReport {
 
 
     }
+
 
 }

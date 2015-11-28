@@ -20,7 +20,9 @@ Given (~'^I am logged in the system as a restaurant$'){ ->
 
 When (~'^I register a residue collection request with Name "([^"]*)"$'){String name ->
 
+
     keepName = name
+
     CreateColetaTestDataAndOperations.createColetaWithName(name)
 }
 
@@ -40,6 +42,7 @@ Given (~'^I am logged in the system as a restaurant$'){ ->
 
 When (~'^I register a residue collection request with Volume "([^"]*)"$'){String volume ->
 
+
     keepVolume = volume
     CreateColetaTestDataAndOperations.createColetaWithVolume(volume)
 }
@@ -51,7 +54,6 @@ Then (~'^The residue request is not generated$'){ ->
 
 //CENARIO GUI:
 //Scenario: Blank Name input
-
 
 Given (~'^I am at creating collection page$'){ ->
     to ColetaCreatePage
@@ -96,14 +98,20 @@ And (~'^I fill the other fields$'){ ->
     page.fillNameAndData()
 }
 
+
 And (~'^Select “Create”$'){ ->
+
 
     page.submit()
 }
 
+
 Then (~'^I see a error message$'){ ->
+
     to ColetaListPage
     at ColetaListPage
     assert page.hasErrors()
 }
+
 */
+

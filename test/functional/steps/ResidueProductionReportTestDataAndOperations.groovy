@@ -59,6 +59,7 @@ class ResidueProductionReportTestDataAndOperations {
         cont.create()
         cont.save()
         cont.response.reset()
+
     }
 
 }

@@ -36,8 +36,8 @@ Given(~'^I am at the HarvestSolicitationViewPage page$'){ ->
 }
 
 
-When(~'^I select the "Generate Report" option$') { ->
-	page.generateReport()
+When(~'I select the "Generate Report" option$') { ->
+    page.generateReport()
 }
 
 And(~'^collections were made on the previous month at "RU" residue generator$') { String name ->
@@ -45,6 +45,8 @@ And(~'^collections were made on the previous month at "RU" residue generator$') 
     residueGenerator = ResidueGenerator.findByNameGenerator(name)
     assert residueGenerator != null && GeneratorTestDataAndOperations.hasMonthlyHarvest(residueGenerator)
 }
+
+
 
 
 Then(~'^I see the generated report$') { ->
