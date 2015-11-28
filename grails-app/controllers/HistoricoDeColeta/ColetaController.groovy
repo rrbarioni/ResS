@@ -104,17 +104,31 @@ class ColetaController {
         }
     }
 
+
     def genReport(){
 
-
         params.max = Math.min(params.max ? params.int('max') : 5, 100)
- 
+        
         def coletaList = Coleta.createCriteria().list (params) {
-            if ( params.query ) {
-                ilike("data", "%${params.query}%")
-            }
+                if (params.date1) {
+                    
+                   
+                    ilike("data", "%${params.date1}%")
+                }
+                    
+                
+            
+            
         }
- 
+/*
+        if (params.date1 && params.date2) {
+            def coletaList = Coleta.findAll {
+                eq("data", inicio)
+            }
+        } else {
+            coletaList = Coleta.list(params)
+        }
+ */
         [coletaInstanceList: coletaList, coletaInstanceTotal: coletaList.totalCount]
     
 
