@@ -1,4 +1,8 @@
 package steps
+
+import pages.ColetaListPage
+import pages.CollectReportPage
+
 import static cucumber.api.groovy.EN.*
 
 import steps.CreateColetaTestDataAndOperations
@@ -48,4 +52,33 @@ Then (~'^an error is sent to the user$'){
    	}
 
    	
+}
+
+//Controller
+
+//Scenario:Generate new report
+
+Given (~'^I am at the Coletas page$'){ -> to ColetaListPage
+    
+}
+
+When (~'^I select the "Gerar Relatorio" option$'){
+     -> at ColetaListPage
+     page.gerarRel()
+     to CollectReportPage
+        
+}
+
+And (~'^I select the date range$'){
+    -> at CollectReportPage
+    page.selectTodayDate()
+    page.submit()
+    to CollectReportPage
+}
+
+
+Then (~'^I see the generated report$'){
+    -> at CollectReportPage
+    
+
 }

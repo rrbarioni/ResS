@@ -19,11 +19,11 @@ Then an error is sent to the user
 
 #GUI
 
-@ignore
+
 Scenario: Generate new report
-Given I am at the HarvestSolicitationViewPage page
-When I select the "Generate Report" option
-And collections were made on the previous month at "RU" residue generator
+Given I am at the Coletas page
+When I select the "Gerar Relatorio" option
+And I select the date range
 Then I see the generated report
 
 @ignore
