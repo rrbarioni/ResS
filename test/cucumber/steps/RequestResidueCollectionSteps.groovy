@@ -106,4 +106,4 @@ Then (~'^I see a error message$'){ ->
     at ColetaListPage
     assert page.hasErrors()
 }
-
+*/

@@ -103,4 +103,20 @@ class ColetaController {
             redirect(action: "show", id: id)
         }
     }
+
+    def genReport(){
+
+
+        params.max = Math.min(params.max ? params.int('max') : 5, 100)
+ 
+        def coletaList = Coleta.createCriteria().list (params) {
+            if ( params.query ) {
+                ilike("data", "%${params.query}%")
+            }
+        }
+ 
+        [coletaInstanceList: coletaList, coletaInstanceTotal: coletaList.totalCount]
+    
+
+    }
 }

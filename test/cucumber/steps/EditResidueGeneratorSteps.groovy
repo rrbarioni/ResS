@@ -128,3 +128,4 @@ Then(~'^I should see a message indicating that an error occurred$'){ ->
     def errorBoolean = page.hasInvalidMessage()
     assert errorBoolean != false
 }
+*/

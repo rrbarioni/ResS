@@ -2,6 +2,7 @@ package steps
 
 import HistoricoDeColeta.Coleta
 import HistoricoDeColeta.ColetaController
+import steps.NoColetasException
 
 //Created by Ricardo Barioni
 
@@ -25,6 +26,45 @@ class CreateColetaTestDataAndOperations {
 
     ]
 
+     static coletaDate = [
+            [
+                    nome: "Cuscuz",
+                    data: ("03/11/2015"),
+                    volume: 20
+            ]
+
+    ]
+
+    static coletaReport = [
+            [
+                    nome: "Cuscuz",
+                    data: ("03/10/2015"),
+                    volume: 0
+            ],
+            [
+                    nome: "Cuscuz",
+                    data: ("03/10/2015"),
+                    volume: 0
+            ],
+            [
+                    nome: "Cuscuz",
+                    data: ("03/10/2015"),
+                    volume: 0
+            ],
+            [
+                    nome: "Cuscuz",
+                    data: ("03/11/2015"),
+                    volume: 30
+            ],
+            [
+                    nome: "Cuscuz",
+                    data: ("03/11/2015"),
+                    volume: 40
+            ],
+
+
+    ]
+
     static public def findColetaByName (String name) {
         coletaName.find { coleta ->
 
@@ -35,9 +75,28 @@ class CreateColetaTestDataAndOperations {
     static public def findColetaByVolume (String volume) {
         int volumeNumber = volume.toInteger();
         coletaVolume.find { coleta ->
-            coleta.volume == volumeNumber
+            coleta.data == volumeNumber
 
         }
+    }
+
+    static public def findColetaByDate (String date) {
+        //int dateForReal = date.toInteger();
+        coletaReport.find { coleta ->
+           
+           coleta.data.contains(date)
+
+        }
+        
+    }
+
+    static public void createColetaWithDate (String date) {
+        def cont = new ColetaController()
+        def novaColeta = findColetaByDate(date)
+        cont.params << novaColeta
+        cont.create()
+        cont.save()
+        cont.response.reset()
     }
 
     static public void createColetaWithName (String name) {
@@ -57,6 +116,17 @@ class CreateColetaTestDataAndOperations {
         cont.create()
         cont.save()
         cont.response.reset()
+    }
+
+    static public String calcVolume(String date) {
+        def coletas = findColetaByDate(date)
+
+        if (coletas) {
+            int count = coletas.grep{it.key =~ 'volume'}.value.sum()
+            return count+""
+        } else {
+            throw new NoColetasException("Sem coletas compativeis", coletas)
+        }
     }
 
 }
