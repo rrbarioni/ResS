@@ -21,7 +21,7 @@ Feature: Proper account authentication
 	Then I'm not granted access to the repository of information in the system
 
 #GUI
-
+@ignore
   Scenario: Logging-in through the access page with correct credentials
 	Given that I have an account registered in the system
 	When I enter "12345678904567" in the CNPJ field
