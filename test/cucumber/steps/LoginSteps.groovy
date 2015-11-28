@@ -48,6 +48,7 @@ When (~'^I enter "([^"]*)" in the CNPJ field$'){
 And (~'^I enter "([^"]*)" password in the password field$'){
     String pass ->at LoginPage
         page.fillPass(pass)
+
 }
 
 And (~'^I submit the form via the Login button$'){

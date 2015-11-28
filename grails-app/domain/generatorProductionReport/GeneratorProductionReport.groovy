@@ -1,6 +1,8 @@
 package generatorProductionReport
 
+
 import com.sun.org.apache.xml.internal.security.utils.resolver.implementations.ResolverDirectHTTP
+
 import residueGenerator.HarvestSolicitation
 import residueGenerator.ResidueGenerator
 
@@ -9,6 +11,7 @@ import residueGenerator.ResidueGenerator
  */
 class GeneratorProductionReport {
     Date creationDate
+
     int numberOfGenerators
     int monthsBack
     String type

@@ -22,8 +22,8 @@ And no collections were made on the previous month at "RU" residue generator
 Then I see an empty report error message
 And no report is shown
 
-
 #CONTROLLER
+
 
 @ignore
 

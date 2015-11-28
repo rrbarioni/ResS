@@ -29,6 +29,7 @@ class ResidueGeneratorController {
         if(password ==null) return false
 
         return password.length() >=8
+
     }
     //#end
     def save() {
