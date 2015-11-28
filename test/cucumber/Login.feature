@@ -6,6 +6,7 @@ Feature: Proper account authentication
   So I can access the information relevant to me stored in the system
 
 #Controller
+
   Scenario: Login with correct credentials
 	Given that there is an account registered by "LosPolos" in the system
 	When I submit the "12345678904567" CNPJ
@@ -20,6 +21,7 @@ Feature: Proper account authentication
 	Then I'm not granted access to the repository of information in the system
 
 #GUI
+
   Scenario: Logging-in through the access page with correct credentials
 	Given that I have an account registered in the system
 	When I enter "12345678904567" in the CNPJ field

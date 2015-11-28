@@ -9,8 +9,8 @@ class GeneratorTestDataAndOperations{
 
             [nameGenerator:"RU",
              type: "Restaurante",
-             cnpj: "09876543212345",
-             username: "Los_Pollos9",
+             cnpj: "11111111111111",
+             username: "Los_Pollos",
              password: "Abcd1234@",
              addressGenerator: "Bubble Street number 7",
              averageMonthlyMeals: 0,
@@ -18,7 +18,7 @@ class GeneratorTestDataAndOperations{
 
             [nameGenerator:"Clovis Palace",
              type: "Restaurante",
-             cnpj: "23456789014567",
+             cnpj: "22222222222222",
              username: "Los_Pollos2",
              password: "Abcd1238@",
              addressGenerator: "Bubble Street number 4",
@@ -27,7 +27,7 @@ class GeneratorTestDataAndOperations{
 
             [nameGenerator:"China Dragon",
              type: "Restaurante",
-             cnpj: "09876543210987",
+             cnpj: "33333333333333",
              username: "Los_Pollos3",
              password: "Abcd1239@",
              addressGenerator: "Donut Street number 5",
@@ -36,12 +36,30 @@ class GeneratorTestDataAndOperations{
 
             [nameGenerator:"China Dragon",
              type: "Restaurante",
-             cnpj: "09876543210987",
+             cnpj: "33333333333333",
              username: "Los_Pollos5",
              password: "Abcd1239@",
              addressGenerator: "Av. Capacanama",
              averageMonthlyMeals: 0,
-             averageDailyMeals: 10]
+             averageDailyMeals: 10],
+
+            [nameGenerator:"RU2",
+             type: "Restaurante",
+             cnpj: "11111111111111",
+             username: "Los_Pollos6",
+             password: "Abcd1234@",
+             addressGenerator: "endereco",
+             averageMonthlyMeals: 0,
+             averageDailyMeals: 0],
+
+            [nameGenerator:"Clovis Palace",
+             type: "Restaurante",
+             cnpj: "22222222222222",
+             username: "Los_Pollos7",
+             password: "Abcd1238@",
+             addressGenerator: "endereco2",
+             averageMonthlyMeals: 0,
+             averageDailyMeals: 0]
 
     ]
 
@@ -79,13 +97,14 @@ class GeneratorTestDataAndOperations{
             generator.nameGenerator == name
         }
     }
-    static public void getGeneratorByCnpj(String cnpj){
+    static public void getGeneratorByCnpj(String CNPJ){
         generators.find {generator ->
-            generator.cnpj == cnpj
+            generator.cnpj== CNPJ
         }
     }
     static public void createGenerator(String address){
         def cont = new ResidueGeneratorController()
+        println address
         def novoGenerator = getGeneratorByAddress(address)
         cont.params << novoGenerator
         cont.create()
@@ -95,9 +114,9 @@ class GeneratorTestDataAndOperations{
 
     static public void createGeneratorName(String name){
         def cont = new ResidueGeneratorController()
-        def newGenerator = [nameGenerator: name,
+        def newGenerator = [nome: name,
                             type: "Restaurante",
-                            cnpj: "09876543212345",
+                            cnpj: "11111111111111",
                             username: "Los_Pollos",
                             password: "@Abcd1234",
                             addressGenerator: "Bubble Street number 7",
@@ -111,12 +130,12 @@ class GeneratorTestDataAndOperations{
 
     static public void createGeneratorCnpj(String CNPJ){
         def cont = new ResidueGeneratorController()
-        def newGenerator = [nameGenerator: "RUcnpj",
+        def newGenerator = [nome: "RUcnpj",
                             type: "Restaurante",
                             cnpj: CNPJ,
                             username: "Los_Pollos6",
                             password: "@Abcd1234",
-                            addressGenerator: "Bubble Street number 10",
+                            addressGenerator: "Bubble Street number 7",
                             averageMonthlyMeals: 0,
                             averageDailyMeals: 0]
         cont.params << newGenerator
@@ -126,9 +145,9 @@ class GeneratorTestDataAndOperations{
     }
     static public void createGeneratorUsernamePasswordAddress(String username, String password, String address ){
         def cont = new ResidueGeneratorController()
-        def newGenerator = [nameGenerator: "RU",
+        def newGenerator = [nome: "RU",
                             type: "Restaurante",
-                            cnpj: "23456789014567",
+                            cnpj: "22222222222222",
                             username: username,
                             password: password,
                             addressGenerator: address,
@@ -141,9 +160,9 @@ class GeneratorTestDataAndOperations{
     }
     static public void createGeneratorUsername(String username){
         def cont = new ResidueGeneratorController()
-        def newGenerator = [nameGenerator: "RU",
+        def newGenerator = [nome: "RU",
                             type: "Restaurante",
-                            cnpj: "23456789014567",
+                            cnpj: "22222222222222",
                             username: username,
                             password: "@Abcd1234",
                             addressGenerator: "Bubble Street number 7",
@@ -159,7 +178,6 @@ class GeneratorTestDataAndOperations{
         def cont = new ResidueGeneratorController()
         cont.verifySecurityOfPassword(password)
     }
-
     static public void showGenerator(String name){
         def cont = new ResidueGeneratorController()
         def newGenerator = getGeneratorByName(name)
@@ -170,6 +188,21 @@ class GeneratorTestDataAndOperations{
         def cont = new ResidueGeneratorController()
         def newGenerator = getGeneratorByCnpj(cnpj)
         cont.show(newGenerator)
+    }
+
+    static public void editGenerator(String address, def residueGenerator){
+        def existingGenerator = ResidueGenerator.findByAddressGenerator(address)
+
+        if(address != null && existingGenerator != null) {
+            def cont = new ResidueGeneratorController()
+            //existingGenerator.addressGenerator = address
+            cont.params << [name: "Clovis Palace"] << [type: "Restaurante"] << [cnpj: "22222222222222"] << [addressGenerator: address] << [averageMonthlyMeals: 0] << [averageDailyMeals: 0] << [id: residueGenerator.getId()] << [username: existingGenerator.username] << [password: existingGenerator.password]
+            //cont.params = existingGenerator
+            //cont.edit()
+            cont.update(existingGenerator.getId(),null)
+            //cont.save()
+            cont.response.reset()
+        }
     }
 
     static public void editGeneratorByCnpj(String cnpj, def residueGenerator){
@@ -184,25 +217,10 @@ class GeneratorTestDataAndOperations{
         }
     }
 
-    static public void editGenerator(String address, def residueGenerator){
-        def existingGenerator = getGeneratorByAddress(address)
-
-        if(address != null && existingGenerator != null) {
-            def cont = new ResidueGeneratorController()
-            //existingGenerator.addressGenerator = address
-            cont.params << [nameGenerator: "Clovis Palace"] << [type: "Restaurante"] << [cnpj: "23456789014567"] << [addressGenerator: address] << [averageMonthlyMeals: 0] << [averageDailyMeals: 0] << [id: residueGenerator.getId()] << [username: existingGenerator.username] << [password: existingGenerator.password]
-            //cont.params = existingGenerator
-            cont.edit()
-            // cont.update(existingGenerator.getId(),null)
-            cont.save()
-            cont.response.reset()
-        }
-    }
-
     static public getAltGenerator(String address){
         def novoGenerator =  [nameGenerator: "Alt",
                               type: "Restaurante",
-                              cnpj: "09876543212345",
+                              cnpj: "11111111111111",
                               username:"LosPollos",
                               password: "Abcd1234@",
                               addressGenerator: address,
@@ -239,7 +257,7 @@ class GeneratorTestDataAndOperations{
         def cont = new ResidueGeneratorController()
         def novoGenerator = getGeneratorByAddress("Bubble Street number 7")
         cont.params << novoGenerator
-        cont.params << [addressGenerator: address] << [averageDailyMeals: dailymeal] <<[username: address]
+        cont.params << [addressGenerator: address] << [averageDailyMeals: dailymeal] <<[username: address] //guarantee that the username is not repeated
         cont.create()
         cont.save()
         cont.response.reset()
@@ -255,7 +273,7 @@ class GeneratorTestDataAndOperations{
 
 
     static public boolean containResidueGenerator(String address,ResGen){
-        def testresidue = getGeneratorByAddress(address)
+        def testresidue = ResidueGenerator.getByAddressGenerator(address)
         return ResGen.contains(testresidue)
     }
 
