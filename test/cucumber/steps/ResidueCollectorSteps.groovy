@@ -5,9 +5,11 @@ package steps
  * Created by Franclin Cabral on 05/10/15.
  */
 
-
-//Controller
 /*
+//Controller
+
+/*
+
 Given (~'^That there is no collector with the email "([^"]*)"$'){ String email ->
     collector = ResidueCollector.findByEmailCollector(email)
     assert collector == null
@@ -40,10 +42,12 @@ And (~'^CNPJ "([^"]*)" is created in the system$'){ String cnpj ->
     assert ResidueCollector.findByCnpjCollector(cnpj) != null
 }
 
+
 */
 
 //Gui
 /*
+
 Given (~'^That I am in the form page of register new collector$'){
     to CollectorCreatePage
     at CollectorCreatePage

@@ -11,19 +11,18 @@ So I can have my residue collected when I need
 #Controller
 Scenario: Blank Name input
 Given I am logged in the system as a restaurant
-When I register a residue collection request with Name “”
-Then The residue request is not generated
+When I register a residue collection request with Name ""
+Then The residue request with name "" is not generated
 
 Scenario: Invalid volume input
-Given I am logged in the system as a restaurant
-When I register a residue collection request with Volume “0”
-Then The residue request is not generated
+Given I am logged on the system as a restaurant
+When I register a residue collection request with Volume "0"
+Then The residue request with volume "0" is not created
 
 
 #GUI
 Scenario: Blank Name input
 Given I am at creating collection page
-
 When I fill the request information with Name ""
 And I fill data and volume fields
 And Choose "Create"
@@ -34,5 +33,5 @@ Given I am on creating collection page
 When I fill the request information with Name "RU"
 And I fill name and data fields
 And Select "Create"
-Then I see a error message
+Then I see an error message
 
