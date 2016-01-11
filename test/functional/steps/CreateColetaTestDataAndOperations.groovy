@@ -8,6 +8,9 @@ import steps.NoColetasException
 
 class CreateColetaTestDataAndOperations {
 
+    def exportService
+    def grailsApplication
+
     static coletaName = [
 
             [
@@ -82,6 +85,7 @@ class CreateColetaTestDataAndOperations {
 
     static public def findColetaByDate (String date) {
         //int dateForReal = date.toInteger();
+        
         coletaReport.find { coleta ->
            
            coleta.data.contains(date)
@@ -124,6 +128,21 @@ class CreateColetaTestDataAndOperations {
         if (coletas) {
             int count = coletas.grep{it.key =~ 'volume'}.value.sum()
             return count+""
+        } else {
+            throw new NoColetasException("Sem coletas compativeis", coletas)
+        }
+    }
+
+    static public boolean genCSV(String date) {
+        def coletas = findColetaByDate(date)
+        //def response;
+        if (coletas) {
+           // response.contentType = grailsApplication.config.grails.mime.types[params.format]
+           // response.setHeader("Content-disposition", "attachment; filename=Relatorio.${params.extension}")
+                    
+           // def c = exportService.export(params.format, response.outputStream,coletas, [:], [:])
+            
+            return true
         } else {
             throw new NoColetasException("Sem coletas compativeis", coletas)
         }

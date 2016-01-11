@@ -5,7 +5,8 @@ package HistoricoDeColeta
 import cucumber.api.Format
 
 class Coleta {
-
+    
+    
     String nome // nome do estabelecimento
     Date data // data da coleta
     int volume // volume coletado
@@ -18,15 +19,12 @@ class Coleta {
         volume  blank: false, nullable: false, notEqual: 0 // volume para coleta não deve ser 0. deve-se haver algo a ser coletado
     }
 
-    static List returnSearch(Date d1, Date d2){
+    static searchable = true
 
-        List coletas = Coleta.createCriteria().list() {
-            between('data', d1, d2)
-        }
-
-        return coletas
-
-    }
+//    static searchable = {
+//       'data' format:'MMddyyyy'
+//       
+//    }
 
     void setName(String novoNome){
         if(Coleta.findByNomeAndData(novoNome,this.data) == null){
@@ -38,5 +36,13 @@ class Coleta {
         if(Coleta.findByNomeAndData(this.nome,novaData) == null){
             this.data = novaData
         }
+    }
+
+    Date getDate() {
+        return data
+    }
+
+    String getName(){
+        return nome
     }
 }

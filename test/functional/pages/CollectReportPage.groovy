@@ -17,6 +17,10 @@ class CollectReportPage extends Page{
         $("input", name: "date2_day").click()
     }
 
+    def gerar(){
+        $("input", name: "Gerar Relatório").click()
+    }
+
     def submit(){
         $("input", name: "Ok ").click()
     }
