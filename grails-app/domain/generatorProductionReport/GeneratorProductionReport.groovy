@@ -1,6 +1,8 @@
 package generatorProductionReport
 
+
 import com.sun.org.apache.xml.internal.security.utils.resolver.implementations.ResolverDirectHTTP
+
 import residueGenerator.HarvestSolicitation
 import residueGenerator.ResidueGenerator
 
@@ -8,7 +10,9 @@ import residueGenerator.ResidueGenerator
  * Created by ess on 16/11/15.
  */
 class GeneratorProductionReport {
+    static searchable = true
     Date creationDate
+
     int numberOfGenerators
     int monthsBack
     String type
@@ -73,5 +77,6 @@ class GeneratorProductionReport {
 
 
     }
+
 
 }

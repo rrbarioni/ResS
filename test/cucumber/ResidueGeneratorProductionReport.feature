@@ -14,6 +14,7 @@ Feature: Residue Generator Production Report
     Given the system has no registered residue Generator
     When the system generates an production report for the last "5" months
     Then then report is empty
+  
   @ignore
   Scenario: generate month based Residue Production report web
     Given I am at the Create Residue Generator Report page
